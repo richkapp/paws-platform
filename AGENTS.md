@@ -252,6 +252,7 @@ For browser-level verification, use Playwright or CDP-driven Chromium against `h
 - **No unique constraint on name:** Re-running upload scripts creates duplicates. Use upsert or check first.
 - **React islands are client:visible:** They lazy-load on scroll. Good for performance.
 - **Immutable Astro assets:** nginx serves `/_astro/*` with `Cache-Control: public, immutable`. If a dog-listing/profile behavior change appears correct in API data but wrong in a user's browser, check for stale island JS. Bump `CAPA_ASSET_VERSION`, rebuild/sync, verify `/caes/` has `Cache-Control: no-cache`, and confirm the live HTML references the new `/_astro/DogListings.*.js` filename.
+- **Static fallback can mask API outages:** `/caes` can continue rendering committed dog data while `api.capapvl.org` and public forms return `502`. Every CAPA status update/deploy must verify `systemctl is-active capapvl-api.service`, local `http://127.0.0.1:3314/health`, and public `https://api.capapvl.org/health`; never infer API health from a rendered page.
 - **Form verifier writes rows:** `scripts/verify-form-endpoint.mjs` always exercises the API insert path, even when SMTP is dry-run. Do not run it against production casually; if QA rows are inserted, delete the `qa-*@example.com` / verifier-source rows from `form_submissions` before checkout.
 
 ---
