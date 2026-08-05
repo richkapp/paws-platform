@@ -235,7 +235,7 @@ curl -sS 'https://api.capapvl.org/dogs?includeAdopted=true' | python3 -c 'import
 curl -sS -I https://capapvl.org/caes/ | grep -i '^cache-control:'
 ```
 
-For browser-level verification, use Playwright or CDP-driven Chromium against `https://capapvl.org/caes/` and confirm `https://api.capapvl.org/dogs?includeAdopted=true` returns 200 with 99 dog cards rendered, 9 adopted banners, and adopted-name searches such as Abby/Bella/Bolt each return `1 cão encontrado` with `ADOTADO!`.
+For browser-level verification, use Playwright or CDP-driven Chromium against `https://capapvl.org/caes/` and confirm `https://api.capapvl.org/dogs?includeAdopted=true` returns 200 with 99 dog cards rendered, 12 adopted banners, and adopted-name searches such as Batatinha/Belinha/Chico each return `1 cão encontrado` with `ADOTADO!`.
 
 ---
 

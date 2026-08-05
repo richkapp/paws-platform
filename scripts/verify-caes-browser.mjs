@@ -6,15 +6,16 @@ const locale = process.argv[3] || 'pt';
 const width = Number(process.argv[4] || 1440);
 const height = Number(process.argv[5] || 1000);
 const port = Number(process.argv[6] || 9440);
+const searchName = process.argv[7] || 'Abby';
 
 if (!url) {
-  console.error('usage: node scripts/verify-caes-browser.mjs <url> [pt|en] [width] [height] [port]');
+  console.error('usage: node scripts/verify-caes-browser.mjs <url> [pt|en] [width] [height] [port] [searchName]');
   process.exit(2);
 }
 
 const expected = locale === 'en'
-  ? { search: 'Abby', one: '1 dog found', adopted: 'Adopted!', all: 'All' }
-  : { search: 'Abby', one: '1 cão encontrado', adopted: 'Adotado!', all: 'Todos' };
+  ? { search: searchName, one: '1 dog found', adopted: 'Adopted!', all: 'All' }
+  : { search: searchName, one: '1 cão encontrado', adopted: 'Adotado!', all: 'Todos' };
 
 const profileDir = `/tmp/capa-caes-browser-${port}-${Date.now()}`;
 const browser = spawn(chromium, [
@@ -116,8 +117,8 @@ try {
   })()`);
 
   if (initial.cards !== 99) throw new Error(`Expected 99 dog cards, got ${initial.cards}`);
-  if (initial.adopted !== 9) throw new Error(`Expected 9 adopted badges, got ${initial.adopted}`);
-  if (initial.adoptedAria !== 9) throw new Error(`Expected 9 adopted accessible labels, got ${initial.adoptedAria}`);
+  if (initial.adopted !== 12) throw new Error(`Expected 12 adopted badges, got ${initial.adopted}`);
+  if (initial.adoptedAria !== 12) throw new Error(`Expected 12 adopted accessible labels, got ${initial.adoptedAria}`);
   if (!initial.hasSearch) throw new Error('Missing #dog-search input');
   if (!initial.hasAllLabel) throw new Error(`Missing filter label ${expected.all}`);
   if (initial.overflow) throw new Error('Page has horizontal overflow');
@@ -135,7 +136,7 @@ try {
       hasOneResultText: document.body.innerText.includes(${JSON.stringify(expected.one)}),
       adopted: cards.filter((card) => card.textContent.includes(${JSON.stringify(expected.adopted)})).length,
       adoptedAria: cards.filter((card) => card.getAttribute('aria-label')?.includes(${JSON.stringify(expected.adopted)})).length,
-      abby: cards.some((card) => card.textContent.includes('Abby')),
+      target: cards.some((card) => card.textContent.includes(${JSON.stringify(expected.search)})),
     };
   })()`);
 
@@ -143,7 +144,7 @@ try {
   if (!searchResult.hasOneResultText) throw new Error(`Search missing results text ${expected.one}`);
   if (searchResult.adopted !== 1) throw new Error(`Search expected one adopted badge, got ${searchResult.adopted}`);
   if (searchResult.adoptedAria !== 1) throw new Error(`Search expected one adopted accessible label, got ${searchResult.adoptedAria}`);
-  if (!searchResult.abby) throw new Error('Search did not keep Abby card visible');
+  if (!searchResult.target) throw new Error(`Search did not keep ${expected.search} card visible`);
 
   const reveal = await evaluate(`(async () => {
     const input = document.querySelector('#dog-search');

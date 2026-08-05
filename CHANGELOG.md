@@ -1,5 +1,8 @@
 # CHANGELOG — capapvl.pt
 
+## 2026-08-05
+- Dogs: marked Batatinha, Belinha, and Chico as adopted after CAPA confirmed their foster families adopted them; they remain visible with adopted banners.
+
 ## 2026-06-29
 - Help foster families: added bilingual multi-step foster-home request form routes at `/ajudar/formulario-familia-acolhimento` and `/en/help/foster-home-form`, replacing the FAT/foster section email buttons with structured form links and extending `/forms/submit` email delivery with `foster_home` submissions.
 - Help donations: added bilingual in-kind supply donation form routes at `/ajudar/formulario-donativos-em-especie` and `/en/help/supply-donation-form`, replacing the supply-section email text with localized drop-off form buttons and extending `/forms/submit` email delivery with `supply_donation` submissions.
