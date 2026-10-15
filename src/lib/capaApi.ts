@@ -1,13 +1,16 @@
+import type { DogSize, DogTraits } from './dogFacts';
+
 export type Dog = {
   id: string;
   name: string;
-  size: 'small' | 'medium' | 'large';
+  size: DogSize;
   sex: 'male' | 'female' | null;
   age: string;
   description: string;
   photo_url: string;
   photos?: string[];
   is_adopted: boolean;
+  traits?: DogTraits;
   created_at: string;
   updated_at: string;
 };

@@ -140,7 +140,9 @@ const en: TranslationKeys = {
     filterBySex: 'Filter by sex',
     filterAll: 'All',
     filterSmall: 'Small',
+    filterSmallMedium: 'Small/Medium',
     filterMedium: 'Medium',
+    filterMediumLarge: 'Medium/Large',
     filterLarge: 'Large',
     filterFemale: '♀ Female',
     filterMale: '♂ Male',
@@ -212,7 +214,9 @@ const en: TranslationKeys = {
   // ─── Shared Labels ─────────────────────────────────
   sizes: {
     small: 'Small',
+    'small-medium': 'Small/Medium',
     medium: 'Medium',
+    'medium-large': 'Medium/Large',
     large: 'Large',
   },
   sexes: {

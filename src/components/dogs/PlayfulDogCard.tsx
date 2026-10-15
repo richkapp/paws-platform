@@ -1,26 +1,25 @@
 import { getTranslations, type Locale } from '../../i18n';
 import type { Dog } from '../../lib/capaApi';
 import { DOG_CARD_ROTATIONS, SEX_BADGE_CLASSES, SIZE_BADGE_CLASSES, getCardDescription } from './dogCardHelpers';
+import { adoptedLabel, fosterLabel, fosterStatus, shortAge, sizeLabel as labelForSize, yearFrom } from '../../lib/dogFacts';
 
 export default function PlayfulDogCard({ dog, locale, index }: { dog: Dog; locale: Locale; index: number }) {
   const t = getTranslations(locale);
-  const sizeLabels: Record<string, string> = {
-    small: t.sizes.small,
-    medium: t.sizes.medium,
-    large: t.sizes.large,
-  };
   const sexLabels: Record<string, string> = {
     male: t.sexes.male,
     female: t.sexes.female,
   };
-  const sizeLabel = sizeLabels[dog.size] ?? dog.size;
+  const sizeLabel = labelForSize(dog.size, locale);
+  const adopted = adoptedLabel(dog.sex, locale);
+  const foster = !dog.is_adopted ? fosterStatus(dog.description) : null;
+  const age = shortAge(yearFrom(dog.age), locale);
   const sexLabel = dog.sex ? sexLabels[dog.sex] ?? dog.sex : '';
   const badgeClasses = SIZE_BADGE_CLASSES[dog.size] ?? 'bg-white text-playful-muted border border-playful-line';
   const sexBadgeClasses = dog.sex ? SEX_BADGE_CLASSES[dog.sex] ?? SEX_BADGE_CLASSES.male : '';
   const rotation = DOG_CARD_ROTATIONS[index % DOG_CARD_ROTATIONS.length];
   const dogPath = locale === 'pt' ? `/cao?id=${dog.id}` : `/en/dog?id=${dog.id}`;
   const photoAlt = locale === 'pt' ? `Fotografia de ${dog.name}` : `Photo of ${dog.name}`;
-  const cardLabel = [dog.name, dog.is_adopted ? t.status.adopted : '', sizeLabel, sexLabel, dog.age].filter(Boolean).join(', ');
+  const cardLabel = [dog.name, dog.is_adopted ? adopted : '', foster ? fosterLabel(foster, dog.sex, locale) : '', sizeLabel, sexLabel, age].filter(Boolean).join(', ');
 
   return (
     <a
@@ -52,8 +51,13 @@ export default function PlayfulDogCard({ dog, locale, index }: { dog: Dog; local
           )}
         </div>
         {dog.is_adopted && (
-          <span className="absolute inset-x-4 bottom-4 rounded-full bg-playful-orange px-3 py-2 text-center text-xs font-extrabold uppercase tracking-wide text-white shadow-pillowy">
-            {t.status.adopted}
+          <span className="absolute bottom-3 right-3 rounded-full bg-playful-orange px-3 py-1.5 text-xs font-extrabold uppercase tracking-wide text-white shadow-pillowy">
+            {adopted}
+          </span>
+        )}
+        {foster && (
+          <span className="absolute bottom-3 right-3 rounded-full bg-white/95 px-3 py-1.5 text-xs font-extrabold text-playful-orange-dark shadow-pillowy" data-dog-card-foster>
+            {fosterLabel(foster, dog.sex, locale)}
           </span>
         )}
       </div>
@@ -61,9 +65,9 @@ export default function PlayfulDogCard({ dog, locale, index }: { dog: Dog; local
       <div className="px-2 pb-3 pt-5 text-center">
         <div className="flex flex-wrap items-center justify-center gap-2">
           <h3 className="font-playful-display text-2xl font-extrabold tracking-[-0.03em] text-playful-ink">{dog.name}</h3>
-          {dog.age && (
+          {age && (
             <span className="rounded-full bg-playful-cream px-2.5 py-1 text-xs font-bold text-playful-muted">
-              {dog.age}
+              {age}
             </span>
           )}
         </div>

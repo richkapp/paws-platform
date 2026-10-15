@@ -7,27 +7,33 @@ import nodemailer from 'nodemailer';
 
 const { Pool } = pg;
 
+const DOG_SIZES = ['small', 'small-medium', 'medium', 'medium-large', 'large'] as const;
+type DogSize = typeof DOG_SIZES[number];
+type DogTraits = Record<string, unknown>;
+
 type DogRow = {
   id: string;
   name: string;
-  size: 'small' | 'medium' | 'large';
+  size: DogSize;
   sex: 'male' | 'female' | null;
   age: string | null;
   description: string | null;
   photo_url: string | null;
   is_adopted: boolean;
+  traits: DogTraits | null;
   created_at: string;
   updated_at: string;
 };
 
 type DogPayload = {
   name?: string;
-  size?: 'small' | 'medium' | 'large';
+  size?: DogSize;
   sex?: 'male' | 'female' | null | '';
   age?: string;
   description?: string;
   photo_url?: string;
   is_adopted?: boolean;
+  traits?: DogTraits;
 };
 
 const FORM_SUBMISSION_KINDS = ['sponsorship', 'mbway', 'visit', 'adoption_interest', 'volunteer', 'supply_donation', 'foster_home'] as const;
@@ -216,6 +222,7 @@ async function serializeDog(row: DogRow) {
     photo_url: photos[0] ?? row.photo_url ?? '',
     photos,
     is_adopted: row.is_adopted,
+    traits: row.traits ?? {},
     created_at: row.created_at,
     updated_at: row.updated_at,
   };
@@ -231,7 +238,7 @@ function cleanPayload(input: DogPayload, existing?: DogRow): Required<DogPayload
   const sex = input.sex === '' ? null : input.sex ?? existing?.sex ?? null;
 
   if (!name) throw new Error('Name is required');
-  if (!['small', 'medium', 'large'].includes(size)) throw new Error('Invalid size');
+  if (!(DOG_SIZES as readonly string[]).includes(size)) throw new Error('Invalid size');
   if (sex && !['male', 'female'].includes(sex)) throw new Error('Invalid sex');
 
   return {
@@ -242,6 +249,7 @@ function cleanPayload(input: DogPayload, existing?: DogRow): Required<DogPayload
     description: input.description ?? existing?.description ?? '',
     photo_url: input.photo_url ?? existing?.photo_url ?? '',
     is_adopted: input.is_adopted ?? existing?.is_adopted ?? false,
+    traits: input.traits && typeof input.traits === 'object' && !Array.isArray(input.traits) ? input.traits : existing?.traits ?? {},
   };
 }
 
@@ -562,10 +570,10 @@ async function handleGetDog(id: string, origin: string | null) {
 async function handleCreateDog(request: Request, origin: string | null) {
   const payload = cleanPayload(await request.json() as DogPayload);
   const result = await pool.query<DogRow>(
-    `insert into dogs (name, size, sex, age, description, photo_url, is_adopted, updated_at)
-     values ($1, $2, $3, $4, $5, $6, $7, now())
+    `insert into dogs (name, size, sex, age, description, photo_url, is_adopted, traits, updated_at)
+     values ($1, $2, $3, $4, $5, $6, $7, $8, now())
      returning *`,
-    [payload.name, payload.size, payload.sex, payload.age, payload.description, payload.photo_url, payload.is_adopted],
+    [payload.name, payload.size, payload.sex, payload.age, payload.description, payload.photo_url, payload.is_adopted, JSON.stringify(payload.traits)],
   );
   return json({ dog: await serializeDog(result.rows[0]) }, { status: 201 }, origin);
 }
@@ -576,10 +584,10 @@ async function handleUpdateDog(id: string, request: Request, origin: string | nu
   const payload = cleanPayload(await request.json() as DogPayload, existing);
   const result = await pool.query<DogRow>(
     `update dogs
-     set name = $1, size = $2, sex = $3, age = $4, description = $5, photo_url = $6, is_adopted = $7, updated_at = now()
-     where id = $8
+     set name = $1, size = $2, sex = $3, age = $4, description = $5, photo_url = $6, is_adopted = $7, traits = $8, updated_at = now()
+     where id = $9
      returning *`,
-    [payload.name, payload.size, payload.sex, payload.age, payload.description, payload.photo_url, payload.is_adopted, id],
+    [payload.name, payload.size, payload.sex, payload.age, payload.description, payload.photo_url, payload.is_adopted, JSON.stringify(payload.traits), id],
   );
   return json({ dog: await serializeDog(result.rows[0]) }, {}, origin);
 }

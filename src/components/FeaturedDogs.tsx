@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { capaApi } from '../lib/capaApi';
 import { capaDogs } from '../data/capaDogs';
 import { getTranslations, localizeDescription, type Locale } from '../i18n';
+import { adoptedLabel } from '../lib/dogFacts';
 import type { Dog } from '../lib/capaApi';
 
 type SizeFilter = 'all' | 'small' | 'medium' | 'large';
@@ -25,11 +26,7 @@ function DogCard({ dog, locale }: { dog: Dog; locale: Locale }) {
   const t = getTranslations(locale);
   const badgeClasses = SIZE_BADGE_CLASSES[dog.size] ?? 'bg-warm-100 text-warm-700 border border-warm-200';
 
-  const sizeLabels: Record<string, string> = {
-    small: t.sizes.small,
-    medium: t.sizes.medium,
-    large: t.sizes.large,
-  };
+  const sizeLabels: Record<string, string> = t.sizes;
   const sizeLabel = sizeLabels[dog.size] ?? dog.size;
 
   const dogPath = locale === 'pt' ? `/cao?id=${dog.id}` : `/en/dog?id=${dog.id}`;
@@ -58,7 +55,7 @@ function DogCard({ dog, locale }: { dog: Dog; locale: Locale }) {
         </span>
         {dog.is_adopted && (
           <span className="absolute inset-x-0 bottom-0 bg-primary-500/95 py-2 text-center text-sm font-extrabold uppercase tracking-wide text-white shadow-md">
-            {t.status.adopted}
+            {adoptedLabel(dog.sex, locale)}
           </span>
         )}
       </div>

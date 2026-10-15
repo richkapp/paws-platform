@@ -1,0 +1,98 @@
+[
+  {
+    "id": "62a652c4-6631-4d4d-a07c-d6454aeb775a",
+    "name": "Mac",
+    "size": "medium",
+    "sex": "male",
+    "age": "",
+    "description": "Sexo: Masculino\nIdade: Nasceu em 2011\nDeu entrada: 2023\nRaça: Indefinida\nPorte: Médio\nPersonalidade: Muito calmo, companheiro e fiel\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipado, Vacinado\nHistória: O Mac estava deitado num descampado sem se conseguir mover, foi recolhido e levado para a clínica. Estava exausto, com uma infeção no pénis, desidratado, com as orelhas num estado péssimo, muitas otites e otoematomas não tratados e a mancar, devido ao estado em que tem as artroses. No início mostrou-se um menino defensivo, não sabemos o que terá passado até chagar a nós, mas depois de perceber que só lhe queremos bem mostrou-se um cão muito meigo.",
+    "photo_url": "https://api.capapvl.org/images/dogs/mac/photo-01.jpg",
+    "photos": [
+      "https://api.capapvl.org/images/dogs/mac/photo-01.jpg",
+      "https://api.capapvl.org/images/dogs/mac/photo-03.jpg",
+      "https://api.capapvl.org/images/dogs/mac/photo-04.jpg",
+      "https://api.capapvl.org/images/dogs/mac/photo-05.jpg",
+      "https://api.capapvl.org/images/dogs/mac/photo-06.jpg",
+      "https://api.capapvl.org/images/dogs/mac/photo-07.jpg",
+      "https://api.capapvl.org/images/dogs/mac/photo-08.jpg",
+      "https://api.capapvl.org/images/dogs/mac/photo-09.jpg",
+      "https://api.capapvl.org/images/dogs/mac/photo-10.jpg",
+      "https://api.capapvl.org/images/dogs/mac/photo-11.jpg",
+      "https://api.capapvl.org/images/dogs/mac/photo-12.jpg",
+      "https://api.capapvl.org/images/dogs/mac/photo-13.jpg"
+    ],
+    "is_adopted": false,
+    "created_at": "2026-02-24T19:52:02.496Z",
+    "updated_at": "2026-02-24T19:52:02.496Z",
+    "_reason": "excluded"
+  },
+  {
+    "id": "bd0fbdd9-f067-4fa0-b94f-f9a8a86b81c1",
+    "name": "Nobita",
+    "size": "small",
+    "sex": "male",
+    "age": "",
+    "description": "Sexo: Masculino\nIdade: Nasceu em 2015\nData de entrada: 2017\nRaça: Indefinida\nPorte: Pequeno/Médio\nPersonalidade: Muito carente e brincalhão\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipado, Vacinado, Castrado\nHistória: Encontrado a vaguear pelas ruas da Póvoa.",
+    "photo_url": "https://api.capapvl.org/images/dogs/nobita/photo-01.jpg",
+    "photos": [
+      "https://api.capapvl.org/images/dogs/nobita/photo-01.jpg",
+      "https://api.capapvl.org/images/dogs/nobita/photo-03.jpg",
+      "https://api.capapvl.org/images/dogs/nobita/photo-04.jpg",
+      "https://api.capapvl.org/images/dogs/nobita/photo-05.jpg",
+      "https://api.capapvl.org/images/dogs/nobita/photo-06.jpg",
+      "https://api.capapvl.org/images/dogs/nobita/photo-07.jpg",
+      "https://api.capapvl.org/images/dogs/nobita/photo-08.jpg",
+      "https://api.capapvl.org/images/dogs/nobita/photo-09.jpg",
+      "https://api.capapvl.org/images/dogs/nobita/photo-10.jpg",
+      "https://api.capapvl.org/images/dogs/nobita/photo-11.jpg",
+      "https://api.capapvl.org/images/dogs/nobita/photo-12.jpg",
+      "https://api.capapvl.org/images/dogs/nobita/photo-13.jpg",
+      "https://api.capapvl.org/images/dogs/nobita/photo-14.jpg"
+    ],
+    "is_adopted": false,
+    "created_at": "2026-02-24T19:56:17.750Z",
+    "updated_at": "2026-02-24T19:56:17.750Z",
+    "_reason": "deceased"
+  },
+  {
+    "id": "80299c12-bbf2-4f15-b440-13beb5ccbe6a",
+    "name": "Patty",
+    "size": "small",
+    "sex": "female",
+    "age": "",
+    "description": "Sexo: Feminino\nIdade: Nasceu em 2013\nData de entrada: 2022\nRaça: X Podenga\nPorte: Pequeno\nPersonalidade: Muito calma, meiga e companheira\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipada, Vacinada, Esterilizada\nHistória: Paty já sentiu na pele o abandono duas vezes. Foi acolhida por uma família, que lhe deu uma casa, amor e conforto, no entanto agora deixou-a para trás, devido às adversidades da vida. Paty vive agora numa box fria e pequena de canil, chorando de noite sem o calor humano. Esta cadela merece uma história de vida mais feliz.",
+    "photo_url": "https://api.capapvl.org/images/dogs/patty/photo-01.jpg",
+    "photos": [
+      "https://api.capapvl.org/images/dogs/patty/photo-01.jpg",
+      "https://api.capapvl.org/images/dogs/patty/photo-03.jpg",
+      "https://api.capapvl.org/images/dogs/patty/photo-04.jpg",
+      "https://api.capapvl.org/images/dogs/patty/photo-05.jpg",
+      "https://api.capapvl.org/images/dogs/patty/photo-06.jpg",
+      "https://api.capapvl.org/images/dogs/patty/photo-07.jpg",
+      "https://api.capapvl.org/images/dogs/patty/photo-08.jpg",
+      "https://api.capapvl.org/images/dogs/patty/photo-09.jpg",
+      "https://api.capapvl.org/images/dogs/patty/photo-10.jpg"
+    ],
+    "is_adopted": false,
+    "created_at": "2026-02-24T19:56:24.488Z",
+    "updated_at": "2026-02-24T19:56:24.488Z",
+    "_reason": "deceased"
+  },
+  {
+    "id": "650afcdc-967d-4f80-8611-f65de064e813",
+    "name": "Serena",
+    "size": "medium",
+    "sex": "female",
+    "age": "",
+    "description": "Sexo: Feminino\nIdade: Nasceu em 2012\nData de entrada: 2024\nRaça: Podenga\nPorte: Médio\nPersonalidade: Meiga, muito carente e companheira\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipada, Vacinada, Esterilizada\nHistória: Abandonada no castelo da Póvoa, a Serena foi mais uma menina que certamente deixou de servir para caça e foi descartada. Uma menina muito meiga e com um jeitinho de ser tão doce. Receosa quando não conhece, mas muito facilmente se acaba por derreter por uma pessoa. Muito alegre e sorridente, a Serena já poucos dentes tem, mais uma prova do seu mau passado, mas agora o futuro dela mudou.",
+    "photo_url": "https://api.capapvl.org/images/dogs/serena/photo-01.jpg",
+    "photos": [
+      "https://api.capapvl.org/images/dogs/serena/photo-01.jpg",
+      "https://api.capapvl.org/images/dogs/serena/photo-03.jpg"
+    ],
+    "is_adopted": false,
+    "created_at": "2026-02-24T19:54:48.086Z",
+    "updated_at": "2026-02-24T19:54:48.086Z",
+    "_reason": "deceased"
+  }
+]

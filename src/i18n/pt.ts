@@ -138,7 +138,9 @@ const pt = {
     filterBySex: 'Filtrar por sexo',
     filterAll: 'Todos',
     filterSmall: 'Pequenos',
+    filterSmallMedium: 'Pequenos/Médios',
     filterMedium: 'Médios',
+    filterMediumLarge: 'Médios/Grandes',
     filterLarge: 'Grandes',
     filterFemale: '♀ Fêmea',
     filterMale: '♂ Macho',
@@ -210,7 +212,9 @@ const pt = {
   // ─── Shared Labels ─────────────────────────────────
   sizes: {
     small: 'Pequeno',
+    'small-medium': 'Pequeno/Médio',
     medium: 'Médio',
+    'medium-large': 'Médio/Grande',
     large: 'Grande',
   },
   sexes: {

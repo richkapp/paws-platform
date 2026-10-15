@@ -3,6 +3,7 @@ import { capaApi } from '../lib/capaApi';
 import { getTranslations, type Locale, type Translations } from '../i18n';
 import type { Dog } from '../lib/capaApi';
 import { capaDogs } from '../data/capaDogs';
+import { DOG_SIZES, type DogSize } from '../lib/dogFacts';
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
 
@@ -41,7 +42,7 @@ const STATIC_ADMIN_PASSWORD_SHA256 = import.meta.env.PUBLIC_STATIC_ADMIN_PASSWOR
 
 interface DogForm {
   name: string;
-  size: 'small' | 'medium' | 'large';
+  size: DogSize;
   sex: 'male' | 'female' | '';
   age: string;
   description: string;
@@ -50,6 +51,8 @@ interface DogForm {
   story: string;
   breed: string;
   entryDate: string;
+  foster: string;
+  note: string;
   socHumans: 'yes' | 'no' | 'unknown';
   socMales: 'yes' | 'no' | 'unknown';
   socFemales: 'yes' | 'no' | 'unknown';
@@ -69,6 +72,8 @@ const EMPTY_FORM: DogForm = {
   story: '',
   breed: '',
   entryDate: '',
+  foster: '',
+  note: '',
   socHumans: 'unknown',
   socMales: 'unknown',
   socFemales: 'unknown',
@@ -173,11 +178,7 @@ function buildDescription(form: DogForm, t: Translations): string {
     male: t.admin.descSexMale,
     female: t.admin.descSexFemale,
   };
-  const sizeDisplay: Record<string, string> = {
-    small: t.sizes.small,
-    medium: t.sizes.medium,
-    large: t.sizes.large,
-  };
+  const sizeDisplay: Record<string, string> = t.sizes;
   const sexLabel = sexDisplay[form.sex];
   if (sexLabel) lines.push(`${t.admin.descSex}: ${sexLabel}`);
   if (form.age) lines.push(`${t.admin.descAge}: ${form.age}`);
@@ -210,6 +211,8 @@ function buildDescription(form: DogForm, t: Translations): string {
   if (form.sterilized) medical.push(t.admin.descSterilized);
   if (medical.length > 0) lines.push(medical.join(', '));
 
+  if (form.foster.trim()) lines.push(`Acolhimento: ${form.foster.trim()}`);
+  if (form.note.trim()) lines.push(`Nota: ${form.note.trim()}`);
   if (form.story) lines.push(`${t.admin.descStory}: ${form.story}`);
 
   return lines.join('\n');
@@ -233,7 +236,9 @@ function parseDescriptionToForm(description: string, base: DogForm, t: Translati
       if (key === personality_key) form.personality = val;
       else if (key === story_key) form.story = val;
       else if (key === breed_key) form.breed = val;
-      else if (key === entry_key) form.entryDate = val;
+      else if (key === entry_key || key === 'deu entrada') form.entryDate = val;
+      else if (key === 'acolhimento') form.foster = val;
+      else if (key === 'nota') form.note = val;
       // Sexo and Idade/Porte are already DB columns, skip
     } else {
       const trimmed = line.trim();
@@ -538,9 +543,9 @@ function DogFormPanel({ initial, existingDog, backendMode, onSave, onCancel, t }
             onChange={(e) => setForm({ ...form, size: e.target.value as DogForm['size'] })}
             className="w-full px-4 py-3 rounded-xl border border-warm-200 bg-warm-50 text-warm-900 text-sm focus:outline-none focus:ring-2 focus:ring-primary-400 focus:border-primary-400"
           >
-            <option value="small">{t.sizes.small}</option>
-            <option value="medium">{t.sizes.medium}</option>
-            <option value="large">{t.sizes.large}</option>
+            {DOG_SIZES.map((size) => (
+              <option key={size} value={size}>{t.sizes[size]}</option>
+            ))}
           </select>
         </div>
 
@@ -591,6 +596,32 @@ function DogFormPanel({ initial, existingDog, backendMode, onSave, onCancel, t }
             onChange={(e) => setForm({ ...form, entryDate: e.target.value })}
             className="w-full px-4 py-3 rounded-xl border border-warm-200 bg-warm-50 text-warm-900 placeholder-warm-400 text-sm focus:outline-none focus:ring-2 focus:ring-primary-400 focus:border-primary-400"
             placeholder={t.admin.formEntryDatePlaceholder}
+          />
+        </div>
+      </div>
+
+      {/* Foster + note */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <div>
+          <label className="block text-sm font-semibold text-warm-700 mb-1.5">Acolhimento</label>
+          <select
+            value={form.foster}
+            onChange={(e) => setForm({ ...form, foster: e.target.value })}
+            className="w-full px-4 py-3 rounded-xl border border-warm-200 bg-warm-50 text-warm-900 text-sm focus:outline-none focus:ring-2 focus:ring-primary-400 focus:border-primary-400"
+          >
+            <option value="">No abrigo</option>
+            <option value="Família de acolhimento temporário">Em família de acolhimento</option>
+            <option value="Hotel de acolhimento">Em hotel de acolhimento</option>
+          </select>
+        </div>
+        <div>
+          <label className="block text-sm font-semibold text-warm-700 mb-1.5">Nota (a saber antes de adotar)</label>
+          <input
+            type="text"
+            value={form.note}
+            onChange={(e) => setForm({ ...form, note: e.target.value })}
+            className="w-full px-4 py-3 rounded-xl border border-warm-200 bg-warm-50 text-warm-900 placeholder-warm-400 text-sm focus:outline-none focus:ring-2 focus:ring-primary-400 focus:border-primary-400"
+            placeholder="Ex: Preferencialmente numa casa sem outros cães"
           />
         </div>
       </div>
@@ -821,7 +852,7 @@ interface DashboardProps {
   t: Translations;
 }
 
-type SizeFilter = 'all' | 'small' | 'medium' | 'large';
+type SizeFilter = 'all' | DogSize;
 type SexFilter = 'all' | 'male' | 'female';
 type StatusFilter = 'all' | 'available' | 'adopted';
 
@@ -835,11 +866,7 @@ function Dashboard({ dogs, backendMode, onRefresh, onAdd, onEdit, onLogout, t }:
   const [deleting, setDeleting] = useState(false);
   const [filtersOpen, setFiltersOpen] = useState(false);
 
-  const sizeLabels: Record<string, string> = {
-    small: t.sizes.small,
-    medium: t.sizes.medium,
-    large: t.sizes.large,
-  };
+  const sizeLabels: Record<string, string> = t.sizes;
   const sexLabels: Record<string, string> = {
     male: t.sexes.male,
     female: t.sexes.female,
@@ -1001,9 +1028,9 @@ function Dashboard({ dogs, backendMode, onRefresh, onAdd, onEdit, onLogout, t }:
                 className="px-4 py-2.5 rounded-xl border border-warm-200 bg-white text-warm-900 text-sm focus:outline-none focus:ring-2 focus:ring-primary-400 focus:border-primary-400 min-h-[44px]"
               >
                 <option value="all">{t.admin.allSizes}</option>
-                <option value="small">{t.sizes.small}</option>
-                <option value="medium">{t.sizes.medium}</option>
-                <option value="large">{t.sizes.large}</option>
+                {DOG_SIZES.map((size) => (
+                  <option key={size} value={size}>{t.sizes[size]}</option>
+                ))}
               </select>
               <select
                 value={sexFilter}

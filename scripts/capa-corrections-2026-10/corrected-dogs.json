@@ -1,0 +1,2805 @@
+[
+  {
+    "id": "35a53d19-adbd-4438-9e1d-7f3022d60fb0",
+    "name": "Abby",
+    "size": "medium",
+    "sex": "female",
+    "age": "",
+    "description": "Sexo: Feminino\nIdade: Nasceu em 2019\nData de entrada: 2022\nRaça: X Podenga\nPorte: Médio\nPersonalidade: Meiga, brincalhona e companheira\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipada, Vacinada, Esterilizada\nHistória: Mais uma vítima de abandono. Tinha sido mãe, foi recolhida juntamente com os seus 5 filhos recém-nascidos.",
+    "photo_url": "/images/dogs/abby/photo-01.jpg",
+    "photos": [
+      "/images/dogs/abby/photo-01.jpg",
+      "/images/dogs/abby/photo-03.jpg",
+      "/images/dogs/abby/photo-04.jpg",
+      "/images/dogs/abby/photo-05.jpg",
+      "/images/dogs/abby/photo-06.jpg",
+      "/images/dogs/abby/photo-07.jpg",
+      "/images/dogs/abby/photo-08.jpg",
+      "/images/dogs/abby/photo-09.jpg",
+      "/images/dogs/abby/photo-10.jpg",
+      "/images/dogs/abby/photo-11.jpg",
+      "/images/dogs/abby/photo-12.jpg",
+      "/images/dogs/abby/photo-13.jpg"
+    ],
+    "is_adopted": true,
+    "traits": {},
+    "created_at": "2026-02-24T19:56:35.544Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "bf25a35f-5a59-4476-8d16-db371667e119",
+    "name": "Afonso",
+    "size": "medium",
+    "sex": "male",
+    "age": "Nasceu em 2020",
+    "description": "Sexo: Masculino\nIdade: Nasceu em 2020\nData de entrada: 2023\nRaça: Cruzado de Podengo\nPorte: Médio\nPersonalidade: Meigo, ativo e brincalhão\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipado, Vacinado, Esterilizado\nHistória: Abandonado numa zona erma com uma cadela. Não aceitava o toque; só com armadilha foi possível o resgate. Mostrou-se logo meigo, apenas assustado.",
+    "photo_url": "/images/dogs/afonso/photo-01.jpg",
+    "photos": [
+      "/images/dogs/afonso/photo-01.jpg",
+      "/images/dogs/afonso/photo-03.jpg",
+      "/images/dogs/afonso/photo-04.jpg",
+      "/images/dogs/afonso/photo-05.jpg",
+      "/images/dogs/afonso/photo-06.jpg",
+      "/images/dogs/afonso/photo-07.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 3,
+      "receio": 0,
+      "carente": false
+    },
+    "created_at": "2026-02-24T19:56:42.132Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "f1c5b890-6a97-4cad-8229-e94eddbd515d",
+    "name": "Aisha",
+    "size": "medium-large",
+    "sex": "female",
+    "age": "Nasceu em 2014",
+    "description": "Sexo: Feminino\nIdade: Nasceu em 2014\nData de entrada: 2015\nRaça: Indefinida\nPorte: Médio/Grande\nPersonalidade: Calma, muito carente e companheira\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipada, Vacinada, Esterilizada\nHistória: Deixada acorrentada ao portão do abrigo numa noite fria e chuvosa de inverno. Está connosco desde 2015.",
+    "photo_url": "/images/dogs/aisha/photo-01.jpg",
+    "photos": [
+      "/images/dogs/aisha/photo-01.jpg",
+      "/images/dogs/aisha/photo-03.jpg",
+      "/images/dogs/aisha/photo-04.jpg",
+      "/images/dogs/aisha/photo-05.jpg",
+      "/images/dogs/aisha/photo-06.jpg",
+      "/images/dogs/aisha/photo-07.jpg",
+      "/images/dogs/aisha/photo-08.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 1,
+      "receio": 0,
+      "carente": true
+    },
+    "created_at": "2026-02-24T19:56:46.917Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "ea404451-14d2-48be-94a6-e3784be6ac33",
+    "name": "Alana",
+    "size": "medium",
+    "sex": "female",
+    "age": "Nasceu em 2019",
+    "description": "Sexo: Feminino\nIdade: Nasceu em 2019\nData de entrada: 2023\nRaça: Cruzada de Podengo\nPorte: Médio\nPersonalidade: Meiga, tranquila e companheira\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nSociável com gatos\nChipada, Vacinada, Esterilizada\nAcolhimento: Família de acolhimento temporário\nNota: Tem um membro amputado. Adapta-se bem e corre sem dificuldade.\nHistória: Resgatada com um membro quase amputado, provavelmente por uma armadilha. Foi operada e recuperou bem. Receia quem não conhece, mas ganha-se a sua confiança com facilidade.",
+    "photo_url": "/images/dogs/alana/photo-01.jpg",
+    "photos": [
+      "/images/dogs/alana/photo-01.jpg",
+      "/images/dogs/alana/photo-03.jpg",
+      "/images/dogs/alana/photo-04.jpg",
+      "/images/dogs/alana/photo-05.jpg",
+      "/images/dogs/alana/photo-06.jpg",
+      "/images/dogs/alana/photo-07.jpg",
+      "/images/dogs/alana/photo-08.jpg",
+      "/images/dogs/alana/photo-09.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 1,
+      "receio": 1,
+      "carente": false
+    },
+    "created_at": "2026-02-24T19:56:52.357Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "fecc60f0-0b86-406a-a91d-b5cdc64b21ef",
+    "name": "Amy",
+    "size": "medium",
+    "sex": "female",
+    "age": "Nasceu em 2022",
+    "description": "Sexo: Feminino\nIdade: Nasceu em 2022\nData de entrada: 2022\nRaça: Indefinida\nPorte: Médio\nPersonalidade: Meiga, muito companheira e energética\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipada, Vacinada, Esterilizada\nHistória: Abandonada com os quatro irmãos e a mãe, com poucos dias de vida. A Amy nunca teve nenhum interessado.",
+    "photo_url": "/images/dogs/amy/photo-01.jpg",
+    "photos": [
+      "/images/dogs/amy/photo-01.jpg",
+      "/images/dogs/amy/photo-03.jpg",
+      "/images/dogs/amy/photo-04.jpg",
+      "/images/dogs/amy/photo-05.jpg",
+      "/images/dogs/amy/photo-06.jpg",
+      "/images/dogs/amy/photo-07.jpg",
+      "/images/dogs/amy/photo-08.jpg",
+      "/images/dogs/amy/photo-09.jpg",
+      "/images/dogs/amy/photo-10.jpg",
+      "/images/dogs/amy/photo-11.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 3,
+      "receio": 0,
+      "carente": false
+    },
+    "created_at": "2026-02-24T19:56:56.758Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "bb6a2c2b-8fec-4ae8-8e95-bb27ed603390",
+    "name": "Andy",
+    "size": "small-medium",
+    "sex": "male",
+    "age": "Nasceu em 2021",
+    "description": "Sexo: Masculino\nIdade: Nasceu em 2021\nData de entrada: 2021\nRaça: Podengo\nPorte: Pequeno/Médio\nPersonalidade: Ativo, muito meigo e brincalhão\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipado, Vacinado, Esterilizado\nHistória: Nasceu na rua com mais quatro irmãos. Todos os irmãos foram adotados; apenas o Andy nunca teve interessados.",
+    "photo_url": "/images/dogs/andy/photo-01.jpg",
+    "photos": [
+      "/images/dogs/andy/photo-01.jpg",
+      "/images/dogs/andy/photo-03.jpg",
+      "/images/dogs/andy/photo-04.jpg",
+      "/images/dogs/andy/photo-05.jpg",
+      "/images/dogs/andy/photo-06.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 3,
+      "receio": 0,
+      "carente": false
+    },
+    "created_at": "2026-02-24T19:55:16.181Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "a5ebdd7e-5976-4a19-80da-5ca4b5bfd64b",
+    "name": "Arisca",
+    "size": "small",
+    "sex": "female",
+    "age": "Nasceu em 2017",
+    "description": "Sexo: Feminino\nIdade: Nasceu em 2017\nData de entrada: 2021\nRaça: Indefinida\nPorte: Pequeno\nPersonalidade: Calma, meiga e muito companheira\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nSociável com gatos\nChipada, Vacinada, Esterilizada\nHistória: Abandonada perto de um restaurante, onde era alimentada. As filhas foram adotadas; a Arisca continua connosco.",
+    "photo_url": "/images/dogs/arisca/photo-01.jpg",
+    "photos": [
+      "/images/dogs/arisca/photo-01.jpg",
+      "/images/dogs/arisca/photo-03.jpg",
+      "/images/dogs/arisca/photo-04.jpg",
+      "/images/dogs/arisca/photo-05.jpg",
+      "/images/dogs/arisca/photo-06.jpg",
+      "/images/dogs/arisca/photo-07.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 1,
+      "receio": 1,
+      "carente": false
+    },
+    "created_at": "2026-02-24T19:55:19.890Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "5fd31126-e731-45a8-ae30-b662d83ce4f5",
+    "name": "Athos",
+    "size": "medium",
+    "sex": "male",
+    "age": "Nasceu em 2011",
+    "description": "Sexo: Masculino\nIdade: Nasceu em 2011\nData de entrada: 2011\nRaça: Podengo\nPorte: Médio\nPersonalidade: Muito calmo e meigo\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipado, Vacinado, Castrado\nHistória: Abandonado em bebé, cresceu no abrigo. É um dos residentes mais antigos, está connosco desde 2011.",
+    "photo_url": "/images/dogs/athos/photo-01.jpg",
+    "photos": [
+      "/images/dogs/athos/photo-01.jpg",
+      "/images/dogs/athos/photo-03.jpg",
+      "/images/dogs/athos/photo-04.jpg",
+      "/images/dogs/athos/photo-05.jpg",
+      "/images/dogs/athos/photo-06.jpg",
+      "/images/dogs/athos/photo-07.jpg",
+      "/images/dogs/athos/photo-08.jpg",
+      "/images/dogs/athos/photo-09.jpg",
+      "/images/dogs/athos/photo-10.jpg",
+      "/images/dogs/athos/photo-11.jpg",
+      "/images/dogs/athos/photo-12.jpg",
+      "/images/dogs/athos/photo-13.jpg",
+      "/images/dogs/athos/photo-14.jpg",
+      "/images/dogs/athos/photo-15.jpg",
+      "/images/dogs/athos/photo-16.jpg",
+      "/images/dogs/athos/photo-17.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 1,
+      "receio": 0,
+      "carente": false
+    },
+    "created_at": "2026-02-24T19:57:02.270Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "9a7cff8e-f263-4459-8ca9-7829bbc763ba",
+    "name": "Ayla",
+    "size": "medium",
+    "sex": "female",
+    "age": "Nasceu em 2021",
+    "description": "Sexo: Feminino\nIdade: Nasceu em 2021\nData de entrada: 2022\nRaça: Indefinida\nPorte: Médio\nPersonalidade: Muito meiga, companheira e fiel\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nSociável com gatos\nChipada, Vacinada, Esterilizada\nHistória: Abandonada com a mãe perto do canil, presas por um arame para que não conseguissem fugir.",
+    "photo_url": "/images/dogs/ayla/photo-01.jpg",
+    "photos": [
+      "/images/dogs/ayla/photo-01.jpg",
+      "/images/dogs/ayla/photo-03.jpg",
+      "/images/dogs/ayla/photo-04.jpg",
+      "/images/dogs/ayla/photo-05.jpg",
+      "/images/dogs/ayla/photo-06.jpg",
+      "/images/dogs/ayla/photo-07.jpg",
+      "/images/dogs/ayla/photo-08.jpg",
+      "/images/dogs/ayla/photo-09.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 2,
+      "receio": 0,
+      "carente": false
+    },
+    "created_at": "2026-02-24T19:57:11.429Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "083a85e3-628b-43c7-8a42-4180999354aa",
+    "name": "Bailey",
+    "size": "medium-large",
+    "sex": "female",
+    "age": "Nasceu em 2017",
+    "description": "Sexo: Feminino\nIdade: Nasceu em 2017\nData de entrada: 2020\nRaça: Indefinida\nPorte: Médio/Grande\nPersonalidade: Calma, meiga e muito brincalhona\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nSociável com gatos\nChipada, Vacinada, Esterilizada\nHistória: Encontrada com nove bebés. Os filhos foram todos adotados; a Bailey continua connosco.",
+    "photo_url": "/images/dogs/bailey/photo-01.jpg",
+    "photos": [
+      "/images/dogs/bailey/photo-01.jpg",
+      "/images/dogs/bailey/photo-03.jpg",
+      "/images/dogs/bailey/photo-04.jpg",
+      "/images/dogs/bailey/photo-05.jpg",
+      "/images/dogs/bailey/photo-06.jpg",
+      "/images/dogs/bailey/photo-07.jpg",
+      "/images/dogs/bailey/photo-08.jpg",
+      "/images/dogs/bailey/photo-09.jpg",
+      "/images/dogs/bailey/photo-10.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 2,
+      "receio": 0,
+      "carente": true,
+      "padrinho": true
+    },
+    "created_at": "2026-02-24T19:55:49.861Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "dd42c712-c028-4a14-9849-65d850d336bb",
+    "name": "Ballo",
+    "size": "large",
+    "sex": "male",
+    "age": "Nasceu em 2014",
+    "description": "Sexo: Masculino\nIdade: Nasceu em 2014\nData de entrada: 2018\nRaça: Cruzado de Pointer\nPorte: Grande\nPersonalidade: Meigo, energético e companheiro\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipado, Vacinado, Castrado\nHistória: Encontrado num estado de magreza avançado e com dermatite. Recuperou bem.",
+    "photo_url": "/images/dogs/ballo/photo-01.jpg",
+    "photos": [
+      "/images/dogs/ballo/photo-01.jpg",
+      "/images/dogs/ballo/photo-03.jpg",
+      "/images/dogs/ballo/photo-04.jpg",
+      "/images/dogs/ballo/photo-05.jpg",
+      "/images/dogs/ballo/photo-06.jpg",
+      "/images/dogs/ballo/photo-07.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 3,
+      "receio": 0,
+      "carente": false
+    },
+    "created_at": "2026-02-24T19:55:55.451Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "ad3c4e4a-bcf7-4dbe-9d0e-f9e1efb5f5f8",
+    "name": "Bart",
+    "size": "medium",
+    "sex": "male",
+    "age": "Nasceu em 2023",
+    "description": "Sexo: Masculino\nIdade: Nasceu em 2023\nData de entrada: 2023\nRaça: Indefinida\nPorte: Médio\nPersonalidade: Meigo, ativo e companheiro\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipado, Vacinado, Esterilizado\nHistória: Encontrado à corrente com a irmã, ambos com seis meses. Estavam magros e assustados; hoje são meninos completamente mudados.",
+    "photo_url": "/images/dogs/bart/photo-01.jpg",
+    "photos": [
+      "/images/dogs/bart/photo-01.jpg",
+      "/images/dogs/bart/photo-03.jpg",
+      "/images/dogs/bart/photo-04.jpg",
+      "/images/dogs/bart/photo-05.jpg",
+      "/images/dogs/bart/photo-06.jpg",
+      "/images/dogs/bart/photo-07.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 3,
+      "receio": 0,
+      "carente": false
+    },
+    "created_at": "2026-02-24T19:57:17.281Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "0a12efe5-f521-4d53-aec5-8c1b27fc3d30",
+    "name": "Batatinha",
+    "size": "medium",
+    "sex": "male",
+    "age": "Nasceu em 2019",
+    "description": "Sexo: Masculino\nIdade: Nasceu em 2019\nData de entrada: 2024\nRaça: Podengo\nPorte: Médio\nPersonalidade: Meigo e calmo\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nSociável com gatos\nChipado, Vacinado, Esterilizado\nAcolhimento: Família de acolhimento temporário\nHistória: Vítima de atropelamento, fez pensos com mel durante quase dois meses e, mesmo com todas as dores, portou-se sempre muito bem. Hoje está completamente recuperado, física e psicologicamente.",
+    "photo_url": "/images/dogs/batatinha/photo-01.jpg",
+    "photos": [
+      "/images/dogs/batatinha/photo-01.jpg",
+      "/images/dogs/batatinha/photo-03.jpg",
+      "/images/dogs/batatinha/photo-04.jpg",
+      "/images/dogs/batatinha/photo-05.jpg",
+      "/images/dogs/batatinha/photo-06.jpg",
+      "/images/dogs/batatinha/photo-07.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 1,
+      "receio": 0,
+      "carente": false
+    },
+    "created_at": "2026-02-24T19:57:23.783Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "17a7ea55-1822-45c9-99ac-c93291df1771",
+    "name": "Becas",
+    "size": "small",
+    "sex": "female",
+    "age": "",
+    "description": "Sexo: Feminino\nIdade: Nasceu em 2011\nData de entrada:2011\nRaça: Indefinida\nPorte: Pequeno/Médio\nPersonalidade: Assustada quando não conhece, mas muito meiga e tranquila\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipada, Vacinada, Esterilizada\nHistória: Foi abandonada em bebé, e cresceu no abrigo. A Becas ainda chegou a ser adotada, mas sofreu maus tratos, e foi recolhida novamente para o abrigo onde se encontra até hoje.",
+    "photo_url": "/images/dogs/becas/photo-01.jpg",
+    "photos": [
+      "/images/dogs/becas/photo-01.jpg",
+      "/images/dogs/becas/photo-03.jpg",
+      "/images/dogs/becas/photo-04.jpg",
+      "/images/dogs/becas/photo-05.jpg",
+      "/images/dogs/becas/photo-06.jpg",
+      "/images/dogs/becas/photo-07.jpg",
+      "/images/dogs/becas/photo-08.jpg"
+    ],
+    "is_adopted": true,
+    "traits": {},
+    "created_at": "2026-02-24T19:55:22.923Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "cc990a4a-f07f-4352-9b8b-6f1ad26aad12",
+    "name": "Belinha",
+    "size": "medium",
+    "sex": "female",
+    "age": "Nasceu em 2020",
+    "description": "Sexo: Feminino\nIdade: Nasceu em 2020\nData de entrada: 2022\nRaça: Podenga\nPorte: Médio\nPersonalidade: Tímida quando não conhece, mas muito meiga\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipada, Vacinada, Esterilizada\nAcolhimento: Família de acolhimento temporário\nHistória: Mais uma podenga abandonada ainda jovem. Mostrou-se receosa no resgate, mas está hoje muito mais confiante nos seres humanos.",
+    "photo_url": "/images/dogs/belinha/photo-01.jpg",
+    "photos": [
+      "/images/dogs/belinha/photo-01.jpg",
+      "/images/dogs/belinha/photo-03.jpg",
+      "/images/dogs/belinha/photo-04.jpg",
+      "/images/dogs/belinha/photo-05.jpg",
+      "/images/dogs/belinha/photo-06.jpg",
+      "/images/dogs/belinha/photo-07.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 2,
+      "receio": 1,
+      "carente": false
+    },
+    "created_at": "2026-02-24T19:57:28.208Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "ab9e1d74-b552-4773-bd89-637f9d076d4b",
+    "name": "Bella",
+    "size": "medium",
+    "sex": "female",
+    "age": "",
+    "description": "",
+    "photo_url": "/images/dogs/bella/photo-01.jpg",
+    "photos": [
+      "/images/dogs/bella/photo-01.jpg",
+      "/images/dogs/bella/photo-03.jpg"
+    ],
+    "is_adopted": true,
+    "traits": {},
+    "created_at": "2026-02-24T19:57:32.190Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "a274d147-2c17-4832-a317-7603ee165570",
+    "name": "Benji",
+    "size": "large",
+    "sex": "male",
+    "age": "Nasceu em 2020",
+    "description": "Sexo: Masculino\nIdade: Nasceu em 2020\nData de entrada: 2021\nRaça: Indefinida\nPorte: Grande\nPersonalidade: Ativo, meigo e companheiro\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipado, Vacinado, Castrado\nNota: Preferencialmente numa casa sem outros cães.\nHistória: Vítima de atropelamento, recuperou rapidamente. Hoje está saudável e cheio de energia: seria o parceiro perfeito para uma família ativa.",
+    "photo_url": "/images/dogs/benji/photo-01.jpg",
+    "photos": [
+      "/images/dogs/benji/photo-01.jpg",
+      "/images/dogs/benji/photo-03.jpg",
+      "/images/dogs/benji/photo-04.jpg",
+      "/images/dogs/benji/photo-05.jpg",
+      "/images/dogs/benji/photo-06.jpg",
+      "/images/dogs/benji/photo-07.jpg",
+      "/images/dogs/benji/photo-08.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 3,
+      "receio": 0,
+      "carente": false
+    },
+    "created_at": "2026-02-24T19:55:59.406Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "fa845f72-3460-48ea-80a6-de3d282099c4",
+    "name": "Bernardo",
+    "size": "large",
+    "sex": "male",
+    "age": "Nasceu em 2020",
+    "description": "Sexo: Masculino\nIdade: Nasceu em 2020\nData de entrada: 2022\nRaça: Indefinida\nPorte: Grande\nPersonalidade: Receoso quando não conhece, mas depressa mostra a sua meiguice e lealdade\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipado, Vacinado, Esterilizado\nHistória: Vivia na rua com a Bianca. Chegou muito magro, com sarna e medo terrível de humanos. Com paciência ganhou confiança e hoje é muito meigo, brincalhão e fiel.",
+    "photo_url": "/images/dogs/bernardo/photo-01.jpg",
+    "photos": [
+      "/images/dogs/bernardo/photo-01.jpg",
+      "/images/dogs/bernardo/photo-03.jpg",
+      "/images/dogs/bernardo/photo-04.jpg",
+      "/images/dogs/bernardo/photo-05.jpg",
+      "/images/dogs/bernardo/photo-06.jpg",
+      "/images/dogs/bernardo/photo-07.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 2,
+      "receio": 1,
+      "carente": false
+    },
+    "created_at": "2026-02-24T19:56:03.504Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "d9958d4a-8ce8-4a19-9c4b-00f5b8817499",
+    "name": "Bia",
+    "size": "medium",
+    "sex": "female",
+    "age": "Nasceu em 2020",
+    "description": "Sexo: Feminino\nIdade: Nasceu em 2020\nData de entrada: 2020\nRaça: Indefinida\nPorte: Médio\nPersonalidade: Assustada quando não conhece, mas muito meiga e companheira\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipada, Vacinada, Esterilizada\nHistória: Nasceu na rua com as irmãs. Foram todas recolhidas com a mãe, mas nunca saíram do abrigo.",
+    "photo_url": "/images/dogs/bia/photo-01.jpg",
+    "photos": [
+      "/images/dogs/bia/photo-01.jpg",
+      "/images/dogs/bia/photo-03.jpg",
+      "/images/dogs/bia/photo-04.jpg",
+      "/images/dogs/bia/photo-05.jpg",
+      "/images/dogs/bia/photo-06.jpg",
+      "/images/dogs/bia/photo-07.jpg",
+      "/images/dogs/bia/photo-08.jpg",
+      "/images/dogs/bia/photo-09.jpg",
+      "/images/dogs/bia/photo-10.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 2,
+      "receio": 1,
+      "carente": false
+    },
+    "created_at": "2026-02-24T19:57:33.674Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "e0ffb948-cd14-4388-9ecd-f565eb664c2b",
+    "name": "Bianca",
+    "size": "small-medium",
+    "sex": "female",
+    "age": "Nasceu em 2018",
+    "description": "Sexo: Feminino\nIdade: Nasceu em 2018\nData de entrada: 2022\nRaça: Indefinida\nPorte: Pequeno/Médio\nPersonalidade: Receosa quando não conhece, muito independente\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipada, Vacinada, Esterilizada\nHistória: Vivia na rua com o Bernardo. Hoje já aceita o toque, mas continua a gostar da sua independência, e é muito companheira à sua maneira.",
+    "photo_url": "/images/dogs/bianca/photo-01.jpg",
+    "photos": [
+      "/images/dogs/bianca/photo-01.jpg",
+      "/images/dogs/bianca/photo-03.jpg",
+      "/images/dogs/bianca/photo-04.jpg",
+      "/images/dogs/bianca/photo-05.jpg",
+      "/images/dogs/bianca/photo-06.jpg",
+      "/images/dogs/bianca/photo-07.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 2,
+      "receio": 2,
+      "carente": false
+    },
+    "created_at": "2026-02-24T19:55:28.829Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "83e48b28-9bac-4e73-9534-d622e33a4fe7",
+    "name": "Black",
+    "size": "medium",
+    "sex": "male",
+    "age": "Nasceu em 2018",
+    "description": "Sexo: Masculino\nIdade: Nasceu em 2018\nData de entrada: 2018\nRaça: Indefinida\nPorte: Médio\nPersonalidade: Muito meigo e tranquilo\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipado, Vacinado, Castrado\nHistória: Abandonado em bebé, cresceu no abrigo.",
+    "photo_url": "/images/dogs/black/photo-01.jpg",
+    "photos": [
+      "/images/dogs/black/photo-01.jpg",
+      "/images/dogs/black/photo-03.jpg",
+      "/images/dogs/black/photo-04.jpg",
+      "/images/dogs/black/photo-05.jpg",
+      "/images/dogs/black/photo-06.jpg",
+      "/images/dogs/black/photo-07.jpg",
+      "/images/dogs/black/photo-08.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 1,
+      "receio": 1,
+      "carente": false,
+      "padrinho": true
+    },
+    "created_at": "2026-02-24T19:57:38.886Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "7898db8b-4276-4613-a077-0eef52bb9b52",
+    "name": "Bolt",
+    "size": "medium",
+    "sex": "male",
+    "age": "",
+    "description": "",
+    "photo_url": "/images/dogs/bolt/photo-01.jpg",
+    "photos": [
+      "/images/dogs/bolt/photo-01.jpg",
+      "/images/dogs/bolt/photo-03.jpg",
+      "/images/dogs/bolt/photo-04.jpg",
+      "/images/dogs/bolt/photo-05.jpg",
+      "/images/dogs/bolt/photo-06.jpg",
+      "/images/dogs/bolt/photo-07.jpg"
+    ],
+    "is_adopted": true,
+    "traits": {},
+    "created_at": "2026-02-24T19:57:42.929Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "5e452f4e-5dbe-4448-a8c6-25ca8bfbf254",
+    "name": "Buggy",
+    "size": "large",
+    "sex": "male",
+    "age": "",
+    "description": "Sexo: Masculino\nIdade: Nasceu em 2010\nData de entrada:2013\nRaça: Indefinida\nPorte: Grande\nPersonalidade: Companheiro, meigo e brincalhão\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nSociável com gatos\nChipado, Vacinado, Castrado\nHistória: Foi deixado acorrentado ao portão do abrigo.",
+    "photo_url": "/images/dogs/buggy/photo-01.jpg",
+    "photos": [
+      "/images/dogs/buggy/photo-01.jpg",
+      "/images/dogs/buggy/photo-03.jpg",
+      "/images/dogs/buggy/photo-04.jpg",
+      "/images/dogs/buggy/photo-05.jpg",
+      "/images/dogs/buggy/photo-06.jpg",
+      "/images/dogs/buggy/photo-07.jpg",
+      "/images/dogs/buggy/photo-08.jpg",
+      "/images/dogs/buggy/photo-09.jpg"
+    ],
+    "is_adopted": true,
+    "traits": {},
+    "created_at": "2026-02-24T19:56:07.039Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "fb910db0-fec9-4145-9a93-2da5577ab5ed",
+    "name": "Cacau",
+    "size": "medium",
+    "sex": "male",
+    "age": "Nasceu em 2013",
+    "description": "Sexo: Masculino\nIdade: Nasceu em 2013\nData de entrada: 2020\nRaça: Indefinida\nPorte: Médio\nPersonalidade: Tímido no início, mas muito meigo e companheiro\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nSociável com gatos\nChipado, Vacinado, Castrado\nHistória: Recolhido de uma propriedade com mais dois cães, todos muito mal nutridos. No início estava retraído, mas depressa ganhámos a sua confiança.",
+    "photo_url": "/images/dogs/cacau/photo-01.jpg",
+    "photos": [
+      "/images/dogs/cacau/photo-01.jpg",
+      "/images/dogs/cacau/photo-03.jpg",
+      "/images/dogs/cacau/photo-04.jpg",
+      "/images/dogs/cacau/photo-05.jpg",
+      "/images/dogs/cacau/photo-06.jpg",
+      "/images/dogs/cacau/photo-07.jpg",
+      "/images/dogs/cacau/photo-08.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 2,
+      "receio": 1,
+      "carente": false,
+      "criancas": "sim",
+      "padrinho": true
+    },
+    "created_at": "2026-02-24T19:57:48.665Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "ac652b1e-bdfc-4990-b3b2-95f39986382b",
+    "name": "Calvin",
+    "size": "medium",
+    "sex": "male",
+    "age": "Nasceu em 2024",
+    "description": "Sexo: Masculino\nIdade: Nasceu em 2024\nData de entrada: 2024\nRaça: Indefinida\nPorte: Médio\nPersonalidade: Ativo, muito meigo e brincalhão\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipado, Vacinado, Esterilizado\nHistória: Abandonado à porta do abrigo com um irmão, com sarna e depois parvovirose. Recuperou sem sequelas e está pronto para seguir para uma família.",
+    "photo_url": "/images/dogs/calvin/photo-01.jpg",
+    "photos": [
+      "/images/dogs/calvin/photo-01.jpg",
+      "/images/dogs/calvin/photo-03.jpg",
+      "/images/dogs/calvin/photo-04.jpg",
+      "/images/dogs/calvin/photo-05.jpg",
+      "/images/dogs/calvin/photo-06.jpg",
+      "/images/dogs/calvin/photo-07.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 3,
+      "receio": 0,
+      "carente": false
+    },
+    "created_at": "2026-02-24T19:57:53.469Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "f1b2582b-b372-435a-847a-d7a6a4dfa474",
+    "name": "Capitão",
+    "size": "large",
+    "sex": "male",
+    "age": "Nasceu em 2013",
+    "description": "Sexo: Masculino\nIdade: Nasceu em 2013\nData de entrada: 2017\nRaça: Castro Laboreiro\nPorte: Grande\nPersonalidade: Calmo, muito meigo e companheiro\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sociável com gatos\nChipado, Vacinado, Castrado\nNota: Dá-se com crianças desde que não lhe tentem levantar as patas, e o mesmo vale para adultos. Não pode viver junto ou perto de gado: cabras, ovelhas e sobretudo vacas.\nHistória: Retirado de uma quinta com mais quatro cães, em péssimo estado. Todos foram recuperados e adotados. Menos o Capitão.",
+    "photo_url": "/images/dogs/capitao/photo-01.jpg",
+    "photos": [
+      "/images/dogs/capitao/photo-01.jpg",
+      "/images/dogs/capitao/photo-03.jpg",
+      "/images/dogs/capitao/photo-04.jpg",
+      "/images/dogs/capitao/photo-05.jpg",
+      "/images/dogs/capitao/photo-06.jpg",
+      "/images/dogs/capitao/photo-07.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 1,
+      "receio": 0,
+      "carente": false,
+      "aves": "nao",
+      "criancas": "sim"
+    },
+    "created_at": "2026-02-24T20:01:50.879Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "c7803426-a75d-4abc-80f8-ba589581ec4e",
+    "name": "Carlota",
+    "size": "medium",
+    "sex": "female",
+    "age": "Nasceu em 2023",
+    "description": "Sexo: Feminino\nIdade: Nasceu em 2023\nData de entrada: 2023\nRaça: Indefinida\nPorte: Médio\nPersonalidade: Receosa quando não conhece, mas meiga e brincalhona\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipada, Vacinada, Esterilizada\nNota: Não é muito de mimo. Prefere a companhia de outros cães.\nHistória: Nasceu na rua e deu entrada já com perto de seis meses. Confia em quem conhece, mas prefere a companhia dos seus amigos de quatro patas.",
+    "photo_url": "/images/dogs/carlota/photo-01.jpg",
+    "photos": [
+      "/images/dogs/carlota/photo-01.jpg",
+      "/images/dogs/carlota/photo-03.jpg",
+      "/images/dogs/carlota/photo-04.jpg",
+      "/images/dogs/carlota/photo-05.jpg",
+      "/images/dogs/carlota/photo-06.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 2,
+      "receio": 2,
+      "carente": false
+    },
+    "created_at": "2026-02-24T19:57:59.006Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "9d862af0-f36b-4ce5-a653-4180ba2573a8",
+    "name": "Channel",
+    "size": "medium",
+    "sex": "female",
+    "age": "",
+    "description": "Sexo: Feminino\nPorte: Médio\nPersonalidade: Calma e meiga, mas receosa com estranhos\nSociável com humanos\nNão sabemos se é sociável com machos\nNão sabemos se é sociável com fêmeas\nNão sabemos se é sociável com gatos\nNota: Ficha ainda por completar: não há registo de idade, raça, saúde nem de como se dá com outros cães ou gatos. A equipa esclarece tudo isso na visita.\nHistória: Precisa de tempo para confiar em quem não conhece. Dado o tempo, é uma cadela calma e meiga.",
+    "photo_url": "/images/dogs/channel/photo-01.jpg",
+    "photos": [
+      "/images/dogs/channel/photo-01.jpg",
+      "/images/dogs/channel/photo-03.jpg",
+      "/images/dogs/channel/photo-04.jpg",
+      "/images/dogs/channel/photo-05.jpg",
+      "/images/dogs/channel/photo-06.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 1,
+      "receio": 2,
+      "carente": false
+    },
+    "created_at": "2026-02-24T19:58:02.825Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "12f70d22-128d-426e-a40b-41f5657fcc8c",
+    "name": "Charlie",
+    "size": "small-medium",
+    "sex": "male",
+    "age": "Nasceu em 2012",
+    "description": "Sexo: Masculino\nIdade: Nasceu em 2012\nData de entrada: 2012\nRaça: Indefinida\nPorte: Pequeno/Médio\nPersonalidade: Receoso quando não conhece, mas muito meigo e calmo\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipado, Vacinado, Castrado\nHistória: Abandonado em bebé, cresceu no abrigo. Está connosco desde 2012.",
+    "photo_url": "/images/dogs/charlie/photo-01.jpg",
+    "photos": [
+      "/images/dogs/charlie/photo-01.jpg",
+      "/images/dogs/charlie/photo-03.jpg",
+      "/images/dogs/charlie/photo-04.jpg",
+      "/images/dogs/charlie/photo-05.jpg",
+      "/images/dogs/charlie/photo-06.jpg",
+      "/images/dogs/charlie/photo-07.jpg",
+      "/images/dogs/charlie/photo-08.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 1,
+      "receio": 1,
+      "carente": false
+    },
+    "created_at": "2026-02-24T19:55:32.997Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "f79c62df-b74e-4b98-a9ae-471357a5b0ec",
+    "name": "Chico",
+    "size": "medium",
+    "sex": "male",
+    "age": "Nasceu em 2015",
+    "description": "Sexo: Masculino\nIdade: Nasceu em 2015\nData de entrada: 2018\nRaça: Cruzado de Labrador\nPorte: Médio\nPersonalidade: Companheiro, meigo e brincalhão\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipado, Vacinado, Castrado\nAcolhimento: Família de acolhimento temporário\nHistória: Retirado de uma situação de maus tratos e negligência. Hoje o Chico é um cão completamente mudado: feliz e amado.",
+    "photo_url": "/images/dogs/chico/photo-01.jpg",
+    "photos": [
+      "/images/dogs/chico/photo-01.jpg",
+      "/images/dogs/chico/photo-03.jpg",
+      "/images/dogs/chico/photo-04.jpg",
+      "/images/dogs/chico/photo-05.jpg",
+      "/images/dogs/chico/photo-06.jpg",
+      "/images/dogs/chico/photo-07.jpg",
+      "/images/dogs/chico/photo-08.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 2,
+      "receio": 0,
+      "carente": false
+    },
+    "created_at": "2026-02-24T19:58:06.795Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "cee28e33-b83e-5d4c-9223-fdd067b67d48",
+    "name": "Chiquinho",
+    "size": "medium",
+    "sex": "male",
+    "age": "Nasceu em 2024",
+    "description": "Sexo: Masculino\nIdade: Nasceu em 2024\nData de entrada: 2025\nRaça: Indefinida\nPorte: Médio\nPersonalidade: Meigo, muito ativo e brincalhão\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipado, Vacinado, Esterilizado\nHistória: Retirado ao tutor por maus tratos denunciados por vizinhos. Apesar de tudo, confia a 100% no ser humano.",
+    "photo_url": "",
+    "photos": [],
+    "is_adopted": false,
+    "traits": {
+      "energia": 3,
+      "receio": 0,
+      "carente": false,
+      "padrinho": true
+    },
+    "created_at": "2026-10-15T12:00:00+00:00",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "c55d27ff-9cb7-48c9-813e-48197e9e589a",
+    "name": "Clyde",
+    "size": "medium",
+    "sex": "male",
+    "age": "Nasceu em 2010",
+    "description": "Sexo: Masculino\nIdade: Nasceu em 2010\nData de entrada: 2010\nRaça: Indefinida\nPorte: Médio\nPersonalidade: Receoso quando não conhece, mas muito meigo e calmo\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipado, Vacinado\nNota: É o cão há mais tempo no abrigo: desde 2010.\nHistória: Encontrado com o irmão junto ao corpo da mãe, vítima de atropelamento. Nunca ultrapassaram o trauma.",
+    "photo_url": "/images/dogs/clyde/photo-01.jpg",
+    "photos": [
+      "/images/dogs/clyde/photo-01.jpg",
+      "/images/dogs/clyde/photo-03.jpg",
+      "/images/dogs/clyde/photo-04.jpg",
+      "/images/dogs/clyde/photo-05.jpg",
+      "/images/dogs/clyde/photo-06.jpg",
+      "/images/dogs/clyde/photo-07.jpg",
+      "/images/dogs/clyde/photo-08.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 1,
+      "receio": 1,
+      "carente": false
+    },
+    "created_at": "2026-02-24T19:58:12.110Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "14612369-2e18-4914-8b55-3f3ddf15e48d",
+    "name": "Dorito",
+    "size": "medium-large",
+    "sex": "male",
+    "age": "Nasceu em 2022",
+    "description": "Sexo: Masculino\nIdade: Nasceu em 2022\nData de entrada: 2024\nRaça: Indefinida\nPorte: Médio/Grande\nPersonalidade: Muito meigo, companheiro e ativo\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipado, Vacinado, Esterilizado\nAcolhimento: Hotel de acolhimento\nHistória: Vivia fechado num galinheiro, sem água nem alimento. Mesmo depois de tudo o que lhe fizeram, ainda confiava no ser humano.",
+    "photo_url": "/images/dogs/dorito/photo-01.jpg",
+    "photos": [
+      "/images/dogs/dorito/photo-01.jpg",
+      "/images/dogs/dorito/photo-03.jpg",
+      "/images/dogs/dorito/photo-04.jpg",
+      "/images/dogs/dorito/photo-05.jpg",
+      "/images/dogs/dorito/photo-06.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 3,
+      "receio": 0,
+      "carente": false
+    },
+    "created_at": "2026-02-24T19:58:16.446Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "947ae730-cd90-4052-b752-11ec996de586",
+    "name": "Duda",
+    "size": "medium",
+    "sex": "female",
+    "age": "Nasceu em 2018",
+    "description": "Sexo: Feminino\nIdade: Nasceu em 2018\nData de entrada: 2018\nRaça: Indefinida\nPorte: Médio\nPersonalidade: Meiga, muito brincalhona e extrovertida\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nSociável com gatos\nChipada, Vacinada, Esterilizada\nHistória: Abandonada em bebé, cresceu no abrigo.",
+    "photo_url": "/images/dogs/duda/photo-01.jpg",
+    "photos": [
+      "/images/dogs/duda/photo-01.jpg",
+      "/images/dogs/duda/photo-03.jpg",
+      "/images/dogs/duda/photo-04.jpg",
+      "/images/dogs/duda/photo-05.jpg",
+      "/images/dogs/duda/photo-06.jpg",
+      "/images/dogs/duda/photo-07.jpg",
+      "/images/dogs/duda/photo-08.jpg",
+      "/images/dogs/duda/photo-09.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 3,
+      "receio": 0,
+      "carente": false
+    },
+    "created_at": "2026-02-24T19:58:20.711Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "770956dd-743c-4924-a383-13c94f669d34",
+    "name": "Esmeralda",
+    "size": "medium",
+    "sex": "female",
+    "age": "",
+    "description": "Sexo: Feminino\nIdade: Nasceu em 2012\nData de entrada: 2012\nRaça: Indefinida\nPorte: Médio\nPersonalidade: Receosa quando não conhece, mas muito meiga e calma\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipada, Vacinada, Esterilizada\nHistória: Foi abandonada em bebé, e cresceu no abrigo.",
+    "photo_url": "/images/dogs/esmeralda/photo-01.jpg",
+    "photos": [
+      "/images/dogs/esmeralda/photo-01.jpg",
+      "/images/dogs/esmeralda/photo-03.jpg",
+      "/images/dogs/esmeralda/photo-04.jpg",
+      "/images/dogs/esmeralda/photo-05.jpg",
+      "/images/dogs/esmeralda/photo-06.jpg",
+      "/images/dogs/esmeralda/photo-07.jpg",
+      "/images/dogs/esmeralda/photo-08.jpg",
+      "/images/dogs/esmeralda/photo-09.jpg",
+      "/images/dogs/esmeralda/photo-10.jpg"
+    ],
+    "is_adopted": true,
+    "traits": {},
+    "created_at": "2026-02-24T19:58:26.458Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "38a75a11-ab4a-4b1b-bb61-6eb13f8c35ff",
+    "name": "Farrusco",
+    "size": "medium",
+    "sex": "male",
+    "age": "",
+    "description": "Sexo: Masculino\nIdade: Nasceu em 2019\nData de entrada: 2022\nRaça: Podengo\nPorte: Médio\nPersonalidade: Calmo e meigo\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nSociável com gatos\nChipado, Vacinado, Esterilizado\nHistória: Farrusco foi abandonado na nossa vila. Viveu durante alguns meses na rua, onde era feliz e cuidado por muitos, mas, infelizmente, também há gente muito má, que começaram a fazer mal ao Farrusco. Tivemos de o recolhe e a adaptação ao canil foi muito difícil, uma vez que estava habituado à liberdade. Os seus dias eram passados a chorar. Felizmente foi melhorando e, com amigos de box, ele melhorou bastante. Só necessita de uma família que o volto a dar a liberdade a que ele estava tão habituado.",
+    "photo_url": "/images/dogs/farrusco/photo-01.jpg",
+    "photos": [
+      "/images/dogs/farrusco/photo-01.jpg",
+      "/images/dogs/farrusco/photo-03.jpg",
+      "/images/dogs/farrusco/photo-04.jpg",
+      "/images/dogs/farrusco/photo-05.jpg",
+      "/images/dogs/farrusco/photo-06.jpg",
+      "/images/dogs/farrusco/photo-07.jpg"
+    ],
+    "is_adopted": true,
+    "traits": {},
+    "created_at": "2026-02-24T19:58:32.181Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "3e10f3df-a92d-4cbb-a426-8c9db0eb4cc2",
+    "name": "Feliz",
+    "size": "medium",
+    "sex": "male",
+    "age": "Nasceu em 2016",
+    "description": "Sexo: Masculino\nIdade: Nasceu em 2016\nData de entrada: 2021\nRaça: Cruzado de Podengo\nPorte: Médio\nPersonalidade: Meigo, ativo e companheiro\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nSociável com gatos\nChipado, Vacinado, Esterilizado\nHistória: Vivia nas ruas da Póvoa, onde era cuidado e alimentado por várias pessoas, até começar a ter comportamentos defensivos e ter de ser recolhido.",
+    "photo_url": "/images/dogs/feliz/photo-01.jpg",
+    "photos": [
+      "/images/dogs/feliz/photo-01.jpg",
+      "/images/dogs/feliz/photo-03.jpg",
+      "/images/dogs/feliz/photo-04.jpg",
+      "/images/dogs/feliz/photo-05.jpg",
+      "/images/dogs/feliz/photo-06.jpg",
+      "/images/dogs/feliz/photo-07.jpg",
+      "/images/dogs/feliz/photo-08.jpg",
+      "/images/dogs/feliz/photo-09.jpg",
+      "/images/dogs/feliz/photo-10.jpg",
+      "/images/dogs/feliz/photo-11.jpg",
+      "/images/dogs/feliz/photo-12.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 3,
+      "receio": 1,
+      "carente": false
+    },
+    "created_at": "2026-02-24T19:58:35.343Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "8da08466-5a53-4cd2-97a9-132e36ecd6bc",
+    "name": "Fiona",
+    "size": "small",
+    "sex": "female",
+    "age": "Nasceu em 2018",
+    "description": "Sexo: Feminino\nIdade: Nasceu em 2018\nData de entrada: 2018\nRaça: Indefinida\nPorte: Pequeno\nPersonalidade: Receosa ao início, mas muito meiga e carente\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipada, Vacinada, Esterilizada\nHistória: Chegou ainda bebé, abandonada com o irmão. Continua sensível e receosa quando não conhece, mas incrivelmente doce quando se sente segura. Só precisa de tempo e paciência.",
+    "photo_url": "/images/dogs/fiona/photo-01.jpg",
+    "photos": [
+      "/images/dogs/fiona/photo-01.jpg",
+      "/images/dogs/fiona/photo-03.jpg",
+      "/images/dogs/fiona/photo-04.jpg",
+      "/images/dogs/fiona/photo-05.jpg",
+      "/images/dogs/fiona/photo-06.jpg",
+      "/images/dogs/fiona/photo-07.jpg",
+      "/images/dogs/fiona/photo-08.jpg",
+      "/images/dogs/fiona/photo-09.jpg",
+      "/images/dogs/fiona/photo-10.jpg",
+      "/images/dogs/fiona/photo-11.jpg",
+      "/images/dogs/fiona/photo-12.jpg",
+      "/images/dogs/fiona/photo-13.jpg",
+      "/images/dogs/fiona/photo-14.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 2,
+      "receio": 2,
+      "carente": true
+    },
+    "created_at": "2026-02-24T19:55:43.349Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "e2930977-7061-4b11-8c5f-d118265ea7b8",
+    "name": "Flora",
+    "size": "medium",
+    "sex": "female",
+    "age": "Nasceu em 2021",
+    "description": "Sexo: Feminino\nIdade: Nasceu em 2021\nData de entrada: 2024\nRaça: Indefinida\nPorte: Médio\nPersonalidade: Meiga, muito carente e companheira\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipada, Vacinada, Esterilizada\nHistória: Abandonada à porta do abrigo presa com uma corrente, e gestante. Hoje vive livre de correntes, mas é muito dependente de contacto humano.",
+    "photo_url": "/images/dogs/flora/photo-01.jpg",
+    "photos": [
+      "/images/dogs/flora/photo-01.jpg",
+      "/images/dogs/flora/photo-03.jpg",
+      "/images/dogs/flora/photo-04.jpg",
+      "/images/dogs/flora/photo-05.jpg",
+      "/images/dogs/flora/photo-06.jpg",
+      "/images/dogs/flora/photo-07.jpg",
+      "/images/dogs/flora/photo-08.jpg",
+      "/images/dogs/flora/photo-09.jpg",
+      "/images/dogs/flora/photo-10.jpg",
+      "/images/dogs/flora/photo-11.jpg",
+      "/images/dogs/flora/photo-12.jpg",
+      "/images/dogs/flora/photo-13.jpg",
+      "/images/dogs/flora/photo-14.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 2,
+      "receio": 0,
+      "carente": true
+    },
+    "created_at": "2026-02-24T19:58:41.630Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "8caa3c3b-0900-4ad7-8de5-32fbd6075e9b",
+    "name": "Frida",
+    "size": "medium",
+    "sex": "female",
+    "age": "Nasceu em 2020",
+    "description": "Sexo: Feminino\nIdade: Nasceu em 2020\nData de entrada: 2020\nRaça: Cruzada de Podengo\nPorte: Médio\nPersonalidade: Muito meiga e extrovertida\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipada, Vacinada, Esterilizada\nHistória: Abandonada em bebé com dois irmãos, cresceu no abrigo.",
+    "photo_url": "/images/dogs/frida/photo-01.jpg",
+    "photos": [
+      "/images/dogs/frida/photo-01.jpg",
+      "/images/dogs/frida/photo-03.jpg",
+      "/images/dogs/frida/photo-04.jpg",
+      "/images/dogs/frida/photo-05.jpg",
+      "/images/dogs/frida/photo-06.jpg",
+      "/images/dogs/frida/photo-07.jpg",
+      "/images/dogs/frida/photo-08.jpg",
+      "/images/dogs/frida/photo-09.jpg",
+      "/images/dogs/frida/photo-10.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 2,
+      "receio": 0,
+      "carente": true
+    },
+    "created_at": "2026-02-24T19:58:52.464Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "4c967abc-12dd-4e91-9fc6-5b47586e6314",
+    "name": "Gamora",
+    "size": "small",
+    "sex": "female",
+    "age": "Nasceu em 2021",
+    "description": "Sexo: Feminino\nIdade: Nasceu em 2021\nData de entrada: 2022\nRaça: Indefinida\nPorte: Pequeno\nPersonalidade: Meiga, brincalhona e ativa\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nSociável com gatos\nChipada, Vacinada, Esterilizada\nAcolhimento: Família de acolhimento temporário\nNota: Tem uma pata amputada. Corre como se tivesse todas.\nHistória: Encontrada com uma fratura antiga que obrigou à amputação. Hoje é uma tripé feliz, meiga e dependente da equipa.",
+    "photo_url": "/images/dogs/gamora/photo-01.jpg",
+    "photos": [
+      "/images/dogs/gamora/photo-01.jpg",
+      "/images/dogs/gamora/photo-03.jpg",
+      "/images/dogs/gamora/photo-04.jpg",
+      "/images/dogs/gamora/photo-05.jpg",
+      "/images/dogs/gamora/photo-06.jpg",
+      "/images/dogs/gamora/photo-07.jpg",
+      "/images/dogs/gamora/photo-08.jpg",
+      "/images/dogs/gamora/photo-09.jpg",
+      "/images/dogs/gamora/photo-10.jpg",
+      "/images/dogs/gamora/photo-11.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 3,
+      "receio": 0,
+      "carente": false
+    },
+    "created_at": "2026-02-24T19:55:50.925Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "27bb1c16-6027-44ef-81cf-9c1cbd261d27",
+    "name": "Harley",
+    "size": "medium",
+    "sex": "female",
+    "age": "Nasceu em 2019",
+    "description": "Sexo: Feminino\nIdade: Nasceu em 2019\nData de entrada: 2022\nRaça: Podenga\nPorte: Médio\nPersonalidade: Muito meiga, calma e companheira\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nSociável com gatos\nChipada, Vacinada, Esterilizada\nHistória: Andou meses na rua sem permitir o resgate. Chegou desnutrida e com fratura de fémur. Hoje está recuperada, física e emocionalmente.",
+    "photo_url": "/images/dogs/harley/photo-01.jpg",
+    "photos": [
+      "/images/dogs/harley/photo-01.jpg",
+      "/images/dogs/harley/photo-03.jpg",
+      "/images/dogs/harley/photo-04.jpg",
+      "/images/dogs/harley/photo-05.jpg",
+      "/images/dogs/harley/photo-06.jpg",
+      "/images/dogs/harley/photo-07.jpg",
+      "/images/dogs/harley/photo-08.jpg",
+      "/images/dogs/harley/photo-09.jpg",
+      "/images/dogs/harley/photo-10.jpg",
+      "/images/dogs/harley/photo-11.jpg",
+      "/images/dogs/harley/photo-12.jpg",
+      "/images/dogs/harley/photo-13.jpg",
+      "/images/dogs/harley/photo-14.jpg",
+      "/images/dogs/harley/photo-15.jpg",
+      "/images/dogs/harley/photo-16.jpg",
+      "/images/dogs/harley/photo-17.jpg",
+      "/images/dogs/harley/photo-18.jpg",
+      "/images/dogs/harley/photo-19.jpg",
+      "/images/dogs/harley/photo-20.jpg",
+      "/images/dogs/harley/photo-21.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 1,
+      "receio": 0,
+      "carente": false
+    },
+    "created_at": "2026-02-24T19:59:00.543Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "b4d1f70e-6496-4251-8359-9d3a2116b2d4",
+    "name": "Isis",
+    "size": "small-medium",
+    "sex": "female",
+    "age": "Nasceu em 2019",
+    "description": "Sexo: Feminino\nIdade: Nasceu em 2019\nData de entrada: 2022\nRaça: Podenga\nPorte: Pequeno/Médio\nPersonalidade: Calma, brincalhona e meiga\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipada, Vacinada, Esterilizada\nHistória: Abandonada com os filhos recém-nascidos. Foram precisas três semanas para ganhar a sua confiança. Hoje é um autêntico poço de mimo.",
+    "photo_url": "/images/dogs/isis/photo-01.jpg",
+    "photos": [
+      "/images/dogs/isis/photo-01.jpg",
+      "/images/dogs/isis/photo-03.jpg",
+      "/images/dogs/isis/photo-04.jpg",
+      "/images/dogs/isis/photo-05.jpg",
+      "/images/dogs/isis/photo-06.jpg",
+      "/images/dogs/isis/photo-07.jpg",
+      "/images/dogs/isis/photo-08.jpg",
+      "/images/dogs/isis/photo-09.jpg",
+      "/images/dogs/isis/photo-10.jpg",
+      "/images/dogs/isis/photo-11.jpg",
+      "/images/dogs/isis/photo-12.jpg",
+      "/images/dogs/isis/photo-13.jpg",
+      "/images/dogs/isis/photo-14.jpg",
+      "/images/dogs/isis/photo-15.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 2,
+      "receio": 1,
+      "carente": false
+    },
+    "created_at": "2026-02-24T19:55:57.510Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "2e599cfb-791b-4350-9490-3e88c62b2c5f",
+    "name": "Jack",
+    "size": "medium",
+    "sex": "male",
+    "age": "Nasceu em 2019",
+    "description": "Sexo: Masculino\nIdade: Nasceu em 2019\nData de entrada: 2022\nRaça: Podengo\nPorte: Médio\nPersonalidade: Meigo, brincalhão e ativo\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipado, Vacinado, Esterilizado\nHistória: Mais uma das muitas vítimas do abandono. Era receoso no início, mas depressa ganhámos a sua confiança.",
+    "photo_url": "/images/dogs/jack/photo-01.jpg",
+    "photos": [
+      "/images/dogs/jack/photo-01.jpg",
+      "/images/dogs/jack/photo-03.jpg",
+      "/images/dogs/jack/photo-04.jpg",
+      "/images/dogs/jack/photo-05.jpg",
+      "/images/dogs/jack/photo-06.jpg",
+      "/images/dogs/jack/photo-07.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 3,
+      "receio": 0,
+      "carente": false
+    },
+    "created_at": "2026-02-24T19:59:14.112Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "e449bb2c-aeea-5e5a-9dc4-725af0884ce8",
+    "name": "Jason",
+    "size": "large",
+    "sex": "male",
+    "age": "Nasceu em 2022",
+    "description": "Sexo: Masculino\nIdade: Nasceu em 2022\nData de entrada: 2026\nRaça: Indeterminada\nPorte: Grande\nPersonalidade: Meigo e ativo\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipado, Vacinado, Esterilizado\nNota: Entrou em 2026. Ainda em adaptação.\nHistória: Recolhido após denúncias. Assim que recolhido mostrou ser um cão muito meigo, mas com alguns medos. Com o tempo, grande parte dos medos melhorou.",
+    "photo_url": "",
+    "photos": [],
+    "is_adopted": false,
+    "traits": {
+      "energia": 3,
+      "receio": 1,
+      "carente": false
+    },
+    "created_at": "2026-10-15T12:00:00+00:00",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "e3401af2-0655-4d41-96a7-103412f3ee1f",
+    "name": "Jerry",
+    "size": "medium",
+    "sex": "male",
+    "age": "Nasceu em 2018",
+    "description": "Sexo: Masculino\nIdade: Nasceu em 2018\nData de entrada: 2018\nRaça: Indefinida\nPorte: Médio\nPersonalidade: Muito extrovertido, meigo e ativo\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipado, Vacinado, Castrado\nHistória: Abandonado em bebé, cresceu no abrigo.",
+    "photo_url": "/images/dogs/jerry/photo-01.jpg",
+    "photos": [
+      "/images/dogs/jerry/photo-01.jpg",
+      "/images/dogs/jerry/photo-03.jpg",
+      "/images/dogs/jerry/photo-04.jpg",
+      "/images/dogs/jerry/photo-05.jpg",
+      "/images/dogs/jerry/photo-06.jpg",
+      "/images/dogs/jerry/photo-07.jpg",
+      "/images/dogs/jerry/photo-08.jpg",
+      "/images/dogs/jerry/photo-09.jpg",
+      "/images/dogs/jerry/photo-10.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 3,
+      "receio": 0,
+      "carente": false
+    },
+    "created_at": "2026-02-24T19:59:17.662Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "7e16f42a-c3c6-41b4-a236-eaa55a0d8868",
+    "name": "Jóia",
+    "size": "medium",
+    "sex": "female",
+    "age": "Nasceu em 2019",
+    "description": "Sexo: Feminino\nIdade: Nasceu em 2019\nRaça: Cruzada de Podengo\nPorte: Médio\nPersonalidade: Meiga e muito brincalhona\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nSociável com gatos\nChipada, Vacinada, Esterilizada\nHistória: As primeiras semanas foram muito complicadas: tinha pavor de humanos. Hoje é uma cadela completamente diferente, que não só aceita mimo como brinca, e muito.",
+    "photo_url": "/images/dogs/joia/photo-01.jpg",
+    "photos": [
+      "/images/dogs/joia/photo-01.jpg",
+      "/images/dogs/joia/photo-03.jpg",
+      "/images/dogs/joia/photo-04.jpg",
+      "/images/dogs/joia/photo-05.jpg",
+      "/images/dogs/joia/photo-06.jpg",
+      "/images/dogs/joia/photo-07.jpg",
+      "/images/dogs/joia/photo-08.jpg",
+      "/images/dogs/joia/photo-09.jpg",
+      "/images/dogs/joia/photo-10.jpg",
+      "/images/dogs/joia/photo-11.jpg",
+      "/images/dogs/joia/photo-12.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 3,
+      "receio": 1,
+      "carente": false
+    },
+    "created_at": "2026-02-24T20:01:27.375Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "b9c832e5-7e98-46d7-b020-b4381b6a1d3e",
+    "name": "Julieta",
+    "size": "small-medium",
+    "sex": "female",
+    "age": "Nasceu em 2012",
+    "description": "Sexo: Feminino\nIdade: Nasceu em 2012\nData de entrada: 2013\nRaça: Indefinida\nPorte: Pequeno/Médio\nPersonalidade: Receosa até ganhar confiança, mas muito meiga e companheira\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipada, Vacinada, Esterilizada\nHistória: Deambulava pelas ruas da Póvoa de Lanhoso com um amigo. Ambos foram recolhidos.",
+    "photo_url": "/images/dogs/julieta/photo-01.jpg",
+    "photos": [
+      "/images/dogs/julieta/photo-01.jpg",
+      "/images/dogs/julieta/photo-03.jpg",
+      "/images/dogs/julieta/photo-04.jpg",
+      "/images/dogs/julieta/photo-05.jpg",
+      "/images/dogs/julieta/photo-06.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 1,
+      "receio": 1,
+      "carente": false
+    },
+    "created_at": "2026-02-24T19:56:06.094Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "d601c4ca-0d01-49f7-b3de-f1b72a0d5723",
+    "name": "Kat",
+    "size": "medium-large",
+    "sex": "female",
+    "age": "Nasceu em 2019",
+    "description": "Sexo: Feminino\nIdade: Nasceu em 2019\nData de entrada: 2020\nRaça: Indefinida\nPorte: Médio/Grande\nPersonalidade: Receosa no início até ganhar confiança, mas extremamente meiga e brincalhona\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nSociável com gatos\nChipada, Vacinada, Esterilizada\nHistória: Encontrada com a sua amiga Kit a deambular por uma das freguesias do concelho. Desde o início se mostrou muito meiga.",
+    "photo_url": "/images/dogs/kat/photo-01.jpg",
+    "photos": [
+      "/images/dogs/kat/photo-01.jpg",
+      "/images/dogs/kat/photo-03.jpg",
+      "/images/dogs/kat/photo-04.jpg",
+      "/images/dogs/kat/photo-05.jpg",
+      "/images/dogs/kat/photo-06.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 3,
+      "receio": 1,
+      "carente": false
+    },
+    "created_at": "2026-02-24T19:56:12.439Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "9bffcbc1-f8e4-4404-a350-dd7f1b137b90",
+    "name": "Kiki",
+    "size": "medium",
+    "sex": "female",
+    "age": "",
+    "description": "Sexo: Feminino\nIdade: Nasceu em 2016\nData de entrada: 2016\nRaça: Indefinida\nPorte: Médio\nPersonalidade: Muito companheira e meiga\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipada, Vacinada, Esterilizada\nHistória: Foi abandonada em bebé, e cresceu no abrigo. Chegou a ser adotada por duas vezes, mas das duas vezes ela conseguia escapar de casa para voltar para o canil.",
+    "photo_url": "/images/dogs/kiki/photo-01.jpg",
+    "photos": [
+      "/images/dogs/kiki/photo-01.jpg",
+      "/images/dogs/kiki/photo-03.jpg",
+      "/images/dogs/kiki/photo-04.jpg",
+      "/images/dogs/kiki/photo-05.jpg",
+      "/images/dogs/kiki/photo-06.jpg",
+      "/images/dogs/kiki/photo-07.jpg",
+      "/images/dogs/kiki/photo-08.jpg",
+      "/images/dogs/kiki/photo-09.jpg"
+    ],
+    "is_adopted": true,
+    "traits": {},
+    "created_at": "2026-02-24T19:59:23.878Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "277a9fe2-69c4-4b1b-b76c-4ef8ead1d389",
+    "name": "Kira",
+    "size": "medium",
+    "sex": "female",
+    "age": "Nasceu em 2016",
+    "description": "Sexo: Feminino\nIdade: Nasceu em 2016\nData de entrada: 2018\nRaça: Podenga\nPorte: Médio\nPersonalidade: Ativa, meiga e companheira\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipada, Vacinada, Esterilizada\nHistória: Encontrada com outra cadela perto de uma zona de caça. Mais dois abandonos provenientes de caçadores.",
+    "photo_url": "/images/dogs/kira/photo-01.jpg",
+    "photos": [
+      "/images/dogs/kira/photo-01.jpg",
+      "/images/dogs/kira/photo-03.jpg",
+      "/images/dogs/kira/photo-04.jpg",
+      "/images/dogs/kira/photo-05.jpg",
+      "/images/dogs/kira/photo-06.jpg",
+      "/images/dogs/kira/photo-07.jpg",
+      "/images/dogs/kira/photo-08.jpg",
+      "/images/dogs/kira/photo-09.jpg",
+      "/images/dogs/kira/photo-10.jpg",
+      "/images/dogs/kira/photo-11.jpg",
+      "/images/dogs/kira/photo-12.jpg",
+      "/images/dogs/kira/photo-13.jpg",
+      "/images/dogs/kira/photo-14.jpg",
+      "/images/dogs/kira/photo-15.jpg",
+      "/images/dogs/kira/photo-16.jpg",
+      "/images/dogs/kira/photo-17.jpg",
+      "/images/dogs/kira/photo-18.jpg",
+      "/images/dogs/kira/photo-19.jpg",
+      "/images/dogs/kira/photo-20.jpg",
+      "/images/dogs/kira/photo-21.jpg",
+      "/images/dogs/kira/photo-22.jpg",
+      "/images/dogs/kira/photo-23.jpg",
+      "/images/dogs/kira/photo-24.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 3,
+      "receio": 0,
+      "carente": false
+    },
+    "created_at": "2026-02-24T19:59:28.264Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "81b05cc8-f505-4b9c-9395-78a3f8763440",
+    "name": "Kit",
+    "size": "small-medium",
+    "sex": "female",
+    "age": "Nasceu em 2019",
+    "description": "Sexo: Feminino\nIdade: Nasceu em 2019\nData de entrada: 2020\nRaça: Podenga\nPorte: Pequeno/Médio\nPersonalidade: Calma, meiga e ativa\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nSociável com gatos\nChipada, Vacinada, Esterilizada\nHistória: Deambulava com a sua amiga Kat. Estava bastante assustada no resgate, mas depressa ganhámos a sua confiança.",
+    "photo_url": "/images/dogs/kit/photo-01.jpg",
+    "photos": [
+      "/images/dogs/kit/photo-01.jpg",
+      "/images/dogs/kit/photo-03.jpg",
+      "/images/dogs/kit/photo-04.jpg",
+      "/images/dogs/kit/photo-05.jpg",
+      "/images/dogs/kit/photo-06.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 2,
+      "receio": 1,
+      "carente": false
+    },
+    "created_at": "2026-02-24T19:56:09.246Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "4f399721-c7ca-4870-b208-1236d64f7365",
+    "name": "Klein",
+    "size": "medium",
+    "sex": "male",
+    "age": "",
+    "description": "Sexo: Masculino\nIdade: Nasceu em 2024\nData de entrada: 2024\nRaça: Indefinida\nPorte: Médio\nPersonalidade: Ativo, muito meigo e brincalhão\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipado, Vacinado, Esterilizado\nHistória: Klein, foi abandonado à porta do nosso abrigo, mais um irmão. Vinham repletos de feridas pelo corpo e com falhas de pelo. Diagnóstico foi sarna e de imediato iniciaram tratamento. Ainda em recuperação, os dois irmãos contraíram Parvovirose. Estiveram bastante mal, mas felizmente recuperaram e sem sequelas. Como se não fosse suficiente a sarna, a parvovirose, só veio atrasar o seu processo de adoção, mas agora está completamente recuperado e pronto a seguir para uma família.",
+    "photo_url": "/images/dogs/klein/photo-01.jpg",
+    "photos": [
+      "/images/dogs/klein/photo-01.jpg",
+      "/images/dogs/klein/photo-03.jpg",
+      "/images/dogs/klein/photo-04.jpg",
+      "/images/dogs/klein/photo-05.jpg",
+      "/images/dogs/klein/photo-06.jpg",
+      "/images/dogs/klein/photo-07.jpg",
+      "/images/dogs/klein/photo-08.jpg",
+      "/images/dogs/klein/photo-09.jpg",
+      "/images/dogs/klein/photo-10.jpg",
+      "/images/dogs/klein/photo-11.jpg",
+      "/images/dogs/klein/photo-12.jpg"
+    ],
+    "is_adopted": true,
+    "traits": {},
+    "created_at": "2026-02-24T19:59:38.779Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "41494055-2ce0-4181-a3f7-15d63a9e16ac",
+    "name": "Lady",
+    "size": "small-medium",
+    "sex": "female",
+    "age": "Nasceu em 2016",
+    "description": "Sexo: Feminino\nIdade: Nasceu em 2016\nData de entrada: 2019\nRaça: Indefinida\nPorte: Pequeno/Médio\nPersonalidade: Meiga, extrovertida e brincalhona\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipada, Vacinada, Esterilizada\nHistória: Encontrada no meio de uma estrada movimentada, junto com os filhos. Todos saíram sãos e salvos.",
+    "photo_url": "/images/dogs/lady/photo-01.jpg",
+    "photos": [
+      "/images/dogs/lady/photo-01.jpg",
+      "/images/dogs/lady/photo-03.jpg",
+      "/images/dogs/lady/photo-04.jpg",
+      "/images/dogs/lady/photo-05.jpg",
+      "/images/dogs/lady/photo-06.jpg",
+      "/images/dogs/lady/photo-07.jpg",
+      "/images/dogs/lady/photo-08.jpg",
+      "/images/dogs/lady/photo-09.jpg",
+      "/images/dogs/lady/photo-10.jpg",
+      "/images/dogs/lady/photo-11.jpg",
+      "/images/dogs/lady/photo-12.jpg",
+      "/images/dogs/lady/photo-13.jpg",
+      "/images/dogs/lady/photo-14.jpg",
+      "/images/dogs/lady/photo-15.jpg",
+      "/images/dogs/lady/photo-16.jpg",
+      "/images/dogs/lady/photo-17.jpg",
+      "/images/dogs/lady/photo-18.jpg",
+      "/images/dogs/lady/photo-19.jpg",
+      "/images/dogs/lady/photo-20.jpg",
+      "/images/dogs/lady/photo-21.jpg",
+      "/images/dogs/lady/photo-22.jpg",
+      "/images/dogs/lady/photo-23.jpg",
+      "/images/dogs/lady/photo-24.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 3,
+      "receio": 0,
+      "carente": false
+    },
+    "created_at": "2026-02-24T19:59:46.097Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "de4da372-273d-4aa4-aff8-91d260bbb9ea",
+    "name": "Leão",
+    "size": "medium",
+    "sex": "male",
+    "age": "Nasceu em 2022",
+    "description": "Sexo: Masculino\nIdade: Nasceu em 2022\nData de entrada: 2022\nRaça: Indefinida\nPorte: Médio\nPersonalidade: Energético, muito meigo e companheiro\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipado, Vacinado, Esterilizado\nHistória: Abandonado com apenas mês e meio, junto com dois irmãos, em muito mau estado.",
+    "photo_url": "/images/dogs/leao/photo-01.jpg",
+    "photos": [
+      "/images/dogs/leao/photo-01.jpg",
+      "/images/dogs/leao/photo-03.jpg",
+      "/images/dogs/leao/photo-04.jpg",
+      "/images/dogs/leao/photo-05.jpg",
+      "/images/dogs/leao/photo-06.jpg",
+      "/images/dogs/leao/photo-07.jpg",
+      "/images/dogs/leao/photo-08.jpg",
+      "/images/dogs/leao/photo-09.jpg",
+      "/images/dogs/leao/photo-10.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 3,
+      "receio": 1,
+      "carente": false
+    },
+    "created_at": "2026-02-24T20:01:32.334Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "cfe4037f-8303-4636-8939-2556484116d9",
+    "name": "Leila",
+    "size": "medium",
+    "sex": "female",
+    "age": "Nasceu em 2015",
+    "description": "Sexo: Feminino\nIdade: Nasceu em 2015\nData de entrada: 2021\nRaça: Indefinida\nPorte: Médio\nPersonalidade: Meiga, muito tranquila e companheira\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipada, Vacinada, Esterilizada\nHistória: Encontrada numa estrada muito movimentada, quase atropelada. Vinha com marca de coleira: certamente mais uma que vivia à corrente.",
+    "photo_url": "/images/dogs/leila/photo-01.jpg",
+    "photos": [
+      "/images/dogs/leila/photo-01.jpg",
+      "/images/dogs/leila/photo-03.jpg",
+      "/images/dogs/leila/photo-04.jpg",
+      "/images/dogs/leila/photo-05.jpg",
+      "/images/dogs/leila/photo-06.jpg",
+      "/images/dogs/leila/photo-07.jpg",
+      "/images/dogs/leila/photo-08.jpg",
+      "/images/dogs/leila/photo-09.jpg",
+      "/images/dogs/leila/photo-10.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 1,
+      "receio": 0,
+      "carente": false
+    },
+    "created_at": "2026-02-24T20:00:00.003Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "b4c230da-f96f-4dbf-bc0b-59f5a58046e1",
+    "name": "Lia",
+    "size": "medium",
+    "sex": "female",
+    "age": "Nasceu em 2020",
+    "description": "Sexo: Feminino\nIdade: Nasceu em 2020\nData de entrada: 2020\nRaça: Indefinida\nPorte: Médio\nPersonalidade: Assustada quando não conhece, mas muito meiga e companheira\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipada, Vacinada, Esterilizada\nHistória: Nasceu na rua com as irmãs. Foram todas recolhidas com a mãe, mas nunca saíram do abrigo.",
+    "photo_url": "/images/dogs/lia/photo-01.jpg",
+    "photos": [
+      "/images/dogs/lia/photo-01.jpg",
+      "/images/dogs/lia/photo-03.jpg",
+      "/images/dogs/lia/photo-04.jpg",
+      "/images/dogs/lia/photo-05.jpg",
+      "/images/dogs/lia/photo-06.jpg",
+      "/images/dogs/lia/photo-07.jpg",
+      "/images/dogs/lia/photo-08.jpg",
+      "/images/dogs/lia/photo-09.jpg",
+      "/images/dogs/lia/photo-10.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 2,
+      "receio": 1,
+      "carente": false
+    },
+    "created_at": "2026-02-24T20:00:07.837Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "ad42d562-8366-45bc-92d1-f275ebb5a16c",
+    "name": "Lilo",
+    "size": "medium",
+    "sex": "male",
+    "age": "Nasceu em 2019",
+    "description": "Sexo: Masculino\nIdade: Nasceu em 2019\nData de entrada: 2021\nRaça: Podengo\nPorte: Médio\nPersonalidade: Muito brincalhão e ativo, mas também muito carente\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipado, Vacinado, Castrado\nHistória: Abandonado numa zona isolada, onde já é costume abandonarem animais. Estava bastante magro.",
+    "photo_url": "/images/dogs/lilo/photo-01.jpg",
+    "photos": [
+      "/images/dogs/lilo/photo-01.jpg",
+      "/images/dogs/lilo/photo-03.jpg",
+      "/images/dogs/lilo/photo-04.jpg",
+      "/images/dogs/lilo/photo-05.jpg",
+      "/images/dogs/lilo/photo-06.jpg",
+      "/images/dogs/lilo/photo-07.jpg",
+      "/images/dogs/lilo/photo-08.jpg",
+      "/images/dogs/lilo/photo-09.jpg",
+      "/images/dogs/lilo/photo-10.jpg",
+      "/images/dogs/lilo/photo-11.jpg",
+      "/images/dogs/lilo/photo-12.jpg",
+      "/images/dogs/lilo/photo-13.jpg",
+      "/images/dogs/lilo/photo-14.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 3,
+      "receio": 0,
+      "carente": true
+    },
+    "created_at": "2026-02-24T20:00:13.372Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "9db962b7-38fc-4cdd-a900-b7905d15158f",
+    "name": "Limão",
+    "size": "medium-large",
+    "sex": "male",
+    "age": "Nasceu em 2021",
+    "description": "Sexo: Masculino\nIdade: Nasceu em 2021\nData de entrada: 2021\nRaça: Indefinida\nPorte: Médio/Grande\nPersonalidade: Meigo, ativo e brincalhão\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipado, Vacinado, Esterilizado\nHistória: Abandonado no monte com os quatro irmãos, com mês e meio. Todos os irmãos foram adotados; o Limão continua connosco.",
+    "photo_url": "/images/dogs/limao/photo-01.jpg",
+    "photos": [
+      "/images/dogs/limao/photo-01.jpg",
+      "/images/dogs/limao/photo-03.jpg",
+      "/images/dogs/limao/photo-04.jpg",
+      "/images/dogs/limao/photo-05.jpg",
+      "/images/dogs/limao/photo-06.jpg",
+      "/images/dogs/limao/photo-07.jpg",
+      "/images/dogs/limao/photo-08.jpg",
+      "/images/dogs/limao/photo-09.jpg",
+      "/images/dogs/limao/photo-10.jpg",
+      "/images/dogs/limao/photo-11.jpg",
+      "/images/dogs/limao/photo-12.jpg",
+      "/images/dogs/limao/photo-13.jpg",
+      "/images/dogs/limao/photo-14.jpg",
+      "/images/dogs/limao/photo-15.jpg",
+      "/images/dogs/limao/photo-16.jpg",
+      "/images/dogs/limao/photo-17.jpg",
+      "/images/dogs/limao/photo-18.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 3,
+      "receio": 0,
+      "carente": false
+    },
+    "created_at": "2026-02-24T20:01:36.906Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "82175250-67cd-4764-8ffa-8252b16c8a0d",
+    "name": "Lisa",
+    "size": "medium",
+    "sex": "female",
+    "age": "Nasceu em 2023",
+    "description": "Sexo: Feminino\nIdade: Nasceu em 2023\nData de entrada: 2023\nRaça: Indefinida\nPorte: Médio\nPersonalidade: Meiga, ativa e companheira\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipada, Vacinada, Esterilizada\nHistória: Encontrada à corrente com o irmão, ambos com seis meses. Estavam magros e assustados; hoje são meninos completamente mudados.",
+    "photo_url": "/images/dogs/lisa/photo-01.jpg",
+    "photos": [
+      "/images/dogs/lisa/photo-01.jpg",
+      "/images/dogs/lisa/photo-03.jpg",
+      "/images/dogs/lisa/photo-04.jpg",
+      "/images/dogs/lisa/photo-05.jpg",
+      "/images/dogs/lisa/photo-06.jpg",
+      "/images/dogs/lisa/photo-07.jpg",
+      "/images/dogs/lisa/photo-08.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 3,
+      "receio": 0,
+      "carente": false
+    },
+    "created_at": "2026-02-24T19:51:55.830Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "fc204817-3c10-4317-8f77-25f99d37d6a6",
+    "name": "Magali",
+    "size": "medium",
+    "sex": "female",
+    "age": "Nasceu em 2019",
+    "description": "Sexo: Feminino\nIdade: Nasceu em 2019\nData de entrada: 2022\nRaça: Indefinida\nPorte: Médio\nPersonalidade: Calma e muito companheira\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipada, Vacinada, Esterilizada\nHistória: Abandonada em fim de gestação. Foi resgatada com os bebés, que ficaram em segurança até estarem disponíveis para adoção.",
+    "photo_url": "/images/dogs/magali/photo-01.jpg",
+    "photos": [
+      "/images/dogs/magali/photo-01.jpg",
+      "/images/dogs/magali/photo-03.jpg",
+      "/images/dogs/magali/photo-04.jpg",
+      "/images/dogs/magali/photo-05.jpg",
+      "/images/dogs/magali/photo-06.jpg",
+      "/images/dogs/magali/photo-07.jpg",
+      "/images/dogs/magali/photo-08.jpg",
+      "/images/dogs/magali/photo-09.jpg",
+      "/images/dogs/magali/photo-10.jpg",
+      "/images/dogs/magali/photo-11.jpg",
+      "/images/dogs/magali/photo-12.jpg",
+      "/images/dogs/magali/photo-13.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 1,
+      "receio": 0,
+      "carente": false
+    },
+    "created_at": "2026-02-24T19:52:10.165Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "13cf416e-e2f2-4fbd-8722-91ab4119787a",
+    "name": "Mia",
+    "size": "medium",
+    "sex": "female",
+    "age": "Nasceu em 2018",
+    "description": "Sexo: Feminino\nIdade: Nasceu em 2018\nData de entrada: 2021\nRaça: Podenga\nPorte: Médio\nPersonalidade: Calma, meiga e muito carente, mas assustada quando não conhece\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipada, Vacinada, Esterilizada\nHistória: Encontrada num dia de muito frio e chuva. Vinha muito magra e com muitos traumas. Hoje é uma cadela completamente diferente.",
+    "photo_url": "/images/dogs/mia/photo-01.jpg",
+    "photos": [
+      "/images/dogs/mia/photo-01.jpg",
+      "/images/dogs/mia/photo-03.jpg",
+      "/images/dogs/mia/photo-04.jpg",
+      "/images/dogs/mia/photo-05.jpg",
+      "/images/dogs/mia/photo-06.jpg",
+      "/images/dogs/mia/photo-07.jpg",
+      "/images/dogs/mia/photo-08.jpg",
+      "/images/dogs/mia/photo-09.jpg",
+      "/images/dogs/mia/photo-10.jpg",
+      "/images/dogs/mia/photo-11.jpg",
+      "/images/dogs/mia/photo-12.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 1,
+      "receio": 1,
+      "carente": true
+    },
+    "created_at": "2026-02-24T19:52:17.599Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "318faa6d-49b2-4a24-ba4e-d35b5027bed3",
+    "name": "Michelle",
+    "size": "medium",
+    "sex": "female",
+    "age": "Nasceu em 2014",
+    "description": "Sexo: Feminino\nIdade: Nasceu em 2014\nData de entrada: 2017\nRaça: Indefinida\nPorte: Médio\nPersonalidade: Extrovertida, brincalhona e meiga\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipada, Vacinada, Esterilizada\nHistória: Foi deixada acorrentada num dia de muito calor, perto do abrigo.",
+    "photo_url": "/images/dogs/michelle/photo-01.jpg",
+    "photos": [
+      "/images/dogs/michelle/photo-01.jpg",
+      "/images/dogs/michelle/photo-03.jpg",
+      "/images/dogs/michelle/photo-04.jpg",
+      "/images/dogs/michelle/photo-05.jpg",
+      "/images/dogs/michelle/photo-06.jpg",
+      "/images/dogs/michelle/photo-07.jpg",
+      "/images/dogs/michelle/photo-08.jpg",
+      "/images/dogs/michelle/photo-09.jpg",
+      "/images/dogs/michelle/photo-10.jpg",
+      "/images/dogs/michelle/photo-11.jpg",
+      "/images/dogs/michelle/photo-12.jpg",
+      "/images/dogs/michelle/photo-13.jpg",
+      "/images/dogs/michelle/photo-14.jpg",
+      "/images/dogs/michelle/photo-15.jpg",
+      "/images/dogs/michelle/photo-16.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 3,
+      "receio": 0,
+      "carente": false,
+      "criancas": "sim"
+    },
+    "created_at": "2026-02-24T19:52:24.205Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "0e330eb5-e6a4-40be-8261-7845c14017c1",
+    "name": "Mickey",
+    "size": "large",
+    "sex": "male",
+    "age": "",
+    "description": "Sexo: Masculino\nIdade: Nasceu em 2018\nData de entrada: 2018\nRaça: Indefinida\nPorte: Grande\nPersonalidade: Calmo e muito meigo\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipado, Vacinado, Castrado\nHistória: Foi abandonado em bebé junto com a sua irmã, e cresceu no abrigo.",
+    "photo_url": "/images/dogs/mickey/photo-01.jpg",
+    "photos": [
+      "/images/dogs/mickey/photo-01.jpg",
+      "/images/dogs/mickey/photo-03.jpg",
+      "/images/dogs/mickey/photo-04.jpg",
+      "/images/dogs/mickey/photo-05.jpg",
+      "/images/dogs/mickey/photo-06.jpg",
+      "/images/dogs/mickey/photo-07.jpg",
+      "/images/dogs/mickey/photo-08.jpg",
+      "/images/dogs/mickey/photo-09.jpg",
+      "/images/dogs/mickey/photo-10.jpg",
+      "/images/dogs/mickey/photo-11.jpg",
+      "/images/dogs/mickey/photo-12.jpg"
+    ],
+    "is_adopted": true,
+    "traits": {},
+    "created_at": "2026-02-24T19:56:15.682Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "c6eb5d14-12b4-4634-827c-9043b2c142d6",
+    "name": "Mimi",
+    "size": "medium",
+    "sex": "female",
+    "age": "Nasceu em 2020",
+    "description": "Sexo: Feminino\nIdade: Nasceu em 2020\nData de entrada: 2022\nRaça: Indefinida\nPorte: Médio\nPersonalidade: Muito meiga, companheira e fiel\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nSociável com gatos\nChipada, Vacinada, Esterilizada\nHistória: Abandonada gestante com a filha adulta, perto do canil, presas por um arame. Teve onze bebés, todos adotados.",
+    "photo_url": "/images/dogs/mimi/photo-01.jpg",
+    "photos": [
+      "/images/dogs/mimi/photo-01.jpg",
+      "/images/dogs/mimi/photo-03.jpg",
+      "/images/dogs/mimi/photo-04.jpg",
+      "/images/dogs/mimi/photo-05.jpg",
+      "/images/dogs/mimi/photo-06.jpg",
+      "/images/dogs/mimi/photo-07.jpg",
+      "/images/dogs/mimi/photo-08.jpg",
+      "/images/dogs/mimi/photo-09.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 2,
+      "receio": 0,
+      "carente": false,
+      "criancas": "sim"
+    },
+    "created_at": "2026-02-24T19:52:32.919Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "69e2cf4b-c84b-4db4-a5fb-ef217a25a09f",
+    "name": "Moranguito",
+    "size": "medium",
+    "sex": "female",
+    "age": "Nasceu em 2021",
+    "description": "Sexo: Feminino\nIdade: Nasceu em 2021\nData de entrada: 2024\nRaça: Podenga\nPorte: Médio\nPersonalidade: Meiga e muito brincalhona\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipada, Vacinada, Esterilizada\nHistória: Vítima de atropelamento com várias fraturas. Tinha muitos medos no início; hoje é uma cadela confiante e muito brincalhona.",
+    "photo_url": "/images/dogs/moranguito/photo-01.jpg",
+    "photos": [
+      "/images/dogs/moranguito/photo-01.jpg",
+      "/images/dogs/moranguito/photo-03.jpg",
+      "/images/dogs/moranguito/photo-04.jpg",
+      "/images/dogs/moranguito/photo-05.jpg",
+      "/images/dogs/moranguito/photo-06.jpg",
+      "/images/dogs/moranguito/photo-07.jpg",
+      "/images/dogs/moranguito/photo-08.jpg",
+      "/images/dogs/moranguito/photo-09.jpg",
+      "/images/dogs/moranguito/photo-10.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 3,
+      "receio": 0,
+      "carente": false
+    },
+    "created_at": "2026-02-24T19:52:43.602Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "730e244f-fda9-468e-8998-54a08d5c0141",
+    "name": "Morena",
+    "size": "medium",
+    "sex": "female",
+    "age": "Nasceu em 2020",
+    "description": "Sexo: Feminino\nIdade: Nasceu em 2020\nData de entrada: 2022\nRaça: Indefinida\nPorte: Médio\nPersonalidade: Energética, muito brincalhona e meiga\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipada, Vacinada, Esterilizada\nHistória: Deixada com uma corrente à porta do abrigo. Desconfia quando não conhece, mas depressa ganha confiança e mostra o quanto é brincalhona.",
+    "photo_url": "/images/dogs/morena/photo-01.jpg",
+    "photos": [
+      "/images/dogs/morena/photo-01.jpg",
+      "/images/dogs/morena/photo-03.jpg",
+      "/images/dogs/morena/photo-04.jpg",
+      "/images/dogs/morena/photo-05.jpg",
+      "/images/dogs/morena/photo-06.jpg",
+      "/images/dogs/morena/photo-07.jpg",
+      "/images/dogs/morena/photo-08.jpg",
+      "/images/dogs/morena/photo-09.jpg",
+      "/images/dogs/morena/photo-10.jpg",
+      "/images/dogs/morena/photo-11.jpg",
+      "/images/dogs/morena/photo-12.jpg",
+      "/images/dogs/morena/photo-13.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 3,
+      "receio": 1,
+      "carente": false
+    },
+    "created_at": "2026-02-24T19:52:49.717Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "bf86e87a-b518-4dd2-8726-c45965726acf",
+    "name": "Mouse",
+    "size": "medium",
+    "sex": "female",
+    "age": "",
+    "description": "Sexo: Feminino\nIdade: Nasceu em 2020\nDeu entrada: 2022\nRaça: Indefinida\nPorte: Médio\nPersonalidade: Energética, muito brincalhona e meiga\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipada, Vacinada, Esterilizada",
+    "photo_url": "/images/dogs/mouse/photo-01.jpg",
+    "photos": [
+      "/images/dogs/mouse/photo-01.jpg",
+      "/images/dogs/mouse/photo-03.jpg",
+      "/images/dogs/mouse/photo-04.jpg",
+      "/images/dogs/mouse/photo-05.jpg",
+      "/images/dogs/mouse/photo-06.jpg",
+      "/images/dogs/mouse/photo-07.jpg",
+      "/images/dogs/mouse/photo-08.jpg",
+      "/images/dogs/mouse/photo-09.jpg",
+      "/images/dogs/mouse/photo-10.jpg",
+      "/images/dogs/mouse/photo-11.jpg",
+      "/images/dogs/mouse/photo-12.jpg"
+    ],
+    "is_adopted": true,
+    "traits": {},
+    "created_at": "2026-02-24T19:52:59.081Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "8da08508-f61d-4600-af0b-30b2f43783cb",
+    "name": "Nancy",
+    "size": "medium",
+    "sex": "female",
+    "age": "Nasceu em 2020",
+    "description": "Sexo: Feminino\nIdade: Nasceu em 2020\nData de entrada: 2020\nRaça: Cruzada de Podengo\nPorte: Médio\nPersonalidade: Muito meiga e extrovertida\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipada, Vacinada, Esterilizada\nHistória: Abandonada em bebé com dois irmãos, cresceu no abrigo.",
+    "photo_url": "/images/dogs/nancy/photo-01.jpg",
+    "photos": [
+      "/images/dogs/nancy/photo-01.jpg",
+      "/images/dogs/nancy/photo-03.jpg",
+      "/images/dogs/nancy/photo-04.jpg",
+      "/images/dogs/nancy/photo-05.jpg",
+      "/images/dogs/nancy/photo-06.jpg",
+      "/images/dogs/nancy/photo-07.jpg",
+      "/images/dogs/nancy/photo-08.jpg",
+      "/images/dogs/nancy/photo-09.jpg",
+      "/images/dogs/nancy/photo-10.jpg",
+      "/images/dogs/nancy/photo-11.jpg",
+      "/images/dogs/nancy/photo-12.jpg",
+      "/images/dogs/nancy/photo-13.jpg",
+      "/images/dogs/nancy/photo-14.jpg",
+      "/images/dogs/nancy/photo-15.jpg",
+      "/images/dogs/nancy/photo-16.jpg",
+      "/images/dogs/nancy/photo-17.jpg",
+      "/images/dogs/nancy/photo-18.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 2,
+      "receio": 1,
+      "carente": false
+    },
+    "created_at": "2026-02-24T19:53:04.882Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "2e15197d-1d96-452a-8fd7-0ab578e3642c",
+    "name": "Narci",
+    "size": "medium",
+    "sex": "female",
+    "age": "Nasceu em 2021",
+    "description": "Sexo: Feminino\nIdade: Nasceu em 2021\nData de entrada: 2022\nRaça: Indefinida\nPorte: Médio\nPersonalidade: Muito meiga, ativa e brincalhona\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nSociável com gatos\nChipada, Vacinada, Esterilizada\nHistória: Vítima de atropelamento com seis meses, com fraturas graves. Foram longos meses de recuperação. Hoje está completamente recuperada.",
+    "photo_url": "/images/dogs/narci/photo-01.jpg",
+    "photos": [
+      "/images/dogs/narci/photo-01.jpg",
+      "/images/dogs/narci/photo-03.jpg",
+      "/images/dogs/narci/photo-04.jpg",
+      "/images/dogs/narci/photo-05.jpg",
+      "/images/dogs/narci/photo-06.jpg",
+      "/images/dogs/narci/photo-07.jpg",
+      "/images/dogs/narci/photo-08.jpg",
+      "/images/dogs/narci/photo-09.jpg",
+      "/images/dogs/narci/photo-10.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 3,
+      "receio": 0,
+      "carente": false,
+      "criancas": "sim"
+    },
+    "created_at": "2026-02-24T19:53:14.893Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "db007477-9d0e-4455-be02-e8d952843837",
+    "name": "Nash",
+    "size": "medium",
+    "sex": "male",
+    "age": "Nasceu em 2022",
+    "description": "Sexo: Masculino\nIdade: Nasceu em 2022\nData de entrada: 2022\nRaça: Indefinida\nPorte: Médio\nPersonalidade: Calmo, muito meigo e companheiro\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipado, Vacinado, Esterilizado\nHistória: Deu entrada com apenas dois meses, com a mãe e mais quatro irmãos, fruto de abandono.",
+    "photo_url": "/images/dogs/nash/photo-01.jpg",
+    "photos": [
+      "/images/dogs/nash/photo-01.jpg",
+      "/images/dogs/nash/photo-03.jpg",
+      "/images/dogs/nash/photo-04.jpg",
+      "/images/dogs/nash/photo-05.jpg",
+      "/images/dogs/nash/photo-06.jpg",
+      "/images/dogs/nash/photo-07.jpg",
+      "/images/dogs/nash/photo-08.jpg",
+      "/images/dogs/nash/photo-09.jpg",
+      "/images/dogs/nash/photo-10.jpg",
+      "/images/dogs/nash/photo-11.jpg",
+      "/images/dogs/nash/photo-12.jpg",
+      "/images/dogs/nash/photo-13.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 1,
+      "receio": 0,
+      "carente": false
+    },
+    "created_at": "2026-02-24T19:53:20.232Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "b3e9e3ee-1db9-4d28-8943-e383ccf54b37",
+    "name": "Nemo",
+    "size": "medium",
+    "sex": "male",
+    "age": "",
+    "description": "Sexo: Masculino\nIdade: Nasceu em 2022\nDeu entrada: 2022\nRaça: Indefinida\nPorte: Médio\nPersonalidade: Receoso quando não conhece, mas muito meigo e companheiro\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipado, Vacinado, Esterilizado\nHistória: O Nemo foi abandonado com apenas mês e meio junto com dois irmãos. Vinham em muito mau estado, desnutridos e repletos de pulgas e carraças.",
+    "photo_url": "/images/dogs/nemo/photo-01.jpg",
+    "photos": [
+      "/images/dogs/nemo/photo-01.jpg",
+      "/images/dogs/nemo/photo-03.jpg",
+      "/images/dogs/nemo/photo-04.jpg"
+    ],
+    "is_adopted": true,
+    "traits": {},
+    "created_at": "2026-02-24T19:53:26.791Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "8437a8d0-73b5-4daa-8afc-1654108423ce",
+    "name": "Nick",
+    "size": "small",
+    "sex": "male",
+    "age": "Nasceu em 2019",
+    "description": "Sexo: Masculino\nIdade: Nasceu em 2019\nData de entrada: 2024\nRaça: Indefinida\nPorte: Pequeno\nPersonalidade: Meigo, calmo e muito carente\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nSociável com gatos\nChipado, Vacinado, Esterilizado\nNota: Teve luxação de rótula e atrofia nas patas traseiras, hoje muito melhores.\nHistória: Resgatado de uma situação de negligência. Passou a vida dentro de um galinheiro, acorrentado. Hoje confia plenamente no ser humano.",
+    "photo_url": "/images/dogs/nick/photo-01.jpg",
+    "photos": [
+      "/images/dogs/nick/photo-01.jpg",
+      "/images/dogs/nick/photo-03.jpg",
+      "/images/dogs/nick/photo-04.jpg",
+      "/images/dogs/nick/photo-05.jpg",
+      "/images/dogs/nick/photo-06.jpg",
+      "/images/dogs/nick/photo-07.jpg",
+      "/images/dogs/nick/photo-08.jpg",
+      "/images/dogs/nick/photo-09.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 1,
+      "receio": 0,
+      "carente": true,
+      "criancas": "sim"
+    },
+    "created_at": "2026-02-24T19:56:12.605Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "6bfb05f7-3168-4d3c-8ca0-3c535ad76ae9",
+    "name": "Ninja",
+    "size": "medium",
+    "sex": "male",
+    "age": "Nasceu em 2022",
+    "description": "Sexo: Masculino\nIdade: Nasceu em 2022\nData de entrada: 2022\nRaça: Indefinida\nPorte: Médio\nPersonalidade: Brincalhão, ativo e meigo\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nSociável com gatos\nChipado, Vacinado, Esterilizado\nHistória: Nasceu no abrigo em segurança. Todos os dez irmãos foram adotados, restando ele e mais um.",
+    "photo_url": "/images/dogs/ninja/photo-01.jpg",
+    "photos": [
+      "/images/dogs/ninja/photo-01.jpg",
+      "/images/dogs/ninja/photo-03.jpg",
+      "/images/dogs/ninja/photo-04.jpg",
+      "/images/dogs/ninja/photo-05.jpg",
+      "/images/dogs/ninja/photo-06.jpg",
+      "/images/dogs/ninja/photo-07.jpg",
+      "/images/dogs/ninja/photo-08.jpg",
+      "/images/dogs/ninja/photo-09.jpg",
+      "/images/dogs/ninja/photo-10.jpg",
+      "/images/dogs/ninja/photo-11.jpg",
+      "/images/dogs/ninja/photo-12.jpg",
+      "/images/dogs/ninja/photo-13.jpg",
+      "/images/dogs/ninja/photo-14.jpg",
+      "/images/dogs/ninja/photo-15.jpg",
+      "/images/dogs/ninja/photo-16.jpg",
+      "/images/dogs/ninja/photo-17.jpg",
+      "/images/dogs/ninja/photo-18.jpg",
+      "/images/dogs/ninja/photo-19.jpg",
+      "/images/dogs/ninja/photo-20.jpg",
+      "/images/dogs/ninja/photo-21.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 3,
+      "receio": 0,
+      "carente": false
+    },
+    "created_at": "2026-02-24T19:53:29.857Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "5364399e-d972-4156-a063-d32cf8bcd510",
+    "name": "Noélia",
+    "size": "medium",
+    "sex": "female",
+    "age": "Nasceu em 2020",
+    "description": "Sexo: Feminino\nIdade: Nasceu em 2020\nData de entrada: 2020\nRaça: Indefinida\nPorte: Médio\nPersonalidade: Assustada quando não conhece, mas muito meiga, fiel e companheira\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nSociável com gatos\nChipada, Vacinada, Esterilizada\nHistória: Nasceu na rua com uma irmã. A irmã foi adotada; a Noélia nunca teve interessados.",
+    "photo_url": "/images/dogs/noelia/photo-01.jpg",
+    "photos": [
+      "/images/dogs/noelia/photo-01.jpg",
+      "/images/dogs/noelia/photo-03.jpg",
+      "/images/dogs/noelia/photo-04.jpg",
+      "/images/dogs/noelia/photo-05.jpg",
+      "/images/dogs/noelia/photo-06.jpg",
+      "/images/dogs/noelia/photo-07.jpg",
+      "/images/dogs/noelia/photo-08.jpg",
+      "/images/dogs/noelia/photo-09.jpg",
+      "/images/dogs/noelia/photo-10.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 2,
+      "receio": 1,
+      "carente": false
+    },
+    "created_at": "2026-02-24T20:01:44.079Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "d13a7bc1-66ae-4a7a-a7eb-32bba5a7c02d",
+    "name": "Nora",
+    "size": "medium",
+    "sex": "female",
+    "age": "Nasceu em 2014",
+    "description": "Sexo: Feminino\nIdade: Nasceu em 2014\nData de entrada: 2016\nRaça: Indefinida\nPorte: Médio\nPersonalidade: Meiga e muito protetora\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipada, Vacinada, Esterilizada\nHistória: Encontrada com os seus filhos, todos eles adotados. A Nora ficou.",
+    "photo_url": "/images/dogs/nora/photo-01.jpg",
+    "photos": [
+      "/images/dogs/nora/photo-01.jpg",
+      "/images/dogs/nora/photo-03.jpg",
+      "/images/dogs/nora/photo-04.jpg",
+      "/images/dogs/nora/photo-05.jpg",
+      "/images/dogs/nora/photo-06.jpg",
+      "/images/dogs/nora/photo-07.jpg",
+      "/images/dogs/nora/photo-08.jpg",
+      "/images/dogs/nora/photo-09.jpg",
+      "/images/dogs/nora/photo-10.jpg",
+      "/images/dogs/nora/photo-11.jpg",
+      "/images/dogs/nora/photo-12.jpg",
+      "/images/dogs/nora/photo-13.jpg",
+      "/images/dogs/nora/photo-14.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 2,
+      "receio": 0,
+      "carente": false
+    },
+    "created_at": "2026-02-24T19:53:42.335Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "5a618457-db64-41ea-9e14-9fd2f949f4cf",
+    "name": "Osho",
+    "size": "medium-large",
+    "sex": "male",
+    "age": "Nasceu em 2012",
+    "description": "Sexo: Masculino\nIdade: Nasceu em 2012\nData de entrada: 2015\nRaça: Indefinida\nPorte: Médio/Grande\nPersonalidade: Muito extrovertido, energético e companheiro\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipado, Vacinado, Castrado\nHistória: Abandonado à porta do abrigo em 2015. Apesar da idade, continua a ser um dos cães mais extrovertidos e energéticos da casa.",
+    "photo_url": "/images/dogs/osho/photo-01.jpg",
+    "photos": [
+      "/images/dogs/osho/photo-01.jpg",
+      "/images/dogs/osho/photo-03.jpg",
+      "/images/dogs/osho/photo-04.jpg",
+      "/images/dogs/osho/photo-05.jpg",
+      "/images/dogs/osho/photo-06.jpg",
+      "/images/dogs/osho/photo-07.jpg",
+      "/images/dogs/osho/photo-08.jpg",
+      "/images/dogs/osho/photo-09.jpg",
+      "/images/dogs/osho/photo-10.jpg",
+      "/images/dogs/osho/photo-11.jpg",
+      "/images/dogs/osho/photo-12.jpg",
+      "/images/dogs/osho/photo-13.jpg",
+      "/images/dogs/osho/photo-14.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 3,
+      "receio": 0,
+      "carente": false
+    },
+    "created_at": "2026-02-24T19:53:49.186Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "7bd52239-edf7-4134-9204-79ec741f975c",
+    "name": "Pavarotti",
+    "size": "medium",
+    "sex": "male",
+    "age": "Nasceu em 2012",
+    "description": "Sexo: Masculino\nIdade: Nasceu em 2012\nData de entrada: 2012\nRaça: Indefinida\nPorte: Médio\nPersonalidade: Desconfiado quando não conhece, mas muito calmo e meigo\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipado, Vacinado, Castrado\nHistória: Recolhido ainda bebé, cresceu no abrigo. Nunca conheceu outra casa e espera, há mais de uma década, por uma família só dele.",
+    "photo_url": "/images/dogs/pavarotti/photo-01.jpg",
+    "photos": [
+      "/images/dogs/pavarotti/photo-01.jpg",
+      "/images/dogs/pavarotti/photo-03.jpg",
+      "/images/dogs/pavarotti/photo-04.jpg",
+      "/images/dogs/pavarotti/photo-05.jpg",
+      "/images/dogs/pavarotti/photo-06.jpg",
+      "/images/dogs/pavarotti/photo-07.jpg",
+      "/images/dogs/pavarotti/photo-08.jpg",
+      "/images/dogs/pavarotti/photo-09.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 1,
+      "receio": 1,
+      "carente": false
+    },
+    "created_at": "2026-02-24T19:53:58.403Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "007b8f41-6eaf-56d5-9fef-580c1c0c80dd",
+    "name": "Pepita",
+    "size": "small",
+    "sex": "female",
+    "age": "Nasceu em 2018",
+    "description": "Sexo: Feminino\nIdade: Nasceu em 2018\nData de entrada: 2026\nRaça: Cruzada de Podenga\nPorte: Pequeno\nPersonalidade: Meiga, tranquila e companheira\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipada, Vacinada, Esterilizada\nHistória: Encontrada no monte de São Mamede, onde foi deixada certamente para morrer. Estava desidratada e desnutrida. Felizmente recuperou muito bem.",
+    "photo_url": "",
+    "photos": [],
+    "is_adopted": false,
+    "traits": {
+      "energia": 1,
+      "receio": 0,
+      "carente": false
+    },
+    "created_at": "2026-10-15T12:00:00+00:00",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "b50ac124-27e7-4d5e-b286-a19df2d60c38",
+    "name": "Peste",
+    "size": "medium",
+    "sex": "female",
+    "age": "Nasceu em 2022",
+    "description": "Sexo: Feminino\nIdade: Nasceu em 2022\nData de entrada: 2022\nRaça: Indefinida\nPorte: Médio\nPersonalidade: Muito meiga, ativa e brincalhona\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipada, Vacinada, Esterilizada\nHistória: Abandonada com os quatro irmãos e a mãe, com poucos dias de vida. Cresceu no abrigo e continua à espera da sua vez.",
+    "photo_url": "/images/dogs/peste/photo-01.jpg",
+    "photos": [
+      "/images/dogs/peste/photo-01.jpg",
+      "/images/dogs/peste/photo-03.jpg",
+      "/images/dogs/peste/photo-04.jpg",
+      "/images/dogs/peste/photo-05.jpg",
+      "/images/dogs/peste/photo-06.jpg",
+      "/images/dogs/peste/photo-07.jpg",
+      "/images/dogs/peste/photo-08.jpg",
+      "/images/dogs/peste/photo-09.jpg",
+      "/images/dogs/peste/photo-10.jpg",
+      "/images/dogs/peste/photo-11.jpg",
+      "/images/dogs/peste/photo-12.jpg",
+      "/images/dogs/peste/photo-13.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 3,
+      "receio": 0,
+      "carente": false
+    },
+    "created_at": "2026-02-24T19:54:02.426Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "922d4307-33bb-5f6e-9d72-65d470bbf0e2",
+    "name": "Peter",
+    "size": "small",
+    "sex": "male",
+    "age": "",
+    "description": "Sexo: Masculino\nPorte: Pequeno\nPersonalidade: Muito meigo, mas com muito medo\nSociável com humanos\nNão sabemos se é sociável com machos\nNão sabemos se é sociável com fêmeas\nNão sabemos se é sociável com gatos\nNota: Ficha ainda por completar: não há registo de idade, raça, saúde nem de como se dá com outros cães ou gatos. A equipa esclarece tudo isso na visita.\nHistória: Tem muito medo e precisa de tempo e calma para confiar. Por baixo do medo é um menino muito meigo.",
+    "photo_url": "",
+    "photos": [],
+    "is_adopted": false,
+    "traits": {
+      "energia": 2,
+      "receio": 2,
+      "carente": false
+    },
+    "created_at": "2026-10-15T12:00:00+00:00",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "eb9b9c85-a109-5bdd-8c93-e4f0f3791f90",
+    "name": "Pietro",
+    "size": "medium",
+    "sex": "male",
+    "age": "Nasceu em 2021",
+    "description": "Sexo: Masculino\nIdade: Nasceu em 2021\nData de entrada: 2025\nRaça: Podengo\nPorte: Médio\nPersonalidade: Receoso quando não conhece, mas muito meigo e companheiro\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nSociável com gatos\nChipado, Vacinado, Esterilizado\nNota: Sofreu um trauma neurológico. É um cão de rotinas: em stress, anda em círculos. Precisa de uma casa calma e previsível.\nHistória: Recolhido por andar constantemente em círculos. Hoje está bem melhor e já confia na equipa. Tirando isso, é um cão perfeitamente feliz.",
+    "photo_url": "",
+    "photos": [],
+    "is_adopted": false,
+    "traits": {
+      "energia": 2,
+      "receio": 1,
+      "carente": false
+    },
+    "created_at": "2026-10-15T12:00:00+00:00",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "711f9297-51d3-4088-bc06-6c393bde243d",
+    "name": "Pingo",
+    "size": "medium",
+    "sex": "male",
+    "age": "Nasceu em 2024",
+    "description": "Sexo: Masculino\nIdade: Nasceu em 2024\nData de entrada: 2024\nRaça: Indefinida\nPorte: Médio\nPersonalidade: Meigo, ativo e brincalhão\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipado, Vacinado, Esterilizado\nHistória: Abandonado com um mês de vida, junto com cinco irmãos. Todos os irmãos foram adotados; o Pingo foi o único que nunca teve um interessado.",
+    "photo_url": "/images/dogs/pingo/photo-01.jpg",
+    "photos": [
+      "/images/dogs/pingo/photo-01.jpg",
+      "/images/dogs/pingo/photo-03.jpg",
+      "/images/dogs/pingo/photo-04.jpg",
+      "/images/dogs/pingo/photo-05.jpg",
+      "/images/dogs/pingo/photo-06.jpg",
+      "/images/dogs/pingo/photo-07.jpg",
+      "/images/dogs/pingo/photo-08.jpg",
+      "/images/dogs/pingo/photo-09.jpg",
+      "/images/dogs/pingo/photo-10.jpg",
+      "/images/dogs/pingo/photo-11.jpg",
+      "/images/dogs/pingo/photo-12.jpg",
+      "/images/dogs/pingo/photo-13.jpg",
+      "/images/dogs/pingo/photo-14.jpg",
+      "/images/dogs/pingo/photo-15.jpg",
+      "/images/dogs/pingo/photo-16.jpg",
+      "/images/dogs/pingo/photo-17.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 3,
+      "receio": 0,
+      "carente": false
+    },
+    "created_at": "2026-02-24T19:54:10.385Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "8df6ede3-b85a-493f-909e-68cd75d20754",
+    "name": "Pipoca",
+    "size": "medium",
+    "sex": "female",
+    "age": "Nasceu em 2022",
+    "description": "Sexo: Feminino\nIdade: Nasceu em 2022\nData de entrada: 2022\nRaça: Indefinida\nPorte: Médio\nPersonalidade: Receosa quando não conhece, mas muito meiga e companheira\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipada, Vacinada, Esterilizada\nHistória: Abandonada com apenas mês e meio junto com dois irmãos, em muito mau estado.",
+    "photo_url": "/images/dogs/pipoca/photo-01.jpg",
+    "photos": [
+      "/images/dogs/pipoca/photo-01.jpg",
+      "/images/dogs/pipoca/photo-03.jpg",
+      "/images/dogs/pipoca/photo-04.jpg",
+      "/images/dogs/pipoca/photo-05.jpg",
+      "/images/dogs/pipoca/photo-06.jpg",
+      "/images/dogs/pipoca/photo-07.jpg",
+      "/images/dogs/pipoca/photo-08.jpg",
+      "/images/dogs/pipoca/photo-09.jpg",
+      "/images/dogs/pipoca/photo-10.jpg",
+      "/images/dogs/pipoca/photo-11.jpg",
+      "/images/dogs/pipoca/photo-12.jpg",
+      "/images/dogs/pipoca/photo-13.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 2,
+      "receio": 1,
+      "carente": false
+    },
+    "created_at": "2026-02-24T19:54:19.492Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "f6b86dd9-b148-436f-84db-75e26d6b0338",
+    "name": "Puma",
+    "size": "medium",
+    "sex": "male",
+    "age": "Nasceu em 2014",
+    "description": "Sexo: Masculino\nIdade: Nasceu em 2014\nData de entrada: 2015\nRaça: Podengo\nPorte: Médio\nPersonalidade: Muito assustado, não aceita o toque humano, mas muito tranquilo\nNão sociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipado, Vacinado\nNota: Não aceita contacto humano. Está fora do processo de adoção comum: qualquer interesse passa obrigatoriamente pela equipa.\nHistória: Foi atirado para dentro de um poço com o irmão. Nunca conseguimos ganhar a sua confiança, tal é o seu trauma.",
+    "photo_url": "/images/dogs/puma/photo-01.jpg",
+    "photos": [
+      "/images/dogs/puma/photo-01.jpg",
+      "/images/dogs/puma/photo-03.jpg",
+      "/images/dogs/puma/photo-04.jpg",
+      "/images/dogs/puma/photo-05.jpg",
+      "/images/dogs/puma/photo-06.jpg",
+      "/images/dogs/puma/photo-07.jpg",
+      "/images/dogs/puma/photo-08.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 1,
+      "receio": 3,
+      "carente": false
+    },
+    "created_at": "2026-02-24T19:54:25.649Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "c389faf4-870a-4ac7-a5ae-d74d6d070ca3",
+    "name": "Ranhosa",
+    "size": "medium",
+    "sex": "female",
+    "age": "Nasceu em 2020",
+    "description": "Sexo: Feminino\nIdade: Nasceu em 2020\nData de entrada: 2022\nRaça: Podenga\nPorte: Médio\nPersonalidade: Muito meiga, ativa e brincalhona\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipada, Vacinada, Esterilizada\nHistória: Vítima de envenenamento. Foram mais de dois dias de convulsões, mas felizmente foi possível reverter a situação e está tudo bem.",
+    "photo_url": "/images/dogs/ranhosa/photo-01.jpg",
+    "photos": [
+      "/images/dogs/ranhosa/photo-01.jpg",
+      "/images/dogs/ranhosa/photo-03.jpg",
+      "/images/dogs/ranhosa/photo-04.jpg",
+      "/images/dogs/ranhosa/photo-05.jpg",
+      "/images/dogs/ranhosa/photo-06.jpg",
+      "/images/dogs/ranhosa/photo-07.jpg",
+      "/images/dogs/ranhosa/photo-08.jpg",
+      "/images/dogs/ranhosa/photo-09.jpg",
+      "/images/dogs/ranhosa/photo-10.jpg",
+      "/images/dogs/ranhosa/photo-11.jpg",
+      "/images/dogs/ranhosa/photo-12.jpg",
+      "/images/dogs/ranhosa/photo-13.jpg",
+      "/images/dogs/ranhosa/photo-14.jpg",
+      "/images/dogs/ranhosa/photo-15.jpg",
+      "/images/dogs/ranhosa/photo-16.jpg",
+      "/images/dogs/ranhosa/photo-17.jpg",
+      "/images/dogs/ranhosa/photo-18.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 3,
+      "receio": 0,
+      "carente": false,
+      "criancas": "sim"
+    },
+    "created_at": "2026-02-24T19:54:29.847Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "93ddf068-f65e-47ef-9eb2-2d4605a14750",
+    "name": "Rastas",
+    "size": "small",
+    "sex": "male",
+    "age": "",
+    "description": "Sexo: Masculino\nPorte: Pequeno\nPersonalidade: Muito meigo e querido, adora brincar mas é calmo\nSociável com humanos\nNão sabemos se é sociável com machos\nNão sabemos se é sociável com fêmeas\nNão sabemos se é sociável com gatos\nNota: Ficha ainda por completar: não há registo de idade, raça, saúde nem de como se dá com outros cães ou gatos. A equipa esclarece tudo isso na visita.\nHistória: Receoso com estranhos, mas ganha confiança depressa. Adora brincar sem ser agitado.",
+    "photo_url": "/images/dogs/rastas/photo-01.jpg",
+    "photos": [
+      "/images/dogs/rastas/photo-01.jpg",
+      "/images/dogs/rastas/photo-03.jpg",
+      "/images/dogs/rastas/photo-04.jpg",
+      "/images/dogs/rastas/photo-05.jpg",
+      "/images/dogs/rastas/photo-06.jpg",
+      "/images/dogs/rastas/photo-07.jpg",
+      "/images/dogs/rastas/photo-08.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 2,
+      "receio": 1,
+      "carente": false
+    },
+    "created_at": "2026-02-24T19:54:39.220Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "f8f64a13-2c47-5841-9c0b-fe335f11a6a9",
+    "name": "Rocky",
+    "size": "medium",
+    "sex": "male",
+    "age": "Nasceu em 2022",
+    "description": "Sexo: Masculino\nIdade: Nasceu em 2022\nData de entrada: 2025\nRaça: American Staffordshire Terrier\nPorte: Médio\nPersonalidade: Meigo, ativo e brincalhão\nSociável com humanos\nNão sociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipado, Vacinado, Esterilizado\nNota: Raça abrangida pela legislação de cães potencialmente perigosos. A adoção tem requisitos legais próprios, a confirmar com a equipa.\nHistória: Resgatado de uma situação de maus tratos. Desde logo se mostrou um cão meigo com pessoas. Foi pouco o tempo com aquele tutor, por isso não traz muitos traumas.",
+    "photo_url": "",
+    "photos": [],
+    "is_adopted": false,
+    "traits": {
+      "energia": 3,
+      "receio": 0,
+      "carente": false
+    },
+    "created_at": "2026-10-15T12:00:00+00:00",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "e6833a61-5297-480b-a5b3-e31a886cf6f1",
+    "name": "Romeu",
+    "size": "medium-large",
+    "sex": "male",
+    "age": "Nasceu em 2012",
+    "description": "Sexo: Masculino\nIdade: Nasceu em 2012\nData de entrada: 2013\nRaça: Indefinida\nPorte: Médio/Grande\nPersonalidade: Receoso quando não conhece, mas muito meigo e tranquilo\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipado, Vacinado, Castrado\nHistória: Vagueava pelas ruas da Póvoa com outra cadela, ambos recolhidos.",
+    "photo_url": "/images/dogs/romeu/photo-01.jpg",
+    "photos": [
+      "/images/dogs/romeu/photo-01.jpg",
+      "/images/dogs/romeu/photo-03.jpg",
+      "/images/dogs/romeu/photo-04.jpg",
+      "/images/dogs/romeu/photo-05.jpg",
+      "/images/dogs/romeu/photo-06.jpg",
+      "/images/dogs/romeu/photo-07.jpg",
+      "/images/dogs/romeu/photo-08.jpg",
+      "/images/dogs/romeu/photo-09.jpg",
+      "/images/dogs/romeu/photo-10.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 1,
+      "receio": 1,
+      "carente": false
+    },
+    "created_at": "2026-02-24T20:01:54.102Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "90c66996-241e-5a3d-afd2-348c05978f72",
+    "name": "Shadow",
+    "size": "large",
+    "sex": "male",
+    "age": "",
+    "description": "Sexo: Masculino\nPorte: Grande\nPersonalidade: Muito meigo e calmo, receoso ao início\nSociável com humanos\nNão sabemos se é sociável com machos\nNão sabemos se é sociável com fêmeas\nNão sabemos se é sociável com gatos\nNota: Ficha ainda por completar: não há registo de idade, raça, saúde nem de como se dá com outros cães ou gatos. A equipa esclarece tudo isso na visita.\nHistória: Adora mimo e adora passear. É calmo, só precisa de um momento para confiar em quem não conhece.",
+    "photo_url": "",
+    "photos": [],
+    "is_adopted": false,
+    "traits": {
+      "energia": 2,
+      "receio": 1,
+      "carente": true
+    },
+    "created_at": "2026-10-15T12:00:00+00:00",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "dc7aa57d-a802-45dd-801b-87515cbb03ac",
+    "name": "Sharpey",
+    "size": "medium",
+    "sex": "female",
+    "age": "Nasceu em 2016",
+    "description": "Sexo: Feminino\nIdade: Nasceu em 2016\nData de entrada: 2019\nRaça: Indefinida\nPorte: Médio\nPersonalidade: Extrovertida, ativa e muito meiga\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipada, Vacinada, Esterilizada\nHistória: Abandonada gestante. Os bebés foram todos adotados. No início era muito assustada, mas depressa ganhámos a sua confiança.",
+    "photo_url": "/images/dogs/sharpey/photo-01.jpg",
+    "photos": [
+      "/images/dogs/sharpey/photo-01.jpg",
+      "/images/dogs/sharpey/photo-03.jpg",
+      "/images/dogs/sharpey/photo-04.jpg",
+      "/images/dogs/sharpey/photo-05.jpg",
+      "/images/dogs/sharpey/photo-06.jpg",
+      "/images/dogs/sharpey/photo-07.jpg",
+      "/images/dogs/sharpey/photo-08.jpg",
+      "/images/dogs/sharpey/photo-09.jpg",
+      "/images/dogs/sharpey/photo-10.jpg",
+      "/images/dogs/sharpey/photo-11.jpg",
+      "/images/dogs/sharpey/photo-12.jpg",
+      "/images/dogs/sharpey/photo-13.jpg",
+      "/images/dogs/sharpey/photo-14.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 3,
+      "receio": 0,
+      "carente": true
+    },
+    "created_at": "2026-02-24T19:54:50.128Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "d01207b3-4e24-4edb-b046-9efc415d40da",
+    "name": "Shrek",
+    "size": "small",
+    "sex": "male",
+    "age": "Nasceu em 2018",
+    "description": "Sexo: Masculino\nIdade: Nasceu em 2018\nData de entrada: 2018\nRaça: Indefinida\nPorte: Pequeno\nPersonalidade: Receoso no início, mas muito calmo e companheiro\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipado, Vacinado, Castrado\nNota: Gosta de fazer companhia, mas não é muito de aceitar mimo.\nHistória: Abandonado com a irmã ainda em bebés. Pelo medo que mostrava, percebeu-se que não estavam habituados a contacto.",
+    "photo_url": "/images/dogs/shrek/photo-01.jpg",
+    "photos": [
+      "/images/dogs/shrek/photo-01.jpg",
+      "/images/dogs/shrek/photo-03.jpg",
+      "/images/dogs/shrek/photo-04.jpg",
+      "/images/dogs/shrek/photo-05.jpg",
+      "/images/dogs/shrek/photo-06.jpg",
+      "/images/dogs/shrek/photo-07.jpg",
+      "/images/dogs/shrek/photo-08.jpg",
+      "/images/dogs/shrek/photo-09.jpg",
+      "/images/dogs/shrek/photo-10.jpg",
+      "/images/dogs/shrek/photo-11.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 1,
+      "receio": 1,
+      "carente": false
+    },
+    "created_at": "2026-02-24T19:56:29.489Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "542d13cf-d17c-4527-819b-f949ac2c86ff",
+    "name": "Sia",
+    "size": "medium",
+    "sex": "female",
+    "age": "Nasceu em 2020",
+    "description": "Sexo: Feminino\nIdade: Nasceu em 2020\nData de entrada: 2020\nRaça: Indefinida\nPorte: Médio\nPersonalidade: Assustada quando não conhece, mas muito meiga e brincalhona\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipada, Vacinada, Esterilizada\nHistória: Nasceu na rua com as irmãs. Foram todas recolhidas, mas nunca saíram do abrigo.",
+    "photo_url": "/images/dogs/sia/photo-01.jpg",
+    "photos": [
+      "/images/dogs/sia/photo-01.jpg",
+      "/images/dogs/sia/photo-03.jpg",
+      "/images/dogs/sia/photo-04.jpg",
+      "/images/dogs/sia/photo-05.jpg",
+      "/images/dogs/sia/photo-06.jpg",
+      "/images/dogs/sia/photo-07.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 3,
+      "receio": 1,
+      "carente": false
+    },
+    "created_at": "2026-02-24T19:54:57.947Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "9f1362c9-0178-4713-bf29-69e34f419b5d",
+    "name": "Sininho",
+    "size": "medium",
+    "sex": "female",
+    "age": "Nasceu em 2021",
+    "description": "Sexo: Feminino\nIdade: Nasceu em 2021\nData de entrada: 2021\nRaça: Podengo\nPorte: Médio\nPersonalidade: Muito meiga, ativa e brincalhona\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nSociável com gatos\nChipada, Vacinada, Esterilizada\nHistória: Nasceu na rua com mais quatro irmãos. Até hoje nunca teve ninguém interessado na sua adoção.",
+    "photo_url": "/images/dogs/sininho/photo-01.jpg",
+    "photos": [
+      "/images/dogs/sininho/photo-01.jpg",
+      "/images/dogs/sininho/photo-03.jpg",
+      "/images/dogs/sininho/photo-04.jpg",
+      "/images/dogs/sininho/photo-05.jpg",
+      "/images/dogs/sininho/photo-06.jpg",
+      "/images/dogs/sininho/photo-07.jpg",
+      "/images/dogs/sininho/photo-08.jpg",
+      "/images/dogs/sininho/photo-09.jpg",
+      "/images/dogs/sininho/photo-10.jpg",
+      "/images/dogs/sininho/photo-11.jpg",
+      "/images/dogs/sininho/photo-12.jpg",
+      "/images/dogs/sininho/photo-13.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 3,
+      "receio": 0,
+      "carente": false
+    },
+    "created_at": "2026-02-24T19:55:01.686Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "e16ad080-4756-4859-95b1-52b63f278f7c",
+    "name": "Spider",
+    "size": "medium",
+    "sex": "male",
+    "age": "Nasceu em 2012",
+    "description": "Sexo: Masculino\nIdade: Nasceu em 2012\nData de entrada: 2014\nRaça: Indefinida\nPorte: Médio\nPersonalidade: Receoso quando não conhece, mas muito extrovertido e meigo\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipado, Vacinado, Castrado\nHistória: Foi atirado para dentro do abrigo, num estado de magreza avançado.",
+    "photo_url": "/images/dogs/spider/photo-01.jpg",
+    "photos": [
+      "/images/dogs/spider/photo-01.jpg",
+      "/images/dogs/spider/photo-03.jpg",
+      "/images/dogs/spider/photo-04.jpg",
+      "/images/dogs/spider/photo-05.jpg",
+      "/images/dogs/spider/photo-06.jpg",
+      "/images/dogs/spider/photo-07.jpg",
+      "/images/dogs/spider/photo-08.jpg",
+      "/images/dogs/spider/photo-09.jpg",
+      "/images/dogs/spider/photo-10.jpg",
+      "/images/dogs/spider/photo-11.jpg",
+      "/images/dogs/spider/photo-12.jpg",
+      "/images/dogs/spider/photo-13.jpg",
+      "/images/dogs/spider/photo-14.jpg",
+      "/images/dogs/spider/photo-15.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 2,
+      "receio": 1,
+      "carente": true
+    },
+    "created_at": "2026-02-24T19:55:09.643Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "c89dde6a-ff0f-4914-8cad-2a6a71a3a9d1",
+    "name": "Stuart",
+    "size": "large",
+    "sex": "male",
+    "age": "Nasceu em 2018",
+    "description": "Sexo: Masculino\nIdade: Nasceu em 2018\nData de entrada: 2021\nRaça: Indefinida\nPorte: Grande\nPersonalidade: Companheiro, muito meigo e ativo\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipado, Vacinado, Esterilizado\nHistória: Abandonado nas ruas da vila, magro e debilitado. Com o tempo recuperou a condição física e hoje é um senhor.",
+    "photo_url": "/images/dogs/stuart/photo-01.jpg",
+    "photos": [
+      "/images/dogs/stuart/photo-01.jpg",
+      "/images/dogs/stuart/photo-03.jpg",
+      "/images/dogs/stuart/photo-04.jpg",
+      "/images/dogs/stuart/photo-05.jpg",
+      "/images/dogs/stuart/photo-06.jpg",
+      "/images/dogs/stuart/photo-07.jpg",
+      "/images/dogs/stuart/photo-08.jpg",
+      "/images/dogs/stuart/photo-09.jpg",
+      "/images/dogs/stuart/photo-10.jpg",
+      "/images/dogs/stuart/photo-11.jpg",
+      "/images/dogs/stuart/photo-12.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 3,
+      "receio": 0,
+      "carente": false,
+      "criancas": "sim"
+    },
+    "created_at": "2026-02-24T20:02:00.516Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "0a814d24-5b9d-4b53-800f-57101acc6879",
+    "name": "Teresa",
+    "size": "medium",
+    "sex": "female",
+    "age": "Nasceu em 2020",
+    "description": "Sexo: Feminino\nIdade: Nasceu em 2020\nData de entrada: 2023\nRaça: Podenga\nPorte: Médio\nPersonalidade: Receosa, mas meiga e calma\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipada, Vacinada, Esterilizada\nNota: Continua a ser uma menina que não quer muito contacto.\nHistória: Abandonada numa zona erma, onde pariu os bebés. Só com armadilha foi possível o resgate. Está muito melhor do que quando chegou.",
+    "photo_url": "/images/dogs/teresa/photo-01.jpg",
+    "photos": [
+      "/images/dogs/teresa/photo-01.jpg",
+      "/images/dogs/teresa/photo-03.jpg",
+      "/images/dogs/teresa/photo-04.jpg",
+      "/images/dogs/teresa/photo-05.jpg",
+      "/images/dogs/teresa/photo-06.jpg",
+      "/images/dogs/teresa/photo-07.jpg",
+      "/images/dogs/teresa/photo-08.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 1,
+      "receio": 2,
+      "carente": false
+    },
+    "created_at": "2026-02-24T19:55:17.390Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "5986182a-95be-4c9d-a4c0-ee1baffab371",
+    "name": "Tim Tim",
+    "size": "medium",
+    "sex": "male",
+    "age": "Nasceu em 2020",
+    "description": "Sexo: Masculino\nIdade: Nasceu em 2020\nData de entrada: 2024\nRaça: Podengo\nPorte: Médio\nPersonalidade: Calmo, meigo e companheiro\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipado, Vacinado, Castrado\nNota: Manca de uma pata, de uma lesão antiga já calcificada. Assusta-se com ruídos. Não gosta de homens com bigode.\nHistória: Encontrado a deambular, já a mancar. Era um menino bastante traumatizado; com o tempo percebeu que pode confiar e hoje é mais feliz.",
+    "photo_url": "/images/dogs/tim-tim/photo-01.jpg",
+    "photos": [
+      "/images/dogs/tim-tim/photo-01.jpg",
+      "/images/dogs/tim-tim/photo-03.jpg",
+      "/images/dogs/tim-tim/photo-04.jpg",
+      "/images/dogs/tim-tim/photo-05.jpg",
+      "/images/dogs/tim-tim/photo-06.jpg",
+      "/images/dogs/tim-tim/photo-07.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 1,
+      "receio": 0,
+      "carente": false,
+      "criancas": "sim"
+    },
+    "created_at": "2026-02-24T20:01:47.980Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "30df61d9-c3b1-4cef-918a-5230a564ce46",
+    "name": "Tom",
+    "size": "medium",
+    "sex": "male",
+    "age": "Nasceu em 2018",
+    "description": "Sexo: Masculino\nIdade: Nasceu em 2018\nData de entrada: 2018\nRaça: Indefinida\nPorte: Médio\nPersonalidade: Muito extrovertido e brincalhão\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipado, Vacinado, Castrado\nHistória: Foi abandonado com os irmãos em bebés, e cresceu no abrigo.",
+    "photo_url": "/images/dogs/tom/photo-01.jpg",
+    "photos": [
+      "/images/dogs/tom/photo-01.jpg",
+      "/images/dogs/tom/photo-03.jpg",
+      "/images/dogs/tom/photo-04.jpg",
+      "/images/dogs/tom/photo-05.jpg",
+      "/images/dogs/tom/photo-06.jpg",
+      "/images/dogs/tom/photo-07.jpg",
+      "/images/dogs/tom/photo-08.jpg",
+      "/images/dogs/tom/photo-09.jpg",
+      "/images/dogs/tom/photo-10.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 3,
+      "receio": 0,
+      "carente": false
+    },
+    "created_at": "2026-02-24T19:55:22.049Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "185a199f-40fc-4660-8d9d-f9d542ac6a2c",
+    "name": "Yoda",
+    "size": "medium",
+    "sex": "male",
+    "age": "Nasceu em 2018",
+    "description": "Sexo: Masculino\nIdade: Nasceu em 2018\nData de entrada: 2023\nRaça: Podengo\nPorte: Médio\nPersonalidade: Meigo, tranquilo e companheiro\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipado, Vacinado, Esterilizado\nNota: Teve leishmaniose e fez tratamento. Hoje está completamente mudado.\nHistória: Apareceu no abrigo em muito mau estado, diagnosticado com leishmaniose. Fez tratamento e hoje é um menino completamente mudado.",
+    "photo_url": "/images/dogs/yoda/photo-01.jpg",
+    "photos": [
+      "/images/dogs/yoda/photo-01.jpg",
+      "/images/dogs/yoda/photo-03.jpg",
+      "/images/dogs/yoda/photo-04.jpg",
+      "/images/dogs/yoda/photo-05.jpg",
+      "/images/dogs/yoda/photo-06.jpg",
+      "/images/dogs/yoda/photo-07.jpg",
+      "/images/dogs/yoda/photo-08.jpg",
+      "/images/dogs/yoda/photo-09.jpg",
+      "/images/dogs/yoda/photo-10.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 1,
+      "receio": 0,
+      "carente": false,
+      "criancas": "sim"
+    },
+    "created_at": "2026-02-24T19:55:30.275Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "1400f66e-a228-494e-b55e-68734404f4af",
+    "name": "Zeus",
+    "size": "medium",
+    "sex": "male",
+    "age": "Nasceu em 2022",
+    "description": "Sexo: Masculino\nIdade: Nasceu em 2022\nData de entrada: 2022\nRaça: Indefinida\nPorte: Médio\nPersonalidade: Energético, muito meigo e companheiro\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipado, Vacinado, Esterilizado\nHistória: Chegou com quatro meses, desnutrido e a tentar morder quem lhe tocava. Foram meses de trabalho, mas hoje conquista o coração de qualquer pessoa.",
+    "photo_url": "/images/dogs/zeus/photo-01.jpg",
+    "photos": [
+      "/images/dogs/zeus/photo-01.jpg",
+      "/images/dogs/zeus/photo-03.jpg",
+      "/images/dogs/zeus/photo-04.jpg",
+      "/images/dogs/zeus/photo-05.jpg",
+      "/images/dogs/zeus/photo-06.jpg",
+      "/images/dogs/zeus/photo-07.jpg",
+      "/images/dogs/zeus/photo-08.jpg",
+      "/images/dogs/zeus/photo-09.jpg",
+      "/images/dogs/zeus/photo-10.jpg",
+      "/images/dogs/zeus/photo-11.jpg",
+      "/images/dogs/zeus/photo-12.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 3,
+      "receio": 2,
+      "carente": false
+    },
+    "created_at": "2026-02-24T19:55:36.679Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  },
+  {
+    "id": "31e06a77-6b09-43ea-8d5d-8394d2c687b0",
+    "name": "Zoe",
+    "size": "medium",
+    "sex": "female",
+    "age": "Nasceu em 2018",
+    "description": "Sexo: Feminino\nIdade: Nasceu em 2018\nData de entrada: 2018\nRaça: Indefinida\nPorte: Médio\nPersonalidade: Calma, meiga e brincalhona\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nSociável com gatos\nChipada, Vacinada, Esterilizada\nHistória: Foi abandonada com os irmãos em bebé, e cresceu no abrigo.",
+    "photo_url": "/images/dogs/zoe/photo-01.jpg",
+    "photos": [
+      "/images/dogs/zoe/photo-01.jpg",
+      "/images/dogs/zoe/photo-03.jpg",
+      "/images/dogs/zoe/photo-04.jpg",
+      "/images/dogs/zoe/photo-05.jpg",
+      "/images/dogs/zoe/photo-06.jpg",
+      "/images/dogs/zoe/photo-07.jpg",
+      "/images/dogs/zoe/photo-08.jpg",
+      "/images/dogs/zoe/photo-09.jpg",
+      "/images/dogs/zoe/photo-10.jpg"
+    ],
+    "is_adopted": false,
+    "traits": {
+      "energia": 2,
+      "receio": 0,
+      "carente": false
+    },
+    "created_at": "2026-02-24T19:55:43.891Z",
+    "updated_at": "2026-10-15T12:00:00+00:00"
+  }
+]

@@ -7,9 +7,12 @@ import type { Dog } from '../lib/capaApi';
 import VisitSchedule from './VisitSchedule';
 import { submitFormSubmission } from '../lib/formSubmission';
 import { SHELTER_EMAIL } from '../lib/capaContact';
+import { adoptTitle, adoptedDesc, adoptedLabel, formatAge, formatShelterSince, fosterNote, sizeLabel as labelForSize, yearFrom } from '../lib/dogFacts';
 
 const SIZE_BADGE_CLASSES: Record<string, string> = {
   small: 'bg-playful-peach text-playful-orange-dark border border-playful-orange/20',
+  'small-medium': 'bg-playful-peach text-playful-orange-dark border border-playful-orange/20',
+  'medium-large': 'bg-playful-cream text-playful-orange-dark border border-playful-line',
   medium: 'bg-white text-playful-orange-dark border border-playful-line',
   large: 'bg-playful-cream text-playful-orange-dark border border-playful-line',
 };
@@ -22,6 +25,8 @@ function parseDescription(raw: string) {
   const fields: { label: string; value: string }[] = [];
   let story = '';
   let personality = '';
+  let foster = '';
+  let note = '';
 
   for (const line of lines) {
     const match = line.match(/^([^:]+):\s*(.+)$/);
@@ -31,6 +36,10 @@ function parseDescription(raw: string) {
 
       if (key === 'história') {
         story = value.trim();
+      } else if (key === 'acolhimento') {
+        foster = value.trim();
+      } else if (key === 'nota') {
+        note = value.trim();
       } else if (key === 'personalidade') {
         personality = value.trim();
       } else if (
@@ -48,9 +57,9 @@ function parseDescription(raw: string) {
     } else {
       // Lines without colon — sociability/medical tags
       const trimmed = line.trim();
-      if (trimmed.startsWith('Sociável') || trimmed.startsWith('Não sabemos')) {
+      if (trimmed.startsWith('Sociável') || trimmed.startsWith('Não sociável') || trimmed.startsWith('Não sabemos')) {
         fields.push({ label: '✓', value: trimmed });
-      } else if (trimmed.match(/^(Chipado|Vacinado|Esterilizado)/)) {
+      } else if (trimmed.match(/^(Chipad|Vacinad|Esterilizad|Castrad)/)) {
         // Combined medical line: "Chipado, Vacinado, Esterilizado"
         fields.push({ label: '🏥', value: trimmed });
       } else if (trimmed) {
@@ -60,7 +69,7 @@ function parseDescription(raw: string) {
     }
   }
 
-  return { fields, story, personality };
+  return { fields, story, personality, foster, note };
 }
 
 /* ── Localize parsed description fields ── */
@@ -80,6 +89,7 @@ function localizeField(label: string, value: string, locale: Locale): { label: s
     [ptT.descSize]: enT.descSize,
     [ptT.descPersonality]: enT.descPersonality,
     [ptT.descStory]: enT.descStory,
+    'No abrigo desde': 'At the shelter since',
   };
   const valueMap: Record<string, string> = {
     [ptT.descSexMale]: enT.descSexMale,
@@ -115,8 +125,9 @@ function localizeTag(text: string, locale: Locale): string {
     [ptT.descVaccinated]: enT.descVaccinated,
     [ptT.descSterilized]: enT.descSterilized,
   };
-  // Handle combined medical lines like "Chipado, Vacinado"
-  const parts = text.split(',').map(s => s.trim());
+  // Handle combined medical lines like "Chipado, Vacinado" (also feminine and "Castrado")
+  const neutral: Record<string, string> = { Chipada: ptT.descChipped, Vacinada: ptT.descVaccinated, Esterilizada: ptT.descSterilized, Castrado: ptT.descSterilized, Castrada: ptT.descSterilized };
+  const parts = text.split(',').map(s => s.trim()).map(p => neutral[p] ?? p);
   if (parts.length > 1 && parts.every(p => tagMap[p])) {
     return parts.map(p => tagMap[p]).join(', ');
   }
@@ -127,20 +138,23 @@ function localizeTag(text: string, locale: Locale): string {
 /* Tag text is always Portuguese (from stored description), so we check Portuguese strings */
 function TagBadge({ text, locale }: { text: string; locale: Locale }) {
   const displayText = localizeTag(text, locale);
-  const isPositive = text.startsWith('Sociável') || text.startsWith('Chipado') || text.startsWith('Vacinado') || text.startsWith('Esterilizado');
+  const isPositive = text.startsWith('Sociável') || /^(Chipad|Vacinad|Esterilizad|Castrad)/.test(text);
   const isUnknown = text.startsWith('Não sabemos');
+  const isNegative = text.startsWith('Não sociável');
 
   return (
     <span
       className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-sm font-extrabold ${
         isPositive
           ? 'border border-playful-orange/20 bg-playful-peach text-playful-orange-dark'
+          : isNegative
+          ? 'border border-amber-300 bg-amber-50 text-amber-900'
           : isUnknown
           ? 'border border-playful-line bg-white/80 text-playful-muted'
           : 'border border-playful-line bg-playful-cream text-playful-muted'
       }`}
     >
-      {isPositive && '✓'} {displayText}
+      {isPositive && '✓'}{isNegative && '✕'} {displayText}
     </span>
   );
 }
@@ -164,7 +178,7 @@ function PhotoGallery({ photos, name, locale, adoptedLabel }: { photos: string[]
           className="block h-full w-full max-w-full object-contain object-center"
         />
         {adoptedLabel && (
-          <span className="absolute left-4 right-4 top-4 z-10 rounded-full bg-playful-orange px-5 py-3 text-center text-sm font-extrabold uppercase tracking-wide text-white shadow-squish">
+          <span className="absolute left-4 top-4 z-10 rounded-full bg-playful-orange px-4 py-2 text-xs font-extrabold uppercase tracking-wide text-white shadow-squish" data-dog-profile-adopted-badge>
             {adoptedLabel}
           </span>
         )}
@@ -480,12 +494,6 @@ export default function DogProfile({ locale = 'pt' }: { locale?: Locale }) {
   const dogsPath = locale === 'pt' ? '/caes' : '/en/dogs';
   const adoptPath = locale === 'pt' ? '/adocao' : '/en/adopt';
 
-  const sizeLabels: Record<string, string> = {
-    small: t.sizes.small,
-    medium: t.sizes.medium,
-    large: t.sizes.large,
-  };
-
   useEffect(() => {
     async function load() {
       const params = new URLSearchParams(window.location.search);
@@ -544,11 +552,27 @@ export default function DogProfile({ locale = 'pt' }: { locale?: Locale }) {
   if (loading) return <LoadingSkeleton />;
   if (notFound || !dog) return <NotFound locale={locale} />;
 
-  const sizeLabel = sizeLabels[dog.size] ?? dog.size;
+  const sizeLabel = labelForSize(dog.size, locale);
+  const adopted = adoptedLabel(dog.sex, locale);
   const badgeClasses = SIZE_BADGE_CLASSES[dog.size] ?? 'bg-white text-playful-orange-dark border border-playful-line';
   const parsed = dog.description ? parseDescription(dog.description) : null;
 
-  const infoFields = parsed?.fields.filter(f => f.label !== '✓' && f.label !== '🏥') ?? [];
+  const infoFields = (parsed?.fields.filter(f => f.label !== '✓' && f.label !== '🏥') ?? []).map((f) => {
+    const key = f.label.trim().toLowerCase();
+    if (key === 'idade') {
+      return { label: f.label, value: formatAge(yearFrom(f.value), 'pt') ?? f.value, display: formatAge(yearFrom(f.value), locale) };
+    }
+    if (key === 'data de entrada' || key === 'deu entrada') {
+      const since = formatShelterSince(yearFrom(f.value), locale);
+      return { label: 'No abrigo desde', value: f.value, display: since };
+    }
+    if (key === 'porte') {
+      return { label: f.label, value: f.value, display: sizeLabel };
+    }
+    return { ...f, display: null as string | null };
+  });
+  const foster = !dog.is_adopted && parsed?.foster ? fosterNote(parsed.foster, dog.name, dog.sex, locale) : null;
+  const note = parsed?.note ?? '';
   const tags = parsed?.fields.filter(f => f.label === '✓' || f.label === '🏥') ?? [];
 
   return (
@@ -566,7 +590,7 @@ export default function DogProfile({ locale = 'pt' }: { locale?: Locale }) {
 
       <section className="relative z-10 grid min-w-0 items-start gap-10 lg:grid-cols-[1.04fr_0.96fr]" aria-labelledby="dog-profile-heading">
         <div className="min-w-0 space-y-5" data-dog-profile-gallery-column>
-          <PhotoGallery photos={photos} name={dog.name} locale={locale} adoptedLabel={dog.is_adopted ? t.status.adopted : undefined} />
+          <PhotoGallery photos={photos} name={dog.name} locale={locale} adoptedLabel={dog.is_adopted ? adopted : undefined} />
           {!dog.is_adopted && <VisitSchedule dogName={dog.name} locale={locale} source="dog" />}
         </div>
 
@@ -574,7 +598,7 @@ export default function DogProfile({ locale = 'pt' }: { locale?: Locale }) {
           <div className="rounded-[2.3rem] border border-playful-line bg-white/88 p-6 shadow-pillowy-lg sm:p-8">
             <div className="mb-4 flex flex-wrap items-center gap-3">
               <span className={`rounded-full px-4 py-2 text-sm font-extrabold shadow-sm ${badgeClasses}`}>{sizeLabel}</span>
-              {dog.is_adopted && <span className="rounded-full bg-playful-orange px-4 py-2 text-sm font-extrabold uppercase text-white shadow-sm">{t.status.adopted}</span>}
+              {dog.is_adopted && <span className="rounded-full bg-playful-orange px-4 py-2 text-sm font-extrabold uppercase text-white shadow-sm">{adopted}</span>}
             </div>
             <h1 id="dog-profile-heading" className="font-playful-display text-5xl font-extrabold tracking-[-0.065em] text-playful-orange-dark sm:text-6xl">{dog.name}</h1>
             {parsed?.personality && (
@@ -582,10 +606,23 @@ export default function DogProfile({ locale = 'pt' }: { locale?: Locale }) {
             )}
           </div>
 
+          {foster && (
+            <p className="rounded-[1.6rem] border border-playful-orange/25 bg-white/90 px-5 py-4 text-base font-bold leading-7 text-playful-orange-dark shadow-pillowy" data-dog-profile-foster>
+              🏡 {foster}
+            </p>
+          )}
+
           {parsed?.story && (
             <section className="rounded-[2rem] border border-playful-line bg-playful-peach/70 p-6 shadow-pillowy sm:p-8" aria-labelledby="dog-story-heading">
               <h2 id="dog-story-heading" className="mb-3 text-xs font-extrabold uppercase tracking-[0.24em] text-playful-orange-dark">{t.dogProfile.storyHeading}</h2>
               <p className="text-base font-medium leading-8 text-playful-muted">{parsed.story}</p>
+            </section>
+          )}
+
+          {note && (
+            <section className="rounded-[2rem] border border-playful-line bg-white/88 p-6 shadow-pillowy sm:p-8" aria-labelledby="dog-note-heading" data-dog-profile-note>
+              <h2 id="dog-note-heading" className="mb-3 text-xs font-extrabold uppercase tracking-[0.24em] text-playful-orange-dark">{locale === 'pt' ? 'A saber antes de adotar' : 'Good to know'}</h2>
+              <p className="text-base font-medium leading-8 text-playful-muted">{note}</p>
             </section>
           )}
         </div>
@@ -598,6 +635,7 @@ export default function DogProfile({ locale = 'pt' }: { locale?: Locale }) {
             <dl className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               {infoFields.map((f, i) => {
                 const localized = localizeField(f.label, f.value, locale);
+                if (f.display) localized.value = f.display;
                 return (
                   <div key={i} className="rounded-[1.5rem] border border-playful-line bg-playful-canvas/80 p-4">
                     <dt className="mb-1 text-xs font-extrabold uppercase tracking-[0.18em] text-playful-muted/75">{localized.label}</dt>
@@ -622,11 +660,11 @@ export default function DogProfile({ locale = 'pt' }: { locale?: Locale }) {
       {dog.is_adopted ? (
         <section className="relative z-10 mt-10 rounded-[2.2rem] border border-playful-line bg-white/88 p-7 shadow-pillowy-lg sm:p-9" aria-labelledby="dog-adopted-heading">
           <h2 id="dog-adopted-heading" className="font-playful-display text-3xl font-extrabold tracking-[-0.04em] text-playful-orange-dark">{t.dogProfile.adoptedTitle}</h2>
-          <p className="mt-3 max-w-3xl text-base font-medium leading-7 text-playful-muted">{t.dogProfile.adoptedDesc}</p>
+          <p className="mt-3 max-w-3xl text-base font-medium leading-7 text-playful-muted">{adoptedDesc(dog.sex, locale)}</p>
         </section>
       ) : (
         <section className="relative z-10 mt-10 rounded-[2.2rem] border border-playful-orange/15 bg-playful-orange-dark p-7 text-white shadow-pillowy-lg sm:p-9" aria-labelledby="dog-adopt-heading">
-          <h2 id="dog-adopt-heading" className="font-playful-display text-3xl font-extrabold tracking-[-0.04em]">{t.dogProfile.adoptTitle} {dog.name}?</h2>
+          <h2 id="dog-adopt-heading" className="font-playful-display text-3xl font-extrabold tracking-[-0.04em]">{adoptTitle(dog.name, dog.sex, locale)}</h2>
           <p className="mt-3 max-w-3xl text-base font-medium leading-7 text-white/82">{t.dogProfile.adoptDesc}</p>
           <div className="mt-7 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
             <AdoptionInterest dogName={dog.name} locale={locale} />

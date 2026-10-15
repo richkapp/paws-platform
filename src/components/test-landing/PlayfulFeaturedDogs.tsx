@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { capaApi } from '../../lib/capaApi';
 import { capaDogs } from '../../data/capaDogs';
 import { getTranslations, localizeDescription, type Locale } from '../../i18n';
+import { adoptedLabel } from '../../lib/dogFacts';
 import type { Dog } from '../../lib/capaApi';
 
 type SizeFilter = 'all' | 'small' | 'medium' | 'large';
@@ -28,11 +29,7 @@ function DogCard({ dog, locale, index }: { dog: Dog; locale: Locale; index: numb
   const badgeClasses = SIZE_BADGE_CLASSES[dog.size] ?? 'bg-white text-playful-muted border border-playful-line';
   const rotation = CARD_ROTATIONS[index % CARD_ROTATIONS.length];
 
-  const sizeLabels: Record<string, string> = {
-    small: t.sizes.small,
-    medium: t.sizes.medium,
-    large: t.sizes.large,
-  };
+  const sizeLabels: Record<string, string> = t.sizes;
   const sizeLabel = sizeLabels[dog.size] ?? dog.size;
   const dogPath = locale === 'pt' ? `/cao?id=${dog.id}` : `/en/dog?id=${dog.id}`;
 
@@ -59,7 +56,7 @@ function DogCard({ dog, locale, index }: { dog: Dog; locale: Locale; index: numb
         </span>
         {dog.is_adopted && (
           <span className="absolute inset-x-4 bottom-4 rounded-full bg-playful-orange/95 px-3 py-2 text-center text-xs font-extrabold uppercase tracking-wide text-white shadow-pillowy">
-            {t.status.adopted}
+            {adoptedLabel(dog.sex, locale)}
           </span>
         )}
       </div>

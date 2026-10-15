@@ -1,6 +1,6 @@
 ---
 import type { Locale } from '../../i18n';
-import { caesHeroContent } from './caesContent';
+import { caesHeroContent, dogProfileCount } from './caesContent';
 
 interface Props {
   locale?: Locale;
@@ -61,6 +61,12 @@ const content = caesHeroContent[locale];
           <span aria-hidden="true">⌕</span>
         </a>
       </div>
+      {locale === 'pt' && (
+        <p class="mt-5 text-base font-bold text-playful-muted">
+          Não sabe por onde começar?
+          <a href="/match" class="playful-focus font-extrabold text-playful-orange-dark underline decoration-playful-orange/40 decoration-2 underline-offset-4" data-caes-match-link>Faça o questionário e veja que cães combinam consigo →</a>
+        </p>
+      )}
 
       <div class="mt-9 flex flex-wrap justify-center gap-3 lg:justify-start" aria-label={locale === 'pt' ? 'Resumo da listagem de cães' : 'Dog listing summary'}>
         {content.chips.map((chip, index) => (
@@ -73,7 +79,7 @@ const content = caesHeroContent[locale];
 
     <figure class="relative mx-auto w-full max-w-[640px] lg:max-w-none">
       <div class="absolute -left-4 top-8 z-20 rotate-[-6deg] rounded-[1.5rem] bg-playful-peach px-5 py-4 text-left shadow-pillowy sm:-left-8">
-        <span class="block font-playful-display text-3xl font-extrabold text-playful-orange-dark">99</span>
+        <span class="block font-playful-display text-3xl font-extrabold text-playful-orange-dark">{dogProfileCount}</span>
         <span class="block text-xs font-extrabold uppercase tracking-[0.18em] text-playful-muted">{locale === 'pt' ? 'perfis' : 'profiles'}</span>
       </div>
       <div class="absolute -right-3 bottom-24 z-20 hidden rotate-3 rounded-full bg-white px-5 py-3 text-sm font-extrabold text-playful-orange-dark shadow-pillowy sm:block">

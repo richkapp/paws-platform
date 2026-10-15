@@ -4,6 +4,8 @@ export const DOG_CARD_ROTATIONS = ['md:-rotate-1', 'md:rotate-1', 'md:rotate-2',
 
 export const SIZE_BADGE_CLASSES: Record<string, string> = {
   small: 'bg-playful-peach text-playful-orange-dark border border-playful-line',
+  'small-medium': 'bg-playful-peach text-playful-orange-dark border border-playful-line',
+  'medium-large': 'bg-playful-orange-dark text-white border border-playful-orange-dark/20',
   medium: 'bg-playful-orange text-white border border-playful-orange-dark/20',
   large: 'bg-playful-watermelon-dark text-white border border-playful-watermelon-dark/20',
 };

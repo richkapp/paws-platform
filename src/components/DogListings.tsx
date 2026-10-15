@@ -5,7 +5,7 @@ import { getTranslations, type Locale } from '../i18n';
 import type { Dog } from '../lib/capaApi';
 import PlayfulDogCard from './dogs/PlayfulDogCard';
 
-type SizeFilter = 'all' | 'small' | 'medium' | 'large';
+type SizeFilter = 'all' | 'small' | 'small-medium' | 'medium' | 'medium-large' | 'large';
 type SexFilter = 'all' | 'male' | 'female';
 
 const FILTER_BUTTON_BASE = 'playful-focus min-h-11 rounded-full px-5 py-2.5 text-sm font-extrabold transition-all';
@@ -21,7 +21,9 @@ export default function DogListings({ locale = 'pt' }: { locale?: Locale }) {
   const filterTabs: { id: SizeFilter; label: string }[] = [
     { id: 'all', label: t.dogListings.filterAll },
     { id: 'small', label: t.dogListings.filterSmall },
+    { id: 'small-medium', label: t.dogListings.filterSmallMedium },
     { id: 'medium', label: t.dogListings.filterMedium },
+    { id: 'medium-large', label: t.dogListings.filterMediumLarge },
     { id: 'large', label: t.dogListings.filterLarge },
   ];
 
