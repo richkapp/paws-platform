@@ -1,0 +1,35 @@
+---
+type StatIconName = 'sterilized' | 'adopted' | 'shelter';
+
+interface Props {
+  icon: StatIconName;
+  class?: string;
+}
+
+const { icon, class: className = 'h-8 w-8' } = Astro.props;
+---
+
+<svg data-stat-icon={icon} class={className} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  {icon === 'sterilized' && (
+    <>
+      <path d="M24 5.5 38.5 10.5v10.8c0 9.6-6.1 17.1-14.5 21.2C15.6 38.4 9.5 30.9 9.5 21.3V10.5L24 5.5Z" class="fill-white/80 stroke-current" stroke-width="2.8" stroke-linejoin="round" />
+      <path d="M20.6 15.5h6.8v5.6H33v6.8h-5.6v5.6h-6.8v-5.6H15v-6.8h5.6v-5.6Z" class="fill-playful-peach stroke-current" stroke-width="2.4" stroke-linejoin="round" />
+    </>
+  )}
+
+  {icon === 'adopted' && (
+    <>
+      <path d="M24 41S7.5 32 7.5 18.8A9 9 0 0 1 24 13.6a9 9 0 0 1 16.5 5.2C40.5 32 24 41 24 41Z" class="fill-playful-peach stroke-current" stroke-width="2.8" stroke-linejoin="round" />
+      <path d="M15.2 18.6a4.4 4.4 0 0 1 4.6-3.4" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" class="opacity-60" />
+    </>
+  )}
+
+  {icon === 'shelter' && (
+    <>
+      <path d="M11.5 20.5V39a2 2 0 0 0 2 2h21a2 2 0 0 0 2-2V20.5" class="fill-white/80 stroke-current" stroke-width="2.8" stroke-linejoin="round" />
+      <path d="M6.5 23 24 8l17.5 15" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M19 41V31a5 5 0 0 1 10 0v10" class="fill-playful-peach stroke-current" stroke-width="2.6" stroke-linejoin="round" />
+      <path d="M33 8.5v6.2" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" />
+    </>
+  )}
+</svg>

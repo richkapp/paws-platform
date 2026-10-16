@@ -1,5 +1,7 @@
 ---
 import { getTranslations, type Locale } from '../../i18n';
+import StatIcon from '../StatIcon.astro';
+import { shelterDogCount } from '../../lib/shelterCount';
 
 interface Props {
   locale?: Locale;
@@ -9,9 +11,9 @@ const { locale = 'pt' } = Astro.props;
 const t = getTranslations(locale);
 
 const stats = [
-  { number: 315, label: t.stats.sterilizedLabel, sublabel: t.stats.sterilizedSub, accent: 'text-playful-orange-dark', bg: 'bg-white', rotate: 'md:rotate-1', icon: '✚' },
-  { number: 419, label: t.stats.adoptedLabel, sublabel: t.stats.adoptedSub, accent: 'text-playful-orange', bg: 'bg-playful-cream', rotate: 'md:-rotate-1 md:translate-y-4', icon: '❤' },
-  { number: 135, label: t.stats.shelterLabel, sublabel: t.stats.shelterSub, accent: 'text-playful-watermelon-dark', bg: 'bg-white', rotate: 'md:rotate-2', icon: '⌂' },
+  { number: 315, label: t.stats.sterilizedLabel, sublabel: t.stats.sterilizedSub, accent: 'text-playful-orange-dark', bg: 'bg-white', rotate: 'md:rotate-1', icon: 'sterilized' as const, live: false },
+  { number: 419, label: t.stats.adoptedLabel, sublabel: t.stats.adoptedSub, accent: 'text-playful-orange', bg: 'bg-playful-cream', rotate: 'md:-rotate-1 md:translate-y-4', icon: 'adopted' as const, live: false },
+  { number: shelterDogCount, label: t.stats.shelterLabel, sublabel: t.stats.shelterSub, accent: 'text-playful-watermelon-dark', bg: 'bg-white', rotate: 'md:rotate-2', icon: 'shelter' as const, live: true },
 ];
 ---
 
@@ -23,10 +25,10 @@ const stats = [
     </div>
 
     <div data-reveal-stagger="110" class="grid grid-cols-1 gap-6 md:grid-cols-3 lg:gap-8">
-      {stats.map(({ number, label, sublabel, accent, bg, rotate, icon }) => (
+      {stats.map(({ number, label, sublabel, accent, bg, rotate, icon, live }) => (
         <article data-reveal="pop" class={`${bg} ${rotate} card-pillowy rounded-playful border border-playful-line/70 p-7 text-center shadow-pillowy`}>
-          <div class="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-playful-peach text-xl shadow-sm" aria-hidden="true">{icon}</div>
-          <div class={`mb-1 font-playful-display text-6xl font-extrabold leading-none ${accent}`}>{number}</div>
+          <div class="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-full bg-playful-peach text-playful-orange-dark shadow-sm" aria-hidden="true"><StatIcon icon={icon} class="h-9 w-9" /></div>
+          <div class={`mb-1 font-playful-display text-6xl font-extrabold leading-none ${accent}`} data-shelter-count={live ? '' : undefined}>{number}</div>
           <h3 class="font-playful-display text-xl font-extrabold text-playful-orange-dark">{label}</h3>
           <p class="mt-1 text-sm font-medium text-playful-muted">{sublabel}</p>
         </article>
@@ -34,3 +36,8 @@ const stats = [
     </div>
   </div>
 </section>
+
+<script>
+  import { refreshShelterCount } from '../../lib/shelterCount';
+  refreshShelterCount();
+</script>
