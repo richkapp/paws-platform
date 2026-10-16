@@ -175,6 +175,11 @@ for r in records:
     if existing:
         dog['photos'] = [f"/images/dogs/{slug(name)}/{p.rsplit('/', 1)[1]}" for p in existing.get('photos') or []]
         dog['photo_url'] = dog['photos'][0] if dog['photos'] else ''
+    else:
+        # New dogs: photos committed under public/images/dogs/<slug>/ (from CAPA's Canva photo sheet).
+        folder = ROOT / 'public/images/dogs' / slug(name)
+        dog['photos'] = [f'/images/dogs/{slug(name)}/{f.name}' for f in sorted(folder.glob('photo-*.jpg'))] if folder.exists() else []
+        dog['photo_url'] = dog['photos'][0] if dog['photos'] else ''
     public.append(dog)
     seen.add(key)
 

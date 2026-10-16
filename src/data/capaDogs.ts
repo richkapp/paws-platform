@@ -778,8 +778,10 @@ export const capaDogs = [
     "sex": "male",
     "age": "Nasceu em 2024",
     "description": "Sexo: Masculino\nIdade: Nasceu em 2024\nData de entrada: 2025\nRaça: Indefinida\nPorte: Médio\nPersonalidade: Meigo, muito ativo e brincalhão\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipado, Vacinado, Esterilizado\nHistória: Retirado ao tutor por maus tratos denunciados por vizinhos. Apesar de tudo, confia a 100% no ser humano.",
-    "photo_url": "",
-    "photos": [],
+    "photo_url": "/images/dogs/chiquinho/photo-01.jpg",
+    "photos": [
+      "/images/dogs/chiquinho/photo-01.jpg"
+    ],
     "is_adopted": false,
     "traits": {
       "energia": 3,
@@ -1167,8 +1169,10 @@ export const capaDogs = [
     "sex": "male",
     "age": "Nasceu em 2022",
     "description": "Sexo: Masculino\nIdade: Nasceu em 2022\nData de entrada: 2026\nRaça: Indeterminada\nPorte: Grande\nPersonalidade: Meigo e ativo\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipado, Vacinado, Esterilizado\nNota: Entrou em 2026. Ainda em adaptação.\nHistória: Recolhido após denúncias. Assim que recolhido mostrou ser um cão muito meigo, mas com alguns medos. Com o tempo, grande parte dos medos melhorou.",
-    "photo_url": "",
-    "photos": [],
+    "photo_url": "/images/dogs/jason/photo-01.jpg",
+    "photos": [
+      "/images/dogs/jason/photo-01.jpg"
+    ],
     "is_adopted": false,
     "traits": {
       "energia": 3,
@@ -2161,8 +2165,10 @@ export const capaDogs = [
     "sex": "female",
     "age": "Nasceu em 2018",
     "description": "Sexo: Feminino\nIdade: Nasceu em 2018\nData de entrada: 2026\nRaça: Cruzada de Podenga\nPorte: Pequeno\nPersonalidade: Meiga, tranquila e companheira\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipada, Vacinada, Esterilizada\nHistória: Encontrada no monte de São Mamede, onde foi deixada certamente para morrer. Estava desidratada e desnutrida. Felizmente recuperou muito bem.",
-    "photo_url": "",
-    "photos": [],
+    "photo_url": "/images/dogs/pepita/photo-01.jpg",
+    "photos": [
+      "/images/dogs/pepita/photo-01.jpg"
+    ],
     "is_adopted": false,
     "traits": {
       "energia": 1,
@@ -2210,8 +2216,10 @@ export const capaDogs = [
     "sex": "male",
     "age": "",
     "description": "Sexo: Masculino\nPorte: Pequeno\nPersonalidade: Muito meigo, mas com muito medo\nSociável com humanos\nNão sabemos se é sociável com machos\nNão sabemos se é sociável com fêmeas\nNão sabemos se é sociável com gatos\nNota: Ficha ainda por completar: não há registo de idade, raça, saúde nem de como se dá com outros cães ou gatos. A equipa esclarece tudo isso na visita.\nHistória: Tem muito medo e precisa de tempo e calma para confiar. Por baixo do medo é um menino muito meigo.",
-    "photo_url": "",
-    "photos": [],
+    "photo_url": "/images/dogs/peter/photo-01.jpg",
+    "photos": [
+      "/images/dogs/peter/photo-01.jpg"
+    ],
     "is_adopted": false,
     "traits": {
       "energia": 2,
@@ -2228,8 +2236,10 @@ export const capaDogs = [
     "sex": "male",
     "age": "Nasceu em 2021",
     "description": "Sexo: Masculino\nIdade: Nasceu em 2021\nData de entrada: 2025\nRaça: Podengo\nPorte: Médio\nPersonalidade: Receoso quando não conhece, mas muito meigo e companheiro\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nSociável com gatos\nChipado, Vacinado, Esterilizado\nNota: Sofreu um trauma neurológico. É um cão de rotinas: em stress, anda em círculos. Precisa de uma casa calma e previsível.\nHistória: Recolhido por andar constantemente em círculos. Hoje está bem melhor e já confia na equipa. Tirando isso, é um cão perfeitamente feliz.",
-    "photo_url": "",
-    "photos": [],
+    "photo_url": "/images/dogs/pietro/photo-01.jpg",
+    "photos": [
+      "/images/dogs/pietro/photo-01.jpg"
+    ],
     "is_adopted": false,
     "traits": {
       "energia": 2,
@@ -2401,8 +2411,10 @@ export const capaDogs = [
     "sex": "male",
     "age": "Nasceu em 2022",
     "description": "Sexo: Masculino\nIdade: Nasceu em 2022\nData de entrada: 2025\nRaça: American Staffordshire Terrier\nPorte: Médio\nPersonalidade: Meigo, ativo e brincalhão\nSociável com humanos\nNão sociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipado, Vacinado, Esterilizado\nNota: Raça abrangida pela legislação de cães potencialmente perigosos. A adoção tem requisitos legais próprios, a confirmar com a equipa.\nHistória: Resgatado de uma situação de maus tratos. Desde logo se mostrou um cão meigo com pessoas. Foi pouco o tempo com aquele tutor, por isso não traz muitos traumas.",
-    "photo_url": "",
-    "photos": [],
+    "photo_url": "/images/dogs/rocky/photo-01.jpg",
+    "photos": [
+      "/images/dogs/rocky/photo-01.jpg"
+    ],
     "is_adopted": false,
     "traits": {
       "energia": 3,
@@ -2447,8 +2459,10 @@ export const capaDogs = [
     "sex": "male",
     "age": "",
     "description": "Sexo: Masculino\nPorte: Grande\nPersonalidade: Muito meigo e calmo, receoso ao início\nSociável com humanos\nNão sabemos se é sociável com machos\nNão sabemos se é sociável com fêmeas\nNão sabemos se é sociável com gatos\nNota: Ficha ainda por completar: não há registo de idade, raça, saúde nem de como se dá com outros cães ou gatos. A equipa esclarece tudo isso na visita.\nHistória: Adora mimo e adora passear. É calmo, só precisa de um momento para confiar em quem não conhece.",
-    "photo_url": "",
-    "photos": [],
+    "photo_url": "/images/dogs/shadow/photo-01.jpg",
+    "photos": [
+      "/images/dogs/shadow/photo-01.jpg"
+    ],
     "is_adopted": false,
     "traits": {
       "energia": 2,
