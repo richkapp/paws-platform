@@ -1,5 +1,53 @@
 [
   {
+    "id": "35a53d19-adbd-4438-9e1d-7f3022d60fb0",
+    "name": "Abby",
+    "size": "medium",
+    "sex": "female",
+    "age": "",
+    "description": "Sexo: Feminino\nIdade: Nasceu em 2019\nData de entrada: 2022\nRaça: X Podenga\nPorte: Médio\nPersonalidade: Meiga, brincalhona e companheira\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipada, Vacinada, Esterilizada\nHistória: Mais uma vítima de abandono. Tinha sido mãe, foi recolhida\njuntamente com os seus 5 filhos recém-nascidos.",
+    "photo_url": "https://api.capapvl.org/images/dogs/abby/photo-01.jpg",
+    "photos": [
+      "https://api.capapvl.org/images/dogs/abby/photo-01.jpg",
+      "https://api.capapvl.org/images/dogs/abby/photo-03.jpg",
+      "https://api.capapvl.org/images/dogs/abby/photo-04.jpg",
+      "https://api.capapvl.org/images/dogs/abby/photo-05.jpg",
+      "https://api.capapvl.org/images/dogs/abby/photo-06.jpg",
+      "https://api.capapvl.org/images/dogs/abby/photo-07.jpg",
+      "https://api.capapvl.org/images/dogs/abby/photo-08.jpg",
+      "https://api.capapvl.org/images/dogs/abby/photo-09.jpg",
+      "https://api.capapvl.org/images/dogs/abby/photo-10.jpg",
+      "https://api.capapvl.org/images/dogs/abby/photo-11.jpg",
+      "https://api.capapvl.org/images/dogs/abby/photo-12.jpg",
+      "https://api.capapvl.org/images/dogs/abby/photo-13.jpg"
+    ],
+    "is_adopted": true,
+    "created_at": "2026-02-24T19:56:35.544Z",
+    "updated_at": "2026-06-18T22:35:46.660Z",
+    "_reason": "excluded"
+  },
+  {
+    "id": "38a75a11-ab4a-4b1b-bb61-6eb13f8c35ff",
+    "name": "Farrusco",
+    "size": "medium",
+    "sex": "male",
+    "age": "",
+    "description": "Sexo: Masculino\nIdade: Nasceu em 2019\nData de entrada: 2022\nRaça: Podengo\nPorte: Médio\nPersonalidade: Calmo e meigo\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nSociável com gatos\nChipado, Vacinado, Esterilizado\nHistória: Farrusco foi abandonado na nossa vila. Viveu durante alguns meses na rua, onde era feliz e cuidado por muitos, mas, infelizmente, também há gente muito má, que começaram a fazer mal ao Farrusco. Tivemos de o\nrecolhe e a adaptação ao canil foi muito difícil, uma vez que estava habituado à liberdade. Os seus dias eram passados a chorar. Felizmente foi melhorando e, com amigos de box, ele melhorou bastante. Só necessita de uma família que o volto a dar a liberdade a que ele estava tão habituado.",
+    "photo_url": "https://api.capapvl.org/images/dogs/farrusco/photo-01.jpg",
+    "photos": [
+      "https://api.capapvl.org/images/dogs/farrusco/photo-01.jpg",
+      "https://api.capapvl.org/images/dogs/farrusco/photo-03.jpg",
+      "https://api.capapvl.org/images/dogs/farrusco/photo-04.jpg",
+      "https://api.capapvl.org/images/dogs/farrusco/photo-05.jpg",
+      "https://api.capapvl.org/images/dogs/farrusco/photo-06.jpg",
+      "https://api.capapvl.org/images/dogs/farrusco/photo-07.jpg"
+    ],
+    "is_adopted": true,
+    "created_at": "2026-02-24T19:58:32.181Z",
+    "updated_at": "2026-06-18T22:35:46.660Z",
+    "_reason": "excluded"
+  },
+  {
     "id": "62a652c4-6631-4d4d-a07c-d6454aeb775a",
     "name": "Mac",
     "size": "medium",

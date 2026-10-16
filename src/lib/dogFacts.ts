@@ -9,6 +9,14 @@ export const SIZE_LABELS: Record<Locale, Record<DogSize, string>> = {
   en: { small: 'Small', 'small-medium': 'Small/Medium', medium: 'Medium', 'medium-large': 'Medium/Large', large: 'Large' },
 };
 
+/** Filters use three groups: Pequeno/Médio counts as Pequeno, Médio/Grande as Grande. */
+export type SizeGroup = 'small' | 'medium' | 'large';
+export function sizeGroup(size: string): SizeGroup {
+  if (size === 'small' || size === 'small-medium') return 'small';
+  if (size === 'large' || size === 'medium-large') return 'large';
+  return 'medium';
+}
+
 export function sizeLabel(size: string, locale: Locale): string {
   return SIZE_LABELS[locale][size as DogSize] ?? size;
 }

@@ -4,22 +4,12 @@ begin;
 alter table dogs drop constraint if exists dogs_size_check;
 alter table dogs add constraint dogs_size_check check (size = any (array['small','small-medium','medium','medium-large','large']));
 alter table dogs add column if not exists traits jsonb not null default '{}'::jsonb;
+delete from dogs where id = '35a53d19-adbd-4438-9e1d-7f3022d60fb0'; -- Abby (excluded)
+delete from dogs where id = '38a75a11-ab4a-4b1b-bb61-6eb13f8c35ff'; -- Farrusco (excluded)
 delete from dogs where id = '62a652c4-6631-4d4d-a07c-d6454aeb775a'; -- Mac (excluded)
 delete from dogs where id = 'bd0fbdd9-f067-4fa0-b94f-f9a8a86b81c1'; -- Nobita (deceased)
 delete from dogs where id = '80299c12-bbf2-4f15-b440-13beb5ccbe6a'; -- Patty (deceased)
 delete from dogs where id = '650afcdc-967d-4f80-8611-f65de064e813'; -- Serena (deceased)
-update dogs set name = 'Abby', size = 'medium', sex = 'female', age = '', description = 'Sexo: Feminino
-Idade: Nasceu em 2019
-Data de entrada: 2022
-Raça: X Podenga
-Porte: Médio
-Personalidade: Meiga, brincalhona e companheira
-Sociável com humanos
-Sociável com machos
-Sociável com fêmeas
-Não sabemos se é sociável com gatos
-Chipada, Vacinada, Esterilizada
-História: Mais uma vítima de abandono. Tinha sido mãe, foi recolhida juntamente com os seus 5 filhos recém-nascidos.', traits = '{}'::jsonb, is_adopted = true, updated_at = now() where id = '35a53d19-adbd-4438-9e1d-7f3022d60fb0';
 update dogs set name = 'Afonso', size = 'medium', sex = 'male', age = 'Nasceu em 2020', description = 'Sexo: Masculino
 Idade: Nasceu em 2020
 Data de entrada: 2023
@@ -317,14 +307,16 @@ Não sabemos se é sociável com gatos
 Chipada, Vacinada, Esterilizada
 Nota: Não é muito de mimo. Prefere a companhia de outros cães.
 História: Nasceu na rua e deu entrada já com perto de seis meses. Confia em quem conhece, mas prefere a companhia dos seus amigos de quatro patas.', traits = '{"energia": 2, "receio": 2, "carente": false}'::jsonb, is_adopted = false, updated_at = now() where id = 'c7803426-a75d-4abc-80f8-ba589581ec4e';
-update dogs set name = 'Channel', size = 'medium', sex = 'female', age = '', description = 'Sexo: Feminino
+update dogs set name = 'Channel', size = 'medium', sex = 'female', age = 'Nasceu em 2012', description = 'Sexo: Feminino
+Idade: Nasceu em 2012
+Data de entrada: 2012
 Porte: Médio
 Personalidade: Calma e meiga, mas receosa com estranhos
 Sociável com humanos
 Não sabemos se é sociável com machos
 Não sabemos se é sociável com fêmeas
 Não sabemos se é sociável com gatos
-Nota: Ficha ainda por completar: não há registo de idade, raça, saúde nem de como se dá com outros cães ou gatos. A equipa esclarece tudo isso na visita.
+Nota: Ficha ainda por completar: não há registo de raça, saúde nem de como se dá com outros cães ou gatos. A equipa esclarece tudo isso na visita.
 História: Precisa de tempo para confiar em quem não conhece. Dado o tempo, é uma cadela calma e meiga.', traits = '{"energia": 1, "receio": 2, "carente": false}'::jsonb, is_adopted = false, updated_at = now() where id = '9d862af0-f36b-4ce5-a653-4180ba2573a8';
 update dogs set name = 'Charlie', size = 'small-medium', sex = 'male', age = 'Nasceu em 2012', description = 'Sexo: Masculino
 Idade: Nasceu em 2012
@@ -413,18 +405,6 @@ Sociável com fêmeas
 Não sabemos se é sociável com gatos
 Chipada, Vacinada, Esterilizada
 História: Foi abandonada em bebé, e cresceu no abrigo.', traits = '{}'::jsonb, is_adopted = true, updated_at = now() where id = '770956dd-743c-4924-a383-13c94f669d34';
-update dogs set name = 'Farrusco', size = 'medium', sex = 'male', age = '', description = 'Sexo: Masculino
-Idade: Nasceu em 2019
-Data de entrada: 2022
-Raça: Podengo
-Porte: Médio
-Personalidade: Calmo e meigo
-Sociável com humanos
-Sociável com machos
-Sociável com fêmeas
-Sociável com gatos
-Chipado, Vacinado, Esterilizado
-História: Farrusco foi abandonado na nossa vila. Viveu durante alguns meses na rua, onde era feliz e cuidado por muitos, mas, infelizmente, também há gente muito má, que começaram a fazer mal ao Farrusco. Tivemos de o recolhe e a adaptação ao canil foi muito difícil, uma vez que estava habituado à liberdade. Os seus dias eram passados a chorar. Felizmente foi melhorando e, com amigos de box, ele melhorou bastante. Só necessita de uma família que o volto a dar a liberdade a que ele estava tão habituado.', traits = '{}'::jsonb, is_adopted = true, updated_at = now() where id = '38a75a11-ab4a-4b1b-bb61-6eb13f8c35ff';
 update dogs set name = 'Feliz', size = 'medium', sex = 'male', age = 'Nasceu em 2016', description = 'Sexo: Masculino
 Idade: Nasceu em 2016
 Data de entrada: 2021
@@ -550,6 +530,7 @@ Chipado, Vacinado, Castrado
 História: Abandonado em bebé, cresceu no abrigo.', traits = '{"energia": 3, "receio": 0, "carente": false}'::jsonb, is_adopted = false, updated_at = now() where id = 'e3401af2-0655-4d41-96a7-103412f3ee1f';
 update dogs set name = 'Jóia', size = 'medium', sex = 'female', age = 'Nasceu em 2019', description = 'Sexo: Feminino
 Idade: Nasceu em 2019
+Data de entrada: 2021
 Raça: Cruzada de Podengo
 Porte: Médio
 Personalidade: Meiga e muito brincalhona
@@ -955,14 +936,16 @@ Sociável com fêmeas
 Não sabemos se é sociável com gatos
 Chipada, Vacinada, Esterilizada
 História: Abandonada com os quatro irmãos e a mãe, com poucos dias de vida. Cresceu no abrigo e continua à espera da sua vez.', traits = '{"energia": 3, "receio": 0, "carente": false}'::jsonb, is_adopted = false, updated_at = now() where id = 'b50ac124-27e7-4d5e-b286-a19df2d60c38';
-insert into dogs (id, name, size, sex, age, description, traits, is_adopted, photo_url, updated_at) values ('922d4307-33bb-5f6e-9d72-65d470bbf0e2', 'Peter', 'small', 'male', '', 'Sexo: Masculino
+insert into dogs (id, name, size, sex, age, description, traits, is_adopted, photo_url, updated_at) values ('922d4307-33bb-5f6e-9d72-65d470bbf0e2', 'Peter', 'small', 'male', 'Nasceu em 2021', 'Sexo: Masculino
+Idade: Nasceu em 2021
+Data de entrada: 2022
 Porte: Pequeno
 Personalidade: Muito meigo, mas com muito medo
 Sociável com humanos
 Não sabemos se é sociável com machos
 Não sabemos se é sociável com fêmeas
 Não sabemos se é sociável com gatos
-Nota: Ficha ainda por completar: não há registo de idade, raça, saúde nem de como se dá com outros cães ou gatos. A equipa esclarece tudo isso na visita.
+Nota: Ficha ainda por completar: não há registo de raça, saúde nem de como se dá com outros cães ou gatos. A equipa esclarece tudo isso na visita.
 História: Tem muito medo e precisa de tempo e calma para confiar. Por baixo do medo é um menino muito meigo.', '{"energia": 2, "receio": 2, "carente": false}'::jsonb, false, '', now());
 insert into dogs (id, name, size, sex, age, description, traits, is_adopted, photo_url, updated_at) values ('eb9b9c85-a109-5bdd-8c93-e4f0f3791f90', 'Pietro', 'medium', 'male', 'Nasceu em 2021', 'Sexo: Masculino
 Idade: Nasceu em 2021
@@ -1026,14 +1009,16 @@ Sociável com fêmeas
 Não sabemos se é sociável com gatos
 Chipada, Vacinada, Esterilizada
 História: Vítima de envenenamento. Foram mais de dois dias de convulsões, mas felizmente foi possível reverter a situação e está tudo bem.', traits = '{"energia": 3, "receio": 0, "carente": false, "criancas": "sim"}'::jsonb, is_adopted = false, updated_at = now() where id = 'c389faf4-870a-4ac7-a5ae-d74d6d070ca3';
-update dogs set name = 'Rastas', size = 'small', sex = 'male', age = '', description = 'Sexo: Masculino
+update dogs set name = 'Rastas', size = 'small', sex = 'male', age = 'Nasceu em 2011', description = 'Sexo: Masculino
+Idade: Nasceu em 2011
+Data de entrada: 2023
 Porte: Pequeno
 Personalidade: Muito meigo e querido, adora brincar mas é calmo
 Sociável com humanos
 Não sabemos se é sociável com machos
 Não sabemos se é sociável com fêmeas
 Não sabemos se é sociável com gatos
-Nota: Ficha ainda por completar: não há registo de idade, raça, saúde nem de como se dá com outros cães ou gatos. A equipa esclarece tudo isso na visita.
+Nota: Ficha ainda por completar: não há registo de raça, saúde nem de como se dá com outros cães ou gatos. A equipa esclarece tudo isso na visita.
 História: Receoso com estranhos, mas ganha confiança depressa. Adora brincar sem ser agitado.', traits = '{"energia": 2, "receio": 1, "carente": false}'::jsonb, is_adopted = false, updated_at = now() where id = '93ddf068-f65e-47ef-9eb2-2d4605a14750';
 insert into dogs (id, name, size, sex, age, description, traits, is_adopted, photo_url, updated_at) values ('f8f64a13-2c47-5841-9c0b-fe335f11a6a9', 'Rocky', 'medium', 'male', 'Nasceu em 2022', 'Sexo: Masculino
 Idade: Nasceu em 2022

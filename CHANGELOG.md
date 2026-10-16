@@ -1,7 +1,31 @@
 # CHANGELOG — capapvl.pt
 
+## 2026-10-16 — CAPA corrections, follow-up fixes
+
+- Filters: size filters on the landing page and `/caes` both use three groups (Pequenos, Médios, Grandes). Pequeno/Médio counts as Pequeno and Médio/Grande as Grande; profiles still show the exact size from CAPA's records.
+- Dogs: removed Abby and Farrusco. Abby is in `caes.json` `_meta.saidos` as an earlier dog to exclude; Farrusco matches its "Farrusca" entry and is not on CAPA's Canva photo sheet by name or photo. Filled missing birth and entry years for Channel, Jóia, Peter and Rastas from CAPA's Canva table "Entrada/Idade"; where that table disagrees with `caes.json`, `caes.json` was kept.
+- Landing page: dog cards show age in years ("12 anos") like `/caes`.
+- `/match`: English version at `/en/match`, added to the main menu in both languages and to the language switcher; disclaimer notes that some temperament data is still being confirmed by the team.
+- Tests: `verify-caes-browser.mjs` and `verify-dog-profile-browser.mjs` updated for 100 profiles, 10 adopted, sex-aware adopted labels, and Mouse replacing Abby as the adopted fixture.
+
+## 2026-10-16 — CAPA October 2026 corrections and /match quiz
+
+- Data: rebuilt dog records from CAPA's `caes.json` (2026-10-15): full stories, sex, five record sizes, foster status (`Acolhimento:`), shelter notes (`Nota:`) and quiz traits; removed Nobita, Patty, Serena (died) and Mac (excluded); added Chiquinho, Jason, Pepita, Peter, Pietro, Rocky and Shadow with photos from CAPA's Canva sheet; marked Becas, Esmeralda, Kiki and Nemo adopted; fixed Mouse showing Morena's story; renamed Esmerelda to Esmeralda (photo folder too).
+- Profile: ADOTADA/ADOTADO and "a/o" wording follow the dog's sex; age reads "cerca de N anos (nasceu em YYYY)"; entry reads "No abrigo desde YYYY, há N anos"; adopted badge moved to the photo corner; foster note and "A saber antes de adotar" box.
+- `/match`: adoption match quiz ported from CAPA's prototype; scores verified identical to the original over 2,000 random answer sets.
+- API/DB: `dogs.size` accepts five sizes; new `traits jsonb` column. Migration in `scripts/capa-corrections-2026-10/`.
+- Deploy: backups in `~/backups/capapvl/` on `2.29.9.89` (database dump, dog photos, previous static site).
+
+## 2026-08-19 — Website runtime moved to the smaller Hetzner host
+
+- Infrastructure: CAPA's Namecheap web A records (`@`, `www`, and `api`) now point to `2.29.9.89`, the `ubuntu-4gb-hel1-1` Hetzner CX23 destination in Helsinki / `eu-central`.
+- Verification: authoritative DNS and forced HTTPS reachability were checked after cutover; mail and non-web DNS records were left untouched. The former `65.21.156.73` host is reserved for Hermes.
+
 ## 2026-08-05
 - Dogs: marked Batatinha, Belinha, and Chico as adopted after CAPA confirmed their foster families adopted them; they remain visible with adopted banners.
+
+## 2026-07-11
+- Updated CAPA repository documentation to use the current `richkapp` GitHub namespace after the account rename; no application code or runtime configuration changed.
 
 ## 2026-06-29
 - Help foster families: added bilingual multi-step foster-home request form routes at `/ajudar/formulario-familia-acolhimento` and `/en/help/foster-home-form`, replacing the FAT/foster section email buttons with structured form links and extending `/forms/submit` email delivery with `foster_home` submissions.
@@ -96,7 +120,7 @@
 
 ## 2026-02-25 (Session 6 — Admin Testing, Enhancements & Deploy)
 - Deploy: Site is LIVE at capapvl.pt — Hostinger Git deploy from `deploy` branch with auto-deployment enabled (Crash & Burn)
-- Deploy: Pushed `main` and `deploy` branches to https://github.com/0rderfl0w/paws-platform (Crash & Burn)
+- Deploy: Pushed `main` and `deploy` branches to https://github.com/richkapp/paws-platform (Crash & Burn)
 - Git: Set repo email to zkgit.substance129@passmail.com, also set as global default on Mac (Crash & Burn)
 
 ## 2026-02-25 (Session 6a — Admin Testing & Enhancements)

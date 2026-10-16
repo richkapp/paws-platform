@@ -1,0 +1,26 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PlayfulSiteNav from '../../components/playful/PlayfulSiteNav.astro';
+import PlayfulSiteFooter from '../../components/playful/PlayfulSiteFooter.astro';
+import MatchQuiz from '../../components/MatchQuiz';
+
+const locale = 'en' as const;
+---
+
+<Layout
+  locale={locale}
+  title="Find Your Match | CAPA Póvoa de Lanhoso"
+  description="Answer four steps about your home and routine and see which CAPA shelter dogs suit you best."
+  ogUrl="https://capapvl.org/en/match"
+  playfulFonts
+>
+  <div class="min-h-screen bg-playful-canvas text-playful-ink font-playful-body pattern-dots selection:bg-playful-orange selection:text-white">
+    <PlayfulSiteNav locale={locale} />
+    <div class="overflow-x-clip">
+      <main class="px-5 py-10 sm:px-8 lg:py-14">
+        <MatchQuiz locale={locale} client:load />
+      </main>
+      <PlayfulSiteFooter locale={locale} />
+    </div>
+  </div>
+</Layout>

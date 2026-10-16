@@ -211,6 +211,102 @@ export const STEPS: Step[] = [
   },
 ];
 
+
+export const STEPS_EN: Step[] = [
+  {
+    title: 'Your home',
+    sub: 'Where the dog will live, and with whom.',
+    questions: [
+      { id: 'casa', title: 'What kind of home do you have?', options: [o('apartamento', 'Apartment'), o('vivenda', 'House')] },
+      {
+        id: 'jardim',
+        title: 'Do you have a garden or yard?',
+        help: 'Fence height matters: some of these dogs have escaped from homes before.',
+        options: [o('nao', 'No'), o('baixa', 'Yes, with a low wall or fence', 'Up to about one metre'), o('alta', 'Yes, well fenced', 'High wall or fence')],
+      },
+      { id: 'pessoas', title: 'How many people live at home?', inline: true, options: [o('1', '1'), o('2', '2'), o('3-4', '3 or 4'), o('5+', '5 or more')] },
+      {
+        id: 'criancas',
+        title: 'Are there children at home?',
+        help: 'With children, temperament matters more than size.',
+        options: [o('nenhuma', 'No', 'Adults only'), o('pequenas', 'Yes, up to 10 years old'), o('grandes', 'Yes, older than 10')],
+      },
+    ],
+  },
+  {
+    title: 'Your daily routine',
+    sub: 'How long the dog is alone, and how often it goes out.',
+    questions: [
+      {
+        id: 'trabalho',
+        title: 'Do you work from home or away?',
+        help: 'Several of these dogs depend a lot on human company.',
+        options: [o('casa', 'From home', 'Someone is almost always there'), o('fora-ate4', 'Away, up to 4 hours a day'), o('fora-4a8', 'Away, 4 to 8 hours'), o('fora-mais8', 'Away, more than 8 hours')],
+      },
+      {
+        id: 'passeios',
+        title: 'How many walks a day can you manage?',
+        help: 'Be realistic: this answer decides the right energy level.',
+        inline: true,
+        options: [o('1', '1 walk'), o('2', '2 walks'), o('3+', '3 or more')],
+      },
+    ],
+  },
+  {
+    title: 'Who already lives with you',
+    sub: 'The animals you already have, and your experience.',
+    questions: [
+      {
+        id: 'animais',
+        title: 'Do you already have animals at home?',
+        help: 'You can choose more than one option.',
+        multi: true,
+        options: [o('nenhum', 'None'), o('macho', 'Male dog'), o('femea', 'Female dog'), o('gato', 'Cat'), o('quinta', 'Chickens, ducks or livestock', 'Yard or farm animals')],
+      },
+      {
+        id: 'descCao',
+        title: 'If you already have a dog, what is it like?',
+        text: true,
+        help: 'In two lines: age, size, whether it is territorial, whether it has lived with other dogs. The team reads this.',
+        placeholder: 'E.g.: 5-year-old female, medium, very playful, has lived with another dog.',
+      },
+      {
+        id: 'exp',
+        title: 'How much experience do you have with dogs?',
+        help: 'Several of these dogs come from abuse and need patient hands.',
+        options: [o('nenhuma', 'This is my first dog', 'I want a dog that settles in easily'), o('alguma', 'I have had dogs', 'I know the day-to-day basics'), o('muita', 'A lot of experience', 'I have handled fearful or traumatised dogs')],
+      },
+    ],
+  },
+  {
+    title: 'What you are looking for',
+    sub: 'The dog you picture at home.',
+    questions: [
+      {
+        id: 'prefEnergia',
+        title: 'Do you prefer a calm or an energetic dog?',
+        options: [o('calmo', 'Calmer', 'Quiet company'), o('equilibrado', 'In between', 'Plays, but also rests'), o('ativo', 'More energetic', 'For lots of walks and play'), o('indiferente', 'No preference')],
+      },
+      {
+        id: 'prefCarencia',
+        title: 'More independent or more affectionate?',
+        options: [o('independente', 'Independent', 'Fine alone, does not demand cuddles'), o('mimado', 'Affectionate', 'Wants to be with us all the time'), o('indiferente', 'No preference')],
+      },
+      { id: 'porte', title: 'What size are you looking for?', inline: true, options: [o('indiferente', 'No preference'), o('pequeno', 'Small'), o('medio', 'Medium'), o('grande', 'Large')] },
+      { id: 'prefSexo', title: 'Male or female?', inline: true, options: [o('indiferente', 'No preference'), o('macho', 'Male'), o('femea', 'Female')] },
+      {
+        id: 'idade',
+        title: 'And what age?',
+        help: 'The older dogs have waited for years and are often the calmest.',
+        options: [o('indiferente', 'No preference'), o('jovem', 'Young', 'Up to 3 years'), o('adulto', 'Adult', 'Between 4 and 8 years'), o('senior', 'Senior', 'Over 8 years, with plenty to give')],
+      },
+    ],
+  },
+];
+
+export type MatchLocale = 'pt' | 'en';
+export const stepsFor = (locale: MatchLocale) => (locale === 'en' ? STEPS_EN : STEPS);
+
 /* ───────── Scoring ───────── */
 
 const GRUPO_PORTE: Record<string, Porte[]> = {
@@ -225,6 +321,90 @@ export const PORTE_TXT: Record<Porte, string> = {
   'medio-grande': 'Médio/grande',
   grande: 'Grande',
 };
+
+export const PORTE_TXT_EN: Record<Porte, string> = {
+  pequeno: 'Small',
+  'pequeno-medio': 'Small/medium',
+  medio: 'Medium',
+  'medio-grande': 'Medium/large',
+  grande: 'Large',
+};
+
+const REASONS = {
+  pt: {
+    aptCalm: 'Calmo, dá-se bem em apartamento',
+    aptSmall: 'Porte contido, fácil num apartamento',
+    yard: 'Tem energia para aproveitar o quintal',
+    fugaLow: 'Já fugiu de casas antes: com grades baixas, foge outra vez',
+    fugaHigh: 'Precisa de espaço bem vedado, e o seu é',
+    active1: 'Cão ativo: um passeio por dia não lhe chega',
+    active3: 'Muito ativo, vai adorar os seus passeios',
+    calm1: 'Calmo: um passeio tranquilo por dia basta-lhe',
+    energy: 'A energia que pediu',
+    needyAlone: 'É muito carente: sofre com tantas horas sozinho',
+    indepAlone: 'Independente, não exige companhia constante',
+    needyHome: 'Muito carente, vai aproveitar a sua companhia',
+    busy: 'Casa movimentada pode ser demais nas primeiras semanas',
+    oldKids: 'Já é um cão idoso: precisa de calma e de crianças que saibam respeitá-lo',
+    fearKids: 'Precisa de tempo e calma para confiar: a equipa avalia se encaixa com crianças pequenas',
+    kidsPace: 'Nem agitado nem apático: bom ritmo para uma casa com crianças',
+    kidsCalm: 'Cão calmo junto de crianças',
+    teens: 'Brincalhão, bom companheiro para jovens',
+    confident: 'Confiante com pessoas desde o início',
+    firstFear: 'Primeiro cão: este precisa de alguém com rodagem',
+    expShy: 'Receoso no início: a sua experiência conta aqui',
+    expFear: 'Precisa de uma casa experiente, e é o seu caso',
+    catsYes: 'Já se sabe que se dá bem com gatos',
+    catsUnknown: 'Não sabemos se aceita gatos: a equipa pode testar',
+    males: 'Sociável com outros machos',
+    females: 'Sociável com outras fêmeas',
+    farmYes: 'Já se sabe que respeita aves de quintal e gado',
+    farmUnknown: 'Não sabemos se respeita aves e gado: tem de ser testado com a equipa antes de ir para casa',
+    cuddly: 'Pede colo, como queria',
+    indep: 'Gosta da sua independência',
+    isF: 'É fêmea, como preferia',
+    isM: 'É macho, como preferia',
+    sizeAsked: (p: Porte) => `Porte ${PORTE_TXT[p].toLowerCase()}, como procura`,
+    ageAsked: (y: number) => `${y} anos, a faixa que procura`,
+  },
+  en: {
+    aptCalm: 'Calm, does well in an apartment',
+    aptSmall: 'Compact size, easy in an apartment',
+    yard: 'Has the energy to enjoy the yard',
+    fugaLow: 'Has escaped from homes before: with a low fence, it will escape again',
+    fugaHigh: 'Needs a well-fenced space, and yours is',
+    active1: 'Active dog: one walk a day is not enough',
+    active3: 'Very active, will love your walks',
+    calm1: 'Calm: one quiet walk a day is enough',
+    energy: 'The energy you asked for',
+    needyAlone: 'Very needy: suffers with so many hours alone',
+    indepAlone: 'Independent, does not need constant company',
+    needyHome: 'Very affectionate, will enjoy your company',
+    busy: 'A busy home may be too much in the first weeks',
+    oldKids: 'An older dog: needs calm and children who know how to respect it',
+    fearKids: 'Needs time and calm to trust: the team will judge whether it suits young children',
+    kidsPace: 'Neither hyper nor sluggish: a good pace for a home with children',
+    kidsCalm: 'A calm dog around children',
+    teens: 'Playful, a good companion for older kids',
+    confident: 'Confident with people from the start',
+    firstFear: 'First dog: this one needs someone experienced',
+    expShy: 'Shy at first: your experience counts here',
+    expFear: 'Needs an experienced home, and yours is one',
+    catsYes: 'Known to get on with cats',
+    catsUnknown: "We don't know if it accepts cats: the team can test",
+    males: 'Sociable with other males',
+    females: 'Sociable with other females',
+    farmYes: 'Known to respect poultry and livestock',
+    farmUnknown: "We don't know if it respects poultry and livestock: it must be tested with the team before going home",
+    cuddly: 'Loves cuddles, as you wanted',
+    indep: 'Enjoys its independence',
+    isF: 'Female, as you preferred',
+    isM: 'Male, as you preferred',
+    sizeAsked: (p: Porte) => `${PORTE_TXT_EN[p]} size, as you're looking for`,
+    ageAsked: (y: number) => `${y} years old, the age range you want`,
+  },
+};
+
 const PESO_PORTE: Record<Porte, number> = { pequeno: -1, 'pequeno-medio': -0.5, medio: 0, 'medio-grande': 0.6, grande: 1 };
 
 export const ageOf = (d: MatchDog, year: number) => (d.nasc ? year - d.nasc : null);
@@ -232,7 +412,8 @@ export const yearsWaiting = (d: MatchDog, year: number) => (d.desde ? year - d.d
 
 export type MatchResult = { d: MatchDog; score: number; good: string[]; warn: string[] };
 
-export function evaluate(d: MatchDog, r: Answers, year: number): MatchResult | null {
+export function evaluate(d: MatchDog, r: Answers, year: number, locale: MatchLocale = 'pt'): MatchResult | null {
+  const T = REASONS[locale];
   const good: string[] = [];
   const warn: string[] = [];
   let s = 0;
@@ -259,107 +440,107 @@ export function evaluate(d: MatchDog, r: Answers, year: number): MatchResult | n
   const space = r.casa === 'apartamento' ? -1 : r.jardim === 'nao' ? -0.4 : 0.6;
   s += space * PESO_PORTE[d.porte] * 14;
   if (r.casa === 'apartamento') {
-    if (d.energia === 1) { s += 9; good.push('Calmo, dá-se bem em apartamento'); }
+    if (d.energia === 1) { s += 9; good.push(T.aptCalm); }
     if (d.energia === 3) s -= 8;
-    if (small) good.push('Porte contido, fácil num apartamento');
+    if (small) good.push(T.aptSmall);
   }
-  if (r.jardim !== 'nao' && d.energia === 3) { s += 9; good.push('Tem energia para aproveitar o quintal'); }
+  if (r.jardim !== 'nao' && d.energia === 3) { s += 9; good.push(T.yard); }
   if (d.fuga) {
-    if (r.jardim === 'baixa') { s -= 18; warn.push('Já fugiu de casas antes: com grades baixas, foge outra vez'); }
-    else if (r.jardim === 'alta') { s += 6; good.push('Precisa de espaço bem vedado, e o seu é'); }
+    if (r.jardim === 'baixa') { s -= 18; warn.push(T.fugaLow); }
+    else if (r.jardim === 'alta') { s += 6; good.push(T.fugaHigh); }
   }
 
   // Walks and energy
   if (d.energia === 3) {
-    if (walks === 1) { s -= 13; warn.push('Cão ativo: um passeio por dia não lhe chega'); }
-    else if (walks === 3) { s += 14; good.push('Muito ativo, vai adorar os seus passeios'); }
+    if (walks === 1) { s -= 13; warn.push(T.active1); }
+    else if (walks === 3) { s += 14; good.push(T.active3); }
     else s += 6;
   } else if (d.energia === 1) {
-    if (walks === 1) { s += 11; good.push('Calmo: um passeio tranquilo por dia basta-lhe'); }
+    if (walks === 1) { s += 11; good.push(T.calm1); }
     else s += 4;
   } else s += 7;
 
   if (r.prefEnergia && r.prefEnergia !== 'indiferente') {
     const target = { calmo: 1, equilibrado: 2, ativo: 3 }[r.prefEnergia as 'calmo' | 'equilibrado' | 'ativo'];
     const diff = Math.abs(target - d.energia);
-    if (diff === 0) { s += 17; good.push('A energia que pediu'); }
+    if (diff === 0) { s += 17; good.push(T.energy); }
     else if (diff === 2) s -= 14;
   }
 
   // Hours alone
   if (hours >= 10) {
-    if (d.carente) { s -= 22; warn.push('É muito carente: sofre com tantas horas sozinho'); }
-    else if (d.receio >= 2) { s += 8; good.push('Independente, não exige companhia constante'); }
+    if (d.carente) { s -= 22; warn.push(T.needyAlone); }
+    else if (d.receio >= 2) { s += 8; good.push(T.indepAlone); }
   } else if (hours === 0) {
-    if (d.carente) { s += 16; good.push('Muito carente, vai aproveitar a sua companhia'); }
+    if (d.carente) { s += 16; good.push(T.needyHome); }
     else s += 4;
   } else if (hours <= 4 && d.carente) s += 8;
   else if (hours === 8 && d.carente) s -= 8;
 
   // Busy or quiet house
   if ((r.pessoas === '3-4' || r.pessoas === '5+') && d.receio >= 2) {
-    s -= 8; warn.push('Casa movimentada pode ser demais nas primeiras semanas');
+    s -= 8; warn.push(T.busy);
   }
   if (r.pessoas === '1' && d.carente) s += 6;
 
   // Children
   if (r.criancas !== 'nenhuma' && years !== null && years >= 12) {
-    s -= 6; warn.push('Já é um cão idoso: precisa de calma e de crianças que saibam respeitá-lo');
+    s -= 6; warn.push(T.oldKids);
   }
   if (r.criancas === 'pequenas') {
-    if (d.receio >= 2) { s -= 20; warn.push('Precisa de tempo e calma para confiar: a equipa avalia se encaixa com crianças pequenas'); }
+    if (d.receio >= 2) { s -= 20; warn.push(T.fearKids); }
     else if (d.receio === 1) s -= 5;
-    if (d.energia === 2) { s += 8; good.push('Nem agitado nem apático: bom ritmo para uma casa com crianças'); }
-    else if (d.energia === 1) { s += 5; good.push('Cão calmo junto de crianças'); }
+    if (d.energia === 2) { s += 8; good.push(T.kidsPace); }
+    else if (d.energia === 1) { s += 5; good.push(T.kidsCalm); }
     if (big) s -= 6;
     if (d.energia === 3 && big) s -= 7;
   } else if (r.criancas === 'grandes') {
     if (d.receio >= 2) s -= 8;
-    if (d.energia === 3) { s += 6; good.push('Brincalhão, bom companheiro para jovens'); }
+    if (d.energia === 3) { s += 6; good.push(T.teens); }
   } else if (d.receio >= 2) s += 6;
 
   // Experience
   if (r.exp === 'nenhuma') {
-    if (d.receio === 0) { s += 15; good.push('Confiante com pessoas desde o início'); }
-    else if (d.receio >= 2) { s -= 20; warn.push('Primeiro cão: este precisa de alguém com rodagem'); }
+    if (d.receio === 0) { s += 15; good.push(T.confident); }
+    else if (d.receio >= 2) { s -= 20; warn.push(T.firstFear); }
   } else if (r.exp === 'alguma') {
     if (d.receio === 0) s += 7; else if (d.receio === 1) s += 9; else s -= 4;
   } else {
-    if (d.receio === 1) { s += 9; good.push('Receoso no início: a sua experiência conta aqui'); }
-    if (d.receio >= 2) { s += 18; good.push('Precisa de uma casa experiente, e é o seu caso'); }
+    if (d.receio === 1) { s += 9; good.push(T.expShy); }
+    if (d.receio >= 2) { s += 18; good.push(T.expFear); }
   }
 
   // Other animals
   if (hasCat) {
-    if (d.gatos === 'sim') { s += 18; good.push('Já se sabe que se dá bem com gatos'); }
-    else { s -= 6; warn.push('Não sabemos se aceita gatos: a equipa pode testar'); }
+    if (d.gatos === 'sim') { s += 18; good.push(T.catsYes); }
+    else { s -= 6; warn.push(T.catsUnknown); }
   }
-  if (hasMale && d.machos === 'sim') { s += 8; good.push('Sociável com outros machos'); }
-  if (hasFemale && d.femeas === 'sim') { s += 8; good.push('Sociável com outras fêmeas'); }
+  if (hasMale && d.machos === 'sim') { s += 8; good.push(T.males); }
+  if (hasFemale && d.femeas === 'sim') { s += 8; good.push(T.females); }
   if (hasFarm) {
-    if (d.aves === 'sim') { s += 16; good.push('Já se sabe que respeita aves de quintal e gado'); }
-    else { s -= 14; warn.push('Não sabemos se respeita aves e gado: tem de ser testado com a equipa antes de ir para casa'); }
+    if (d.aves === 'sim') { s += 16; good.push(T.farmYes); }
+    else { s -= 14; warn.push(T.farmUnknown); }
   }
 
   // Requested affection
   if (r.prefCarencia === 'mimado') {
-    if (d.carente) { s += 15; good.push('Pede colo, como queria'); } else s -= 7;
+    if (d.carente) { s += 15; good.push(T.cuddly); } else s -= 7;
   } else if (r.prefCarencia === 'independente') {
     if (d.carente) s -= 13;
-    else if (d.receio >= 2) { s += 14; good.push('Gosta da sua independência'); }
+    else if (d.receio >= 2) { s += 14; good.push(T.indep); }
     else s += 5;
   }
 
   // Sex, size, age
   if (r.prefSexo && r.prefSexo !== 'indiferente') {
     const sx = d.sexo === 'F' ? 'femea' : 'macho';
-    if (sx === r.prefSexo) { s += 12; good.push(d.sexo === 'F' ? 'É fêmea, como preferia' : 'É macho, como preferia'); }
+    if (sx === r.prefSexo) { s += 12; good.push(d.sexo === 'F' ? T.isF : T.isM); }
     else s -= 12;
   }
-  if (r.porte && r.porte !== 'indiferente') good.push(`Porte ${PORTE_TXT[d.porte].toLowerCase()}, como procura`);
+  if (r.porte && r.porte !== 'indiferente') good.push(T.sizeAsked(d.porte));
   if (years !== null && r.idade && r.idade !== 'indiferente') {
     const band = years <= 3 ? 'jovem' : years <= 8 ? 'adulto' : 'senior';
-    if (band === r.idade) { s += 18; good.push(`${years} anos, a faixa que procura`); }
+    if (band === r.idade) { s += 18; good.push(T.ageAsked(years)); }
     else s -= 11;
   }
 
@@ -382,24 +563,35 @@ export const LEVELS: [number, string, number][] = [
   [55, 'Pode funcionar', 2],
   [0, 'Menos provável', 1],
 ];
-export const levelFor = (score: number) => LEVELS.find((l) => score >= l[0])!;
+const LEVEL_EN: Record<string, string> = { 'Muito compatível': 'Very compatible', Compatível: 'Compatible', 'Pode funcionar': 'Could work', 'Menos provável': 'Less likely' };
+export const levelFor = (score: number, locale: MatchLocale = 'pt'): [number, string, number] => {
+  const l = LEVELS.find((x) => score >= x[0])!;
+  return locale === 'en' ? [l[0], LEVEL_EN[l[1]], l[2]] : l;
+};
 
-export function rankDogs(dogs: MatchDog[], r: Answers, year: number) {
-  const all = dogs.map((d) => evaluate(d, r, year)).filter((x): x is MatchResult => x !== null).sort((a, b) => b.score - a.score);
+export function rankDogs(dogs: MatchDog[], r: Answers, year: number, locale: MatchLocale = 'pt') {
+  const all = dogs.map((d) => evaluate(d, r, year, locale)).filter((x): x is MatchResult => x !== null).sort((a, b) => b.score - a.score);
   const top = all.filter((x) => x.score >= 55).slice(0, 4);
   return { all, shown: top.length ? top : all.slice(0, 3) };
 }
 
-export function conflicts(r: Answers): string[] {
+const CONFLICTS_EN = [
+  'You asked for an energetic dog but can only manage one walk a day. We show the more balanced ones: an active dog with a single walk gets frustrated, and that is when the damage at home starts.',
+  'You asked for an affectionate dog but are away more than 8 hours. We left out the neediest ones, who suffer a lot alone.',
+  'With a low fence, check the height with the team before deciding: many of these dogs jump higher than you would think.',
+];
+
+export function conflicts(r: Answers, locale: MatchLocale = 'pt'): string[] {
   const out: string[] = [];
+  const en = locale === 'en';
   if (r.prefEnergia === 'ativo' && r.passeios === '1') {
-    out.push('Pediu um cão energético mas só consegue um passeio por dia. Mostramos os mais equilibrados: um cão ativo com um só passeio fica frustrado e é aí que começam os estragos em casa.');
+    out.push(en ? CONFLICTS_EN[0] : 'Pediu um cão energético mas só consegue um passeio por dia. Mostramos os mais equilibrados: um cão ativo com um só passeio fica frustrado e é aí que começam os estragos em casa.');
   }
   if (r.prefCarencia === 'mimado' && r.trabalho === 'fora-mais8') {
-    out.push('Pediu um cão mimado mas está fora mais de 8 horas. Deixámos de fora os mais carentes, que sofrem muito sozinhos.');
+    out.push(en ? CONFLICTS_EN[1] : 'Pediu um cão mimado mas está fora mais de 8 horas. Deixámos de fora os mais carentes, que sofrem muito sozinhos.');
   }
   if (r.jardim === 'baixa') {
-    out.push('Com grades baixas, confirme a altura com a equipa antes de decidir: muitos destes cães saltam mais do que parece.');
+    out.push(en ? CONFLICTS_EN[2] : 'Com grades baixas, confirme a altura com a equipa antes de decidir: muitos destes cães saltam mais do que parece.');
   }
   return out;
 }
@@ -462,4 +654,59 @@ ${obs ? `\nNota\n${obs}\n` : ''}
 Podem dizer-me qual é o próximo passo para conhecer ${dogRef}?
 
 Obrigado.`;
+}
+
+const SUMMARY_EN: Record<string, Record<string, string>> = {
+  casa: { apartamento: 'Apartment', vivenda: 'House' },
+  jardim: { nao: 'no garden', baixa: 'garden with a low fence', alta: 'well-fenced garden' },
+  pessoas: { '1': '1 person at home', '2': '2 people at home', '3-4': '3 or 4 people at home', '5+': '5 or more people at home' },
+  criancas: { nenhuma: 'no children', pequenas: 'children up to 10', grandes: 'children over 10' },
+  trabalho: { casa: 'Works from home', 'fora-ate4': 'Away up to 4 h a day', 'fora-4a8': 'Away 4 to 8 h', 'fora-mais8': 'Away more than 8 h' },
+  passeios: { '1': '1 walk a day', '2': '2 walks a day', '3+': '3 or more walks a day' },
+  exp: { nenhuma: 'First dog', alguma: 'Has had dogs', muita: 'A lot of experience' },
+  prefEnergia: { calmo: 'Looking for a calm dog', equilibrado: 'Looking for a balanced dog', ativo: 'Looking for an energetic dog', indiferente: 'Energy: no preference' },
+  prefCarencia: { independente: 'Prefers independent', mimado: 'Prefers affectionate', indiferente: 'Affection: no preference' },
+  porte: { indiferente: 'Size: no preference', pequeno: 'Small size', medio: 'Medium size', grande: 'Large size' },
+  prefSexo: { indiferente: 'Sex: no preference', macho: 'Prefers male', femea: 'Prefers female' },
+  idade: { indiferente: 'Age: no preference', jovem: 'Prefers young', adulto: 'Prefers adult', senior: 'Prefers senior' },
+  animais: { nenhum: 'none', macho: 'male dog', femea: 'female dog', gato: 'cat', quinta: 'chickens, ducks or livestock' },
+};
+
+export function buildMessageEn(name: string, r: Answers, c: Contact): string {
+  const fill = (v: string) => v.trim() || '(to fill in)';
+  const pickEn = (k: string, v?: string) => (v ? SUMMARY_EN[k][v] ?? '' : '');
+  const animals = (r.animais ?? []).map((a) => SUMMARY_EN.animais[a]).filter(Boolean).join(', ');
+  const current = (r.descCao ?? '').trim();
+  const obs = c.obs.trim();
+  return `Hello CAPA team,
+
+I took the quiz on the website and would like to know more about ${name}.
+
+About me
+- Name: ${fill(c.nome)}
+- Age: ${fill(c.idade)}
+- Phone: ${fill(c.tel)}
+- Email: ${fill(c.email)}
+- Location: ${fill(c.local)}
+
+My home
+- ${pickEn('casa', r.casa)}, ${pickEn('jardim', r.jardim)}
+- ${pickEn('pessoas', r.pessoas)}, ${pickEn('criancas', r.criancas)}
+
+My routine
+- ${pickEn('trabalho', r.trabalho)}
+- ${pickEn('passeios', r.passeios)}
+
+Animals and experience
+- Animals I already have: ${animals || '(not given)'}
+- ${pickEn('exp', r.exp)}${current ? `\n- My current dog: ${current}` : ''}
+
+What I'm looking for
+- ${pickEn('prefEnergia', r.prefEnergia)}
+- ${pickEn('prefCarencia', r.prefCarencia)}
+- ${pickEn('porte', r.porte)}, ${pickEn('prefSexo', r.prefSexo).toLowerCase()}, ${pickEn('idade', r.idade).toLowerCase()}
+${obs ? `\nNote\n${obs}\n` : ''}
+Could you tell me the next step to meet ${name}?
+
+Thank you.`;
 }

@@ -24,13 +24,13 @@ const profiles = [
     alternatePath: '/en/dog?id=5fd31126-e731-45a8-ae30-b662d83ce4f5',
   },
   {
-    name: 'abby-adopted-mobile',
-    path: '/cao/?id=35a53d19-adbd-4438-9e1d-7f3022d60fb0',
-    dog: 'Abby',
+    name: 'mouse-adopted-mobile',
+    path: '/cao/?id=bf86e87a-b518-4dd2-8726-c45965726acf',
+    dog: 'Mouse',
     width: 390,
     height: 900,
-    adoptedLabel: 'Adotado!',
-    alternatePath: '/en/dog?id=35a53d19-adbd-4438-9e1d-7f3022d60fb0',
+    adoptedLabel: 'Adotada!',
+    alternatePath: '/en/dog?id=bf86e87a-b518-4dd2-8726-c45965726acf',
   },
   {
     name: 'alana-long-story-desktop',

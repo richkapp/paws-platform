@@ -21,9 +21,14 @@
 Dog shelter website for **CAPA Póvoa de Lanhoso** (Clube de Adoção e Proteção Animal), a Portuguese non-profit rescue/shelter/adoption organization. Built on the paws-platform open-source template.
 
 **Live:** https://capapvl.org/ (Hetzner nginx static site + API proxy)
-**Repo:** https://github.com/0rderfl0w/paws-platform
+**Repo:** https://github.com/richkapp/paws-platform
 
 ---
+
+## Current website runtime destination
+
+- CAPA's public static site and API now run on `ubuntu-4gb-hel1-1` (Hetzner CX23, x86, 40 GB, Helsinki / `eu-central`), public IPv4 `2.29.9.89`.
+- The former `ubuntu-16gb-hel1-1` / `65.21.156.73` is reserved for Hermes; do not use it as the CAPA website/API destination.
 
 ## Setup
 
@@ -57,11 +62,12 @@ bun preview            # preview production build locally
 
 ## Hetzner API
 
-**API:** `https://api.capapvl.org` (Namecheap DNS points `capapvl.org`, `www`, and `api` to Hetzner `65.21.156.73`)
+**API:** `https://api.capapvl.org` (Namecheap DNS points `capapvl.org`, `www`, and `api` to Hetzner `2.29.9.89`)
 **Service:** `capapvl-api.service`
 **Runtime:** Bun, `server/capa-api.ts`
 **Database:** `capapvl_db` on local PostgreSQL
 **Bind/security:** `server/capa-api.ts` must bind `127.0.0.1:3314`; public HTTPS access goes through nginx only. Do not widen the API to `0.0.0.0` or expose raw `3314` to fix connectivity.
+**Lifecycle gotcha:** `/etc/systemd/system/capapvl-api.service` is enabled and uses `Restart=always`. Killing the Bun PID is not persistent; systemd respawns it. For intentional downtime, stop the unit with `sudo systemctl stop capapvl-api.service` and verify no listener on `127.0.0.1:3314`. Only disable the unit across reboot after Z explicitly approves that persistence change.
 
 **2026-05-15 status:** The legacy Supabase project `amkwoeepuhlnjmybbnbo.supabase.co` returns NXDOMAIN from Hetzner and local DNS. Runtime Supabase usage has been migrated to the Hetzner API. Public pages still keep `src/data/capaDogs.ts` and static files under `public/images/dogs/` as a fallback.
 
@@ -223,6 +229,10 @@ rsync -a --delete dist/ /home/deploy/apps/capapvl/
 find /home/deploy/apps/capapvl -type d -exec chmod 755 {} +
 find /home/deploy/apps/capapvl -type f -exec chmod 644 {} +
 ```
+
+**Run deploys on the CAPA server, not on Hermes:** production is `deploy@2.29.9.89`. Sync `server/`, `src/`, `scripts/` and `public/images/dogs/` there (never `--delete` on photos), then build there. Set `ASTRO_TELEMETRY_DISABLED=1` for the build: `deploy` cannot create `~/.config/astro` on that host and the build fails without it. Back up first into `~/backups/capapvl/` (`pg_dump -Fc "$DATABASE_URL"` after sourcing `/etc/capapvl-api.env`, plus the photos and `/home/deploy/apps/capapvl`).
+
+**Database roles:** `capapvl_app` (the API's `DATABASE_URL`) can select/insert/update/delete dog rows but cannot alter the schema; `dogs` is owned by `capapvl_admin`. Schema changes need `sudo -u postgres` as root on `2.29.9.89`; ask Z before using root there.
 
 WARNING: Do not edit files directly under `/home/deploy/apps/capapvl`; they are generated from source and overwritten by the next build/sync.
 

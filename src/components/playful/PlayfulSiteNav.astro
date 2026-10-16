@@ -18,6 +18,7 @@ const dogsPath = locale === 'pt' ? '/caes' : '/en/dogs';
 const adoptPath = locale === 'pt' ? '/adocao' : '/en/adopt';
 const aboutPath = locale === 'pt' ? '/sobre-nos' : '/en/about';
 const helpPath = locale === 'pt' ? '/ajudar' : '/en/help';
+const matchPath = locale === 'pt' ? '/match' : '/en/match';
 const languageSelectorLabel = locale === 'pt' ? 'Selecionar idioma' : 'Select language';
 const playfulLanguageRouteMap = routeMap;
 const brandAriaLabel = locale === 'pt' ? 'CAPA Póvoa de Lanhoso — Página inicial' : 'CAPA Póvoa de Lanhoso — Home';
@@ -28,6 +29,7 @@ const navLinks = [
   { href: homePath, label: t.nav.home, rotate: '-rotate-1' },
   { href: dogsPath, label: t.nav.dogs, rotate: 'rotate-1' },
   { href: adoptPath, label: t.nav.adoption, rotate: '-rotate-1' },
+  { href: matchPath, label: t.nav.match, rotate: 'rotate-1' },
   { href: aboutPath, label: t.nav.about, rotate: 'rotate-1' },
   { href: helpPath, label: t.nav.help, rotate: '-rotate-1' },
 ];

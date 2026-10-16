@@ -6,7 +6,7 @@ const locale = process.argv[3] || 'pt';
 const width = Number(process.argv[4] || 1440);
 const height = Number(process.argv[5] || 1000);
 const port = Number(process.argv[6] || 9440);
-const searchName = process.argv[7] || 'Abby';
+const searchName = process.argv[7] || 'Mouse';
 
 if (!url) {
   console.error('usage: node scripts/verify-caes-browser.mjs <url> [pt|en] [width] [height] [port] [searchName]');
@@ -15,7 +15,7 @@ if (!url) {
 
 const expected = locale === 'en'
   ? { search: searchName, one: '1 dog found', adopted: 'Adopted!', all: 'All' }
-  : { search: searchName, one: '1 cão encontrado', adopted: 'Adotado!', all: 'Todos' };
+  : { search: searchName, one: '1 cão encontrado', adopted: 'Adotad[ao]!', all: 'Todos' };
 
 const profileDir = `/tmp/capa-caes-browser-${port}-${Date.now()}`;
 const browser = spawn(chromium, [
@@ -108,17 +108,17 @@ try {
     const cards = [...document.querySelectorAll('[data-dog-card]')];
     return {
       cards: cards.length,
-      adopted: cards.filter((card) => card.textContent.includes(${JSON.stringify(expected.adopted)})).length,
-      adoptedAria: cards.filter((card) => card.getAttribute('aria-label')?.includes(${JSON.stringify(expected.adopted)})).length,
+      adopted: cards.filter((card) => new RegExp(${JSON.stringify(expected.adopted)}).test(card.textContent)).length,
+      adoptedAria: cards.filter((card) => new RegExp(${JSON.stringify(expected.adopted)}).test(card.getAttribute('aria-label') ?? '')).length,
       hasSearch: Boolean(document.querySelector('#dog-search')),
       hasAllLabel: document.body.innerText.includes(${JSON.stringify(expected.all)}),
       overflow: document.documentElement.scrollWidth > window.innerWidth + 2,
     };
   })()`);
 
-  if (initial.cards !== 99) throw new Error(`Expected 99 dog cards, got ${initial.cards}`);
-  if (initial.adopted !== 12) throw new Error(`Expected 12 adopted badges, got ${initial.adopted}`);
-  if (initial.adoptedAria !== 12) throw new Error(`Expected 12 adopted accessible labels, got ${initial.adoptedAria}`);
+  if (initial.cards !== 100) throw new Error(`Expected 100 dog cards, got ${initial.cards}`);
+  if (initial.adopted !== 10) throw new Error(`Expected 10 adopted badges, got ${initial.adopted}`);
+  if (initial.adoptedAria !== 10) throw new Error(`Expected 10 adopted accessible labels, got ${initial.adoptedAria}`);
   if (!initial.hasSearch) throw new Error('Missing #dog-search input');
   if (!initial.hasAllLabel) throw new Error(`Missing filter label ${expected.all}`);
   if (initial.overflow) throw new Error('Page has horizontal overflow');
@@ -134,8 +134,8 @@ try {
     return {
       cards: cards.length,
       hasOneResultText: document.body.innerText.includes(${JSON.stringify(expected.one)}),
-      adopted: cards.filter((card) => card.textContent.includes(${JSON.stringify(expected.adopted)})).length,
-      adoptedAria: cards.filter((card) => card.getAttribute('aria-label')?.includes(${JSON.stringify(expected.adopted)})).length,
+      adopted: cards.filter((card) => new RegExp(${JSON.stringify(expected.adopted)}).test(card.textContent)).length,
+      adoptedAria: cards.filter((card) => new RegExp(${JSON.stringify(expected.adopted)}).test(card.getAttribute('aria-label') ?? '')).length,
       target: cards.some((card) => card.textContent.includes(${JSON.stringify(expected.search)})),
     };
   })()`);
@@ -170,7 +170,7 @@ try {
     };
   })()`);
 
-  if (reveal.cards !== 99) throw new Error(`Post-reset expected 99 cards, got ${reveal.cards}`);
+  if (reveal.cards !== 100) throw new Error(`Post-reset expected 100 cards, got ${reveal.cards}`);
   if (reveal.hidden !== 0) throw new Error(`Reveal left ${reveal.hidden} hidden element(s)`);
   if (reveal.overflow) throw new Error('Page has horizontal overflow after scrolling');
 

@@ -41,7 +41,20 @@ SIZE = {'pequeno': 'small', 'pequeno-medio': 'small-medium', 'medio': 'medium', 
 SIZE_PT = {'small': 'Pequeno', 'small-medium': 'Pequeno/Médio', 'medium': 'Médio', 'medium-large': 'Médio/Grande', 'large': 'Grande'}
 
 # CAPA confirmed: died, or left the shelter earlier and must be excluded.
-REMOVE = {'nobita': 'deceased', 'patty': 'deceased', 'serena': 'deceased', 'mac': 'excluded'}
+# caes.json _meta.saidos: died, or earlier dogs to exclude (Abby and Mac are on that list).
+REMOVE = {'nobita': 'deceased', 'patty': 'deceased', 'serena': 'deceased', 'mac': 'excluded', 'abby': 'excluded',
+          # "Farrusca" in saidos; Farrusco is not on CAPA's Canva photo sheet by name or by photo.
+          'farrusco': 'excluded'}
+
+# Gaps in caes.json filled from CAPA's Canva table "Entrada/Idade" (sent 2026-10-15).
+# Only missing values are filled; where the table disagrees with caes.json, caes.json wins.
+CANVA_FILL = {
+    'Channel': {'nasc': 2012, 'desde': 2012},
+    'Jóia': {'desde': 2021},
+    'Peter': {'nasc': 2021, 'desde': 2022},
+    'Rastas': {'nasc': 2011, 'desde': 2023},
+}
+PARTIAL_NOTE = 'Ficha ainda por completar: não há registo de raça, saúde nem de como se dá com outros cães ou gatos. A equipa esclarece tudo isso na visita.'
 ADOPT = {'becas', 'esmerelda', 'nemo', 'kiki'}
 RENAME = {'esmerelda': 'Esmeralda'}
 # Generic placeholder texts that never came from the shelter records.
@@ -130,6 +143,11 @@ public, removed, report = [], [], []
 seen = set()
 
 for r in records:
+    for k, v in CANVA_FILL.get(r['nome'], {}).items():
+        if not r.get(k):
+            r[k] = v
+    if r['nome'] in CANVA_FILL and r.get('nota', '').startswith('Ficha ainda por completar'):
+        r['nota'] = PARTIAL_NOTE
     key = norm(r['nome'])
     size = SIZE[r['porte']]
     foster = None

@@ -56,17 +56,11 @@ const content = caesHeroContent[locale];
           {content.primaryCta}
           <span aria-hidden="true">↓</span>
         </a>
-        <a href="#dog-search" class="squishy playful-focus inline-flex items-center justify-center gap-2 rounded-full border-2 border-playful-orange bg-white/85 px-8 py-4 font-playful-display text-base font-extrabold text-playful-orange-dark shadow-pillowy">
+        <a href={locale === 'pt' ? '/match' : '/en/match'} data-caes-match-button class="squishy playful-focus inline-flex items-center justify-center gap-2 rounded-full border-2 border-playful-orange bg-white/85 px-8 py-4 font-playful-display text-base font-extrabold text-playful-orange-dark shadow-pillowy">
           {content.secondaryCta}
-          <span aria-hidden="true">⌕</span>
+          <span aria-hidden="true">🐾</span>
         </a>
       </div>
-      {locale === 'pt' && (
-        <p class="mt-5 text-base font-bold text-playful-muted">
-          Não sabe por onde começar?
-          <a href="/match" class="playful-focus font-extrabold text-playful-orange-dark underline decoration-playful-orange/40 decoration-2 underline-offset-4" data-caes-match-link>Faça o questionário e veja que cães combinam consigo →</a>
-        </p>
-      )}
 
       <div class="mt-9 flex flex-wrap justify-center gap-3 lg:justify-start" aria-label={locale === 'pt' ? 'Resumo da listagem de cães' : 'Dog listing summary'}>
         {content.chips.map((chip, index) => (

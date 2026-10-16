@@ -35,6 +35,7 @@ export const routeMap: Record<string, string> = {
   '/ajudar/formulario-familia-acolhimento': '/en/help/foster-home-form',
   '/sobre-nos': '/en/about',
   '/admin': '/en/admin',
+  '/match': '/en/match',
 };
 
 const reverseRouteMap: Record<string, string> = Object.fromEntries(

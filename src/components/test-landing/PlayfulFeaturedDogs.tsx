@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { capaApi } from '../../lib/capaApi';
 import { capaDogs } from '../../data/capaDogs';
 import { getTranslations, localizeDescription, type Locale } from '../../i18n';
-import { adoptedLabel } from '../../lib/dogFacts';
+import { adoptedLabel, shortAge, sizeGroup, yearFrom } from '../../lib/dogFacts';
 import type { Dog } from '../../lib/capaApi';
 
 type SizeFilter = 'all' | 'small' | 'medium' | 'large';
@@ -64,9 +64,9 @@ function DogCard({ dog, locale, index }: { dog: Dog; locale: Locale; index: numb
       <div className="px-2 pb-3 pt-5 text-center">
         <div className="flex flex-wrap items-center justify-center gap-2">
           <h3 className="font-playful-display text-2xl font-extrabold tracking-[-0.03em] text-playful-ink">{dog.name}</h3>
-          {dog.age && (
+          {shortAge(yearFrom(dog.age), locale) && (
             <span className="rounded-full bg-playful-cream px-2.5 py-1 text-xs font-bold text-playful-muted">
-              {dog.age}
+              {shortAge(yearFrom(dog.age), locale)}
             </span>
           )}
         </div>
@@ -116,7 +116,7 @@ export default function PlayfulFeaturedDogs({ locale = 'pt' }: { locale?: Locale
   }, []);
 
   const filteredDogs = (() => {
-    const result = filter === 'all' ? dogs : dogs.filter((d) => d.size === filter);
+    const result = filter === 'all' ? dogs : dogs.filter((d) => sizeGroup(d.size) === filter);
     return result.slice(0, 6);
   })();
 

@@ -1,32 +1,5 @@
 [
   {
-    "id": "35a53d19-adbd-4438-9e1d-7f3022d60fb0",
-    "name": "Abby",
-    "size": "medium",
-    "sex": "female",
-    "age": "",
-    "description": "Sexo: Feminino\nIdade: Nasceu em 2019\nData de entrada: 2022\nRaça: X Podenga\nPorte: Médio\nPersonalidade: Meiga, brincalhona e companheira\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nNão sabemos se é sociável com gatos\nChipada, Vacinada, Esterilizada\nHistória: Mais uma vítima de abandono. Tinha sido mãe, foi recolhida juntamente com os seus 5 filhos recém-nascidos.",
-    "photo_url": "/images/dogs/abby/photo-01.jpg",
-    "photos": [
-      "/images/dogs/abby/photo-01.jpg",
-      "/images/dogs/abby/photo-03.jpg",
-      "/images/dogs/abby/photo-04.jpg",
-      "/images/dogs/abby/photo-05.jpg",
-      "/images/dogs/abby/photo-06.jpg",
-      "/images/dogs/abby/photo-07.jpg",
-      "/images/dogs/abby/photo-08.jpg",
-      "/images/dogs/abby/photo-09.jpg",
-      "/images/dogs/abby/photo-10.jpg",
-      "/images/dogs/abby/photo-11.jpg",
-      "/images/dogs/abby/photo-12.jpg",
-      "/images/dogs/abby/photo-13.jpg"
-    ],
-    "is_adopted": true,
-    "traits": {},
-    "created_at": "2026-02-24T19:56:35.544Z",
-    "updated_at": "2026-10-15T12:00:00+00:00"
-  },
-  {
     "id": "bf25a35f-5a59-4476-8d16-db371667e119",
     "name": "Afonso",
     "size": "medium",
@@ -696,8 +669,8 @@
     "name": "Channel",
     "size": "medium",
     "sex": "female",
-    "age": "",
-    "description": "Sexo: Feminino\nPorte: Médio\nPersonalidade: Calma e meiga, mas receosa com estranhos\nSociável com humanos\nNão sabemos se é sociável com machos\nNão sabemos se é sociável com fêmeas\nNão sabemos se é sociável com gatos\nNota: Ficha ainda por completar: não há registo de idade, raça, saúde nem de como se dá com outros cães ou gatos. A equipa esclarece tudo isso na visita.\nHistória: Precisa de tempo para confiar em quem não conhece. Dado o tempo, é uma cadela calma e meiga.",
+    "age": "Nasceu em 2012",
+    "description": "Sexo: Feminino\nIdade: Nasceu em 2012\nData de entrada: 2012\nPorte: Médio\nPersonalidade: Calma e meiga, mas receosa com estranhos\nSociável com humanos\nNão sabemos se é sociável com machos\nNão sabemos se é sociável com fêmeas\nNão sabemos se é sociável com gatos\nNota: Ficha ainda por completar: não há registo de raça, saúde nem de como se dá com outros cães ou gatos. A equipa esclarece tudo isso na visita.\nHistória: Precisa de tempo para confiar em quem não conhece. Dado o tempo, é uma cadela calma e meiga.",
     "photo_url": "/images/dogs/channel/photo-01.jpg",
     "photos": [
       "/images/dogs/channel/photo-01.jpg",
@@ -887,27 +860,6 @@
     "is_adopted": true,
     "traits": {},
     "created_at": "2026-02-24T19:58:26.458Z",
-    "updated_at": "2026-10-15T12:00:00+00:00"
-  },
-  {
-    "id": "38a75a11-ab4a-4b1b-bb61-6eb13f8c35ff",
-    "name": "Farrusco",
-    "size": "medium",
-    "sex": "male",
-    "age": "",
-    "description": "Sexo: Masculino\nIdade: Nasceu em 2019\nData de entrada: 2022\nRaça: Podengo\nPorte: Médio\nPersonalidade: Calmo e meigo\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nSociável com gatos\nChipado, Vacinado, Esterilizado\nHistória: Farrusco foi abandonado na nossa vila. Viveu durante alguns meses na rua, onde era feliz e cuidado por muitos, mas, infelizmente, também há gente muito má, que começaram a fazer mal ao Farrusco. Tivemos de o recolhe e a adaptação ao canil foi muito difícil, uma vez que estava habituado à liberdade. Os seus dias eram passados a chorar. Felizmente foi melhorando e, com amigos de box, ele melhorou bastante. Só necessita de uma família que o volto a dar a liberdade a que ele estava tão habituado.",
-    "photo_url": "/images/dogs/farrusco/photo-01.jpg",
-    "photos": [
-      "/images/dogs/farrusco/photo-01.jpg",
-      "/images/dogs/farrusco/photo-03.jpg",
-      "/images/dogs/farrusco/photo-04.jpg",
-      "/images/dogs/farrusco/photo-05.jpg",
-      "/images/dogs/farrusco/photo-06.jpg",
-      "/images/dogs/farrusco/photo-07.jpg"
-    ],
-    "is_adopted": true,
-    "traits": {},
-    "created_at": "2026-02-24T19:58:32.181Z",
     "updated_at": "2026-10-15T12:00:00+00:00"
   },
   {
@@ -1212,7 +1164,7 @@
     "size": "medium",
     "sex": "female",
     "age": "Nasceu em 2019",
-    "description": "Sexo: Feminino\nIdade: Nasceu em 2019\nRaça: Cruzada de Podengo\nPorte: Médio\nPersonalidade: Meiga e muito brincalhona\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nSociável com gatos\nChipada, Vacinada, Esterilizada\nHistória: As primeiras semanas foram muito complicadas: tinha pavor de humanos. Hoje é uma cadela completamente diferente, que não só aceita mimo como brinca, e muito.",
+    "description": "Sexo: Feminino\nIdade: Nasceu em 2019\nData de entrada: 2021\nRaça: Cruzada de Podengo\nPorte: Médio\nPersonalidade: Meiga e muito brincalhona\nSociável com humanos\nSociável com machos\nSociável com fêmeas\nSociável com gatos\nChipada, Vacinada, Esterilizada\nHistória: As primeiras semanas foram muito complicadas: tinha pavor de humanos. Hoje é uma cadela completamente diferente, que não só aceita mimo como brinca, e muito.",
     "photo_url": "/images/dogs/joia/photo-01.jpg",
     "photos": [
       "/images/dogs/joia/photo-01.jpg",
@@ -2210,8 +2162,8 @@
     "name": "Peter",
     "size": "small",
     "sex": "male",
-    "age": "",
-    "description": "Sexo: Masculino\nPorte: Pequeno\nPersonalidade: Muito meigo, mas com muito medo\nSociável com humanos\nNão sabemos se é sociável com machos\nNão sabemos se é sociável com fêmeas\nNão sabemos se é sociável com gatos\nNota: Ficha ainda por completar: não há registo de idade, raça, saúde nem de como se dá com outros cães ou gatos. A equipa esclarece tudo isso na visita.\nHistória: Tem muito medo e precisa de tempo e calma para confiar. Por baixo do medo é um menino muito meigo.",
+    "age": "Nasceu em 2021",
+    "description": "Sexo: Masculino\nIdade: Nasceu em 2021\nData de entrada: 2022\nPorte: Pequeno\nPersonalidade: Muito meigo, mas com muito medo\nSociável com humanos\nNão sabemos se é sociável com machos\nNão sabemos se é sociável com fêmeas\nNão sabemos se é sociável com gatos\nNota: Ficha ainda por completar: não há registo de raça, saúde nem de como se dá com outros cães ou gatos. A equipa esclarece tudo isso na visita.\nHistória: Tem muito medo e precisa de tempo e calma para confiar. Por baixo do medo é um menino muito meigo.",
     "photo_url": "/images/dogs/peter/photo-01.jpg",
     "photos": [
       "/images/dogs/peter/photo-01.jpg"
@@ -2379,8 +2331,8 @@
     "name": "Rastas",
     "size": "small",
     "sex": "male",
-    "age": "",
-    "description": "Sexo: Masculino\nPorte: Pequeno\nPersonalidade: Muito meigo e querido, adora brincar mas é calmo\nSociável com humanos\nNão sabemos se é sociável com machos\nNão sabemos se é sociável com fêmeas\nNão sabemos se é sociável com gatos\nNota: Ficha ainda por completar: não há registo de idade, raça, saúde nem de como se dá com outros cães ou gatos. A equipa esclarece tudo isso na visita.\nHistória: Receoso com estranhos, mas ganha confiança depressa. Adora brincar sem ser agitado.",
+    "age": "Nasceu em 2011",
+    "description": "Sexo: Masculino\nIdade: Nasceu em 2011\nData de entrada: 2023\nPorte: Pequeno\nPersonalidade: Muito meigo e querido, adora brincar mas é calmo\nSociável com humanos\nNão sabemos se é sociável com machos\nNão sabemos se é sociável com fêmeas\nNão sabemos se é sociável com gatos\nNota: Ficha ainda por completar: não há registo de raça, saúde nem de como se dá com outros cães ou gatos. A equipa esclarece tudo isso na visita.\nHistória: Receoso com estranhos, mas ganha confiança depressa. Adora brincar sem ser agitado.",
     "photo_url": "/images/dogs/rastas/photo-01.jpg",
     "photos": [
       "/images/dogs/rastas/photo-01.jpg",
