@@ -32,3 +32,4 @@ all-dogs.json
 
 # jetbrains setting folder
 .idea/
+/archive/

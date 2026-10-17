@@ -1,5 +1,13 @@
 # CHANGELOG — capapvl.pt
 
+## 2026-10-17 — Admin area rebuilt for the CAPA team
+
+- Editing no longer loses data: the old form dropped "Chipada/Vacinada/Esterilizada" on every female dog and "Castrado" on 19 males, and cut multi-line stories. New `src/lib/adminDogForm.ts` reads and writes every existing record format (round-trip checked on all 100 dogs).
+- Portuguese only, in the site's playful style; card list with tabs (Para adoção, Adotados, Por completar, Todos), accent-insensitive search, "Ver no site" links.
+- Editor: birth and entry years instead of free text, gendered labels, foster status, "A saber antes de adotar", and the /match traits (energia, receio, carente, fuga, aves, padrinho), so new dogs can appear in the quiz. Photo previews before upload, size/format checks, unsaved-changes guard, sticky save bar.
+- Confirm dialogs for marking adopted and deleting; delete suggests "Marcar adotado" instead.
+- API: renaming a dog moves its photo folder (photos were lost before); duplicate names refused; deleted dogs' photos archived outside `public/`; 10 failed logins per IP per 15 minutes.
+
 ## 2026-10-16 — CAPA corrections, follow-up fixes
 
 - Filters: size filters on the landing page and `/caes` both use three groups (Pequenos, Médios, Grandes). Pequeno/Médio counts as Pequeno and Médio/Grande as Grande; profiles still show the exact size from CAPA's records.

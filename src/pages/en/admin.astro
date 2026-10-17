@@ -2,13 +2,14 @@
 import Layout from '../../layouts/Layout.astro';
 import AdminPanel from '../../components/AdminPanel';
 
-const locale = 'en' as const;
+const locale = 'pt' as const;
 ---
 
 <Layout
   locale={locale}
-  title="Admin — CAPA Póvoa de Lanhoso"
+  title="Gestão de cães | CAPA Póvoa de Lanhoso"
   noindex={true}
+  playfulFonts
 >
   <AdminPanel locale={locale} client:load />
 </Layout>

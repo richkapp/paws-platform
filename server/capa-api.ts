@@ -1,5 +1,5 @@
 import { createHash, createHmac, randomUUID, timingSafeEqual } from 'node:crypto';
-import { mkdir, readdir, unlink } from 'node:fs/promises';
+import { mkdir, readdir, rename, stat, unlink } from 'node:fs/promises';
 import path from 'node:path';
 import sharp from 'sharp';
 import pg from 'pg';
@@ -89,6 +89,8 @@ const SESSION_SECRET = process.env.CAPA_SESSION_SECRET ?? '';
 const PUBLIC_API_URL = (process.env.CAPA_PUBLIC_API_URL ?? '').replace(/\/$/, '');
 const PROJECT_ROOT = process.env.CAPA_PROJECT_ROOT ?? process.cwd();
 const DOG_IMAGES_ROOT = path.join(PROJECT_ROOT, 'public', 'images', 'dogs');
+// Photos of deleted dogs are moved here (outside public/) so a new dog with the same name starts clean.
+const DOG_IMAGES_ARCHIVE = path.join(PROJECT_ROOT, 'archive', 'dog-photos');
 const ALLOWED_ORIGINS = (process.env.CAPA_ALLOWED_ORIGINS ?? 'https://capapvl.pt,https://www.capapvl.pt,http://127.0.0.1:14324,http://127.0.0.1:4321')
   .split(',')
   .map((origin) => origin.trim())
@@ -106,6 +108,8 @@ if (!DATABASE_URL) throw new Error('DATABASE_URL is required');
 if (!ADMIN_EMAIL || !ADMIN_PASSWORD_SHA256 || !SESSION_SECRET) {
   throw new Error('CAPA admin auth env vars are required');
 }
+
+const loginFailures = new Map<string, number[]>();
 
 const pool = new Pool({ connectionString: DATABASE_URL, max: 8 });
 
@@ -567,8 +571,26 @@ async function handleGetDog(id: string, origin: string | null) {
   return json({ dog: await serializeDog(row) }, {}, origin);
 }
 
+async function archivePhotoFolder(slug: string): Promise<void> {
+  if (!slug) return;
+  const from = path.join(DOG_IMAGES_ROOT, slug);
+  if (!(await stat(from).then(() => true, () => false))) return;
+  await mkdir(DOG_IMAGES_ARCHIVE, { recursive: true });
+  const stamp = new Date().toISOString().replace(/[:.]/g, '-');
+  await rename(from, path.join(DOG_IMAGES_ARCHIVE, `${slug}-${stamp}`));
+}
+
+async function slugTaken(name: string, exceptId?: string): Promise<boolean> {
+  const slug = toSlug(name);
+  const result = await pool.query<{ id: string; name: string }>('select id, name from dogs');
+  return result.rows.some((row) => row.id !== exceptId && toSlug(row.name) === slug);
+}
+
 async function handleCreateDog(request: Request, origin: string | null) {
   const payload = cleanPayload(await request.json() as DogPayload);
+  if (await slugTaken(payload.name)) return error('Duplicate name', 409, origin);
+  // A leftover folder from an earlier dog with this name must not become this dog's photos.
+  await archivePhotoFolder(toSlug(payload.name));
   const result = await pool.query<DogRow>(
     `insert into dogs (name, size, sex, age, description, photo_url, is_adopted, traits, updated_at)
      values ($1, $2, $3, $4, $5, $6, $7, $8, now())
@@ -582,6 +604,17 @@ async function handleUpdateDog(id: string, request: Request, origin: string | nu
   const existing = await getDogRow(id);
   if (!existing) return error('Dog not found', 404, origin);
   const payload = cleanPayload(await request.json() as DogPayload, existing);
+  const oldSlug = toSlug(existing.name);
+  const newSlug = toSlug(payload.name);
+  if (oldSlug !== newSlug) {
+    if (!newSlug || await slugTaken(payload.name, id)) return error('Duplicate name', 409, origin);
+    // Photos live in a folder named after the dog: move it so a rename keeps them.
+    const from = path.join(DOG_IMAGES_ROOT, oldSlug);
+    const to = path.join(DOG_IMAGES_ROOT, newSlug);
+    const exists = async (dir: string) => stat(dir).then(() => true, () => false);
+    await archivePhotoFolder(newSlug); // leftover from an earlier dog; no current dog uses it (checked above)
+    if (await exists(from)) await rename(from, to);
+  }
   const result = await pool.query<DogRow>(
     `update dogs
      set name = $1, size = $2, sex = $3, age = $4, description = $5, photo_url = $6, is_adopted = $7, traits = $8, updated_at = now()
@@ -596,6 +629,7 @@ async function handleDeleteDog(id: string, origin: string | null) {
   const existing = await getDogRow(id);
   if (!existing) return error('Dog not found', 404, origin);
   await pool.query('delete from dogs where id = $1', [id]);
+  await archivePhotoFolder(toSlug(existing.name));
   return json({ ok: true }, {}, origin);
 }
 
@@ -701,12 +735,18 @@ Bun.serve({
       if (url.pathname === '/forms/submit' && request.method === 'POST') return handleFormSubmit(request, origin);
 
       if (url.pathname === '/auth/login' && request.method === 'POST') {
+        const ip = request.headers.get('x-real-ip') ?? 'local';
+        const now = Date.now();
+        const recent = (loginFailures.get(ip) ?? []).filter((t) => now - t < 15 * 60 * 1000);
+        if (recent.length >= 10) return error('Too many attempts', 429, origin);
         const body = await request.json().catch(() => ({})) as { email?: string; password?: string };
         const email = (body.email ?? '').trim().toLowerCase();
         const passwordHash = sha256(body.password ?? '');
         if (email !== ADMIN_EMAIL.toLowerCase() || !constantTimeEqual(passwordHash, ADMIN_PASSWORD_SHA256)) {
+          loginFailures.set(ip, [...recent, now]);
           return error('Invalid login', 401, origin);
         }
+        loginFailures.delete(ip);
         return json({ token: signToken(ADMIN_EMAIL) }, {}, origin);
       }
 
