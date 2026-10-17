@@ -11,7 +11,7 @@ export const SIZE_BADGE_CLASSES: Record<string, string> = {
 };
 
 export const SEX_BADGE_CLASSES: Record<string, string> = {
-  female: 'bg-playful-watermelon/15 text-playful-watermelon-dark border border-playful-watermelon/25',
+  female: 'bg-white text-playful-watermelon-dark border border-playful-watermelon/40',
   male: 'bg-playful-cream text-playful-orange-dark border border-playful-line',
 };
 
