@@ -1,6 +1,6 @@
 ---
 import type { Locale } from '../../i18n';
-import { caesHeroContent, dogProfileCount } from './caesContent';
+import { caesHeroContent, availableCount } from './caesContent';
 
 interface Props {
   locale?: Locale;
@@ -65,7 +65,9 @@ const content = caesHeroContent[locale];
       <div class="mt-9 flex flex-wrap justify-center gap-3 lg:justify-start" aria-label={locale === 'pt' ? 'Resumo da listagem de cães' : 'Dog listing summary'}>
         {content.chips.map((chip, index) => (
           <span class={`rounded-full border border-playful-line bg-white/80 px-4 py-2 text-sm font-extrabold text-playful-muted shadow-sm ${index % 2 === 0 ? '-rotate-1' : 'rotate-1'}`}>
-            {chip}
+            {index < 2 ? (
+              <><span data-shelter-count={index === 0 ? '' : undefined} data-adopted-count={index === 1 ? '' : undefined}>{chip.split(' ')[0]}</span> {chip.split(' ').slice(1).join(' ')}</>
+            ) : chip}
           </span>
         ))}
       </div>
@@ -73,8 +75,8 @@ const content = caesHeroContent[locale];
 
     <figure class="relative mx-auto w-full max-w-[640px] lg:max-w-none">
       <div class="absolute -left-4 top-8 z-20 rotate-[-6deg] rounded-[1.5rem] bg-playful-peach px-5 py-4 text-left shadow-pillowy sm:-left-8">
-        <span class="block font-playful-display text-3xl font-extrabold text-playful-orange-dark">{dogProfileCount}</span>
-        <span class="block text-xs font-extrabold uppercase tracking-[0.18em] text-playful-muted">{locale === 'pt' ? 'perfis' : 'profiles'}</span>
+        <span class="block font-playful-display text-3xl font-extrabold text-playful-orange-dark" data-shelter-count>{availableCount}</span>
+        <span class="block text-xs font-extrabold uppercase tracking-[0.18em] text-playful-muted">{locale === 'pt' ? 'para adoção' : 'available'}</span>
       </div>
       <div class="absolute -right-3 bottom-24 z-20 hidden rotate-3 rounded-full bg-white px-5 py-3 text-sm font-extrabold text-playful-orange-dark shadow-pillowy sm:block">
         {locale === 'pt' ? 'Cada patudo tem uma história' : 'Every dog has a story'}
@@ -98,3 +100,8 @@ const content = caesHeroContent[locale];
     </figure>
   </div>
 </section>
+
+<script>
+  import { refreshShelterCount } from '../../lib/shelterCount';
+  refreshShelterCount();
+</script>

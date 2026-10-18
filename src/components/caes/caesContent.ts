@@ -2,7 +2,8 @@ import type { Locale } from '../../i18n';
 import { capaDogs } from '../../data/capaDogs';
 
 export const dogProfileCount = capaDogs.length;
-const adoptedCount = capaDogs.filter((dog) => dog.is_adopted).length;
+export const availableCount = capaDogs.filter((dog) => !dog.is_adopted).length;
+export const adoptedCount = capaDogs.filter((dog) => dog.is_adopted).length;
 
 export type CaesHeroContent = {
   eyebrow: string;
@@ -26,7 +27,7 @@ export const caesHeroContent: Record<Locale, CaesHeroContent> = {
     secondaryCta: 'Fazer o questionário',
     imageAlt: 'Colagem de cães do CAPA Póvoa de Lanhoso disponíveis para adoção',
     imageCaption: 'Percorra os perfis, conheça a personalidade de cada patudo e fale connosco quando encontrar uma ligação.',
-    chips: [`${dogProfileCount} perfis`, `${adoptedCount} adotados visíveis`, 'Tamanho e sexo', 'Pesquisa por nome'],
+    chips: [`${availableCount} para adoção`, `${adoptedCount} já adotados`, 'Tamanho e sexo', 'Pesquisa por nome'],
   },
   en: {
     eyebrow: 'Ready for adoption',
@@ -37,6 +38,6 @@ export const caesHeroContent: Record<Locale, CaesHeroContent> = {
     secondaryCta: 'Take the match quiz',
     imageAlt: 'Collage of CAPA Póvoa de Lanhoso dogs available for adoption',
     imageCaption: 'Browse the profiles, get to know each dog’s personality, and contact us when one of them feels right.',
-    chips: [`${dogProfileCount} profiles`, `${adoptedCount} adopted visible`, 'Size and sex', 'Search by name'],
+    chips: [`${availableCount} available`, `${adoptedCount} adopted`, 'Size and sex', 'Search by name'],
   },
 };
