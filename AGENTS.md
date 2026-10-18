@@ -230,6 +230,8 @@ find /home/deploy/apps/capapvl -type d -exec chmod 755 {} +
 find /home/deploy/apps/capapvl -type f -exec chmod 644 {} +
 ```
 
+**Publish only from `main`:** production must never run code that is not on `origin/main`. Before syncing to `2.29.9.89`, check out `main`, run `git fetch origin && git status -sb` and confirm the working tree is clean and level with `origin/main` (no ahead/behind, no uncommitted changes). Feature branches are reviewed and merged first (merge needs Z's explicit approval), then published. The production folder `/home/deploy/projects/capapvl.pt` on that host is plain files, not a git checkout; after a publish, compare it with `main` using `rsync -anci` (excluding `public/images/dogs/`, `.env*`, `node_modules`, `dist`, `archive`) and expect no differences. Use dated backup folders (`site-pre-<label>-$(date -u +%Y%m%dT%H%M%SZ)`) instead of deleting an older backup first.
+
 **Run deploys on the CAPA server, not on Hermes:** production is `deploy@2.29.9.89`. Sync `server/`, `src/`, `scripts/` and `public/images/dogs/` there (never `--delete` on photos), then build there. Set `ASTRO_TELEMETRY_DISABLED=1` for the build: `deploy` cannot create `~/.config/astro` on that host and the build fails without it. Back up first into `~/backups/capapvl/` (`pg_dump -Fc "$DATABASE_URL"` after sourcing `/etc/capapvl-api.env`, plus the photos and `/home/deploy/apps/capapvl`).
 
 **Database roles:** `capapvl_app` (the API's `DATABASE_URL`) can select/insert/update/delete dog rows but cannot alter the schema; `dogs` is owned by `capapvl_admin`. Schema changes need `sudo -u postgres` as root on `2.29.9.89`; ask Z before using root there.
