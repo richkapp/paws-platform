@@ -1,0 +1,31 @@
+---
+import Layout from '../layouts/Layout.astro';
+import DogListings from '../components/DogListings';
+import CaesPlayfulHero from '../components/caes/CaesPlayfulHero.astro';
+import PlayfulSiteNav from '../components/playful/PlayfulSiteNav.astro';
+import PlayfulSiteFooter from '../components/playful/PlayfulSiteFooter.astro';
+import PlayfulScrollReveal from '../components/playful/PlayfulScrollReveal.astro';
+
+const locale = 'pt' as const;
+---
+
+<Layout
+  locale={locale}
+  title="Os Nossos Cães"
+  description="Conheça os nossos cães disponíveis para adoção. Filtre por tamanho e encontre o seu novo companheiro."
+  ogImage="/illustrations/orion-play.svg"
+  playfulFonts
+>
+  <div data-playful-scroll-reveal class="min-h-screen bg-playful-canvas text-playful-ink font-playful-body pattern-dots selection:bg-playful-orange selection:text-white">
+    <PlayfulSiteNav locale={locale} />
+    <div class="overflow-x-clip">
+      <main>
+        <CaesPlayfulHero locale={locale} />
+        <DogListings locale={locale} client:load />
+      </main>
+      <PlayfulSiteFooter locale={locale} />
+    </div>
+  </div>
+
+  <PlayfulScrollReveal observeDynamic />
+</Layout>

@@ -1,0 +1,42 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import PlayfulSiteNav from '../../../components/playful/PlayfulSiteNav.astro';
+import PlayfulSiteFooter from '../../../components/playful/PlayfulSiteFooter.astro';
+import PlayfulScrollReveal from '../../../components/playful/PlayfulScrollReveal.astro';
+import VolunteerForm from '../../../components/VolunteerForm';
+
+const locale = 'en' as const;
+---
+
+<Layout
+  locale={locale}
+  title="Volunteer Form"
+  description="Schedule a time to volunteer with example shelter and tell us what kind of shelter work you can help with."
+  ogImage="/illustrations/miso-portrait.svg"
+  playfulFonts
+>
+  <div data-playful-scroll-reveal class="min-h-screen bg-playful-canvas text-playful-ink font-playful-body pattern-dots selection:bg-playful-orange selection:text-white">
+    <PlayfulSiteNav locale={locale} />
+    <div class="overflow-x-clip">
+      <main class="relative px-5 py-14 sm:px-8 lg:py-20">
+        <div class="ambient-blob -left-28 top-24 h-96 w-96 bg-playful-peach/80"></div>
+        <div class="ambient-blob -right-24 top-40 h-96 w-96 bg-playful-orange/25"></div>
+
+        <div class="relative z-10 mx-auto mb-8 flex max-w-4xl flex-wrap items-center justify-between gap-4">
+          <a href="/en/help#volunteering" class="playful-focus inline-flex items-center gap-2 rounded-full border border-playful-line bg-white/85 px-5 py-3 text-sm font-extrabold text-playful-orange-dark shadow-sm hover:bg-playful-peach">
+            <span aria-hidden="true">←</span>
+            Back to volunteering
+          </a>
+          <a href="/ajudar/formulario-voluntariado" class="playful-focus inline-flex items-center gap-2 rounded-full border border-playful-line bg-white/75 px-4 py-2 text-sm font-extrabold text-playful-muted shadow-sm hover:text-playful-orange-dark">
+            Português 🇵🇹
+          </a>
+        </div>
+
+        <VolunteerForm locale={locale} client:load />
+      </main>
+      <PlayfulSiteFooter locale={locale} />
+    </div>
+  </div>
+
+  <PlayfulScrollReveal />
+</Layout>

@@ -1,0 +1,213 @@
+---
+import { getTranslations, getAlternatePath, locales, type Locale } from '../../i18n';
+import PlayfulDonateMenu from './PlayfulDonateMenu.astro';
+import { shelter, safeDestination } from '../../config/shelter';
+import BrandIcon from '../BrandIcon.astro';
+
+interface Props {
+  locale?: Locale;
+}
+
+const { locale = 'pt' } = Astro.props;
+const t = getTranslations(locale);
+const currentPathname = Astro.url.pathname;
+const currentPath = `${currentPathname}${Astro.url.search}`;
+const normalizedCurrentPath = normalizePath(currentPathname);
+
+const homePath = locale === 'pt' ? '/' : '/en/';
+const dogsPath = locale === 'pt' ? '/caes' : '/en/dogs';
+const adoptPath = locale === 'pt' ? '/adocao' : '/en/adopt';
+const aboutPath = locale === 'pt' ? '/sobre-nos' : '/en/about';
+const helpPath = locale === 'pt' ? '/ajudar' : '/en/help';
+const matchPath = locale === 'pt' ? '/match' : '/en/match';
+const languageSelectorLabel = locale === 'pt' ? 'Selecionar idioma' : 'Select language';
+const brandAriaLabel = `${shelter.name} — ${t.nav.home}`;
+const facebookLabel = locale === 'pt' ? 'abrigo no Facebook' : 'abrigo on Facebook';
+const instagramLabel = locale === 'pt' ? 'abrigo no Instagram' : 'abrigo on Instagram';
+
+const navLinks = [
+  { href: homePath, label: t.nav.home, rotate: '-rotate-1' },
+  { href: dogsPath, label: t.nav.dogs, rotate: 'rotate-1' },
+  { href: adoptPath, label: t.nav.adoption, rotate: '-rotate-1' },
+  { href: matchPath, label: t.nav.match, rotate: 'rotate-1' },
+  { href: aboutPath, label: t.nav.about, rotate: 'rotate-1' },
+  { href: helpPath, label: t.nav.help, rotate: '-rotate-1' },
+];
+
+function normalizePath(path: string) {
+  return path.replace(/\/+$/, '') || '/';
+}
+
+function isActivePath(href: string) {
+  const normalizedHref = normalizePath(href);
+  if (normalizedHref === '/' || normalizedHref === '/en') {
+    return normalizedCurrentPath === normalizedHref;
+  }
+  return normalizedCurrentPath === normalizedHref || normalizedCurrentPath.startsWith(`${normalizedHref}/`);
+}
+---
+
+<header class="sticky top-0 z-50 rounded-b-[2rem] border-b border-playful-line/70 bg-playful-canvas/92 shadow-pillowy backdrop-blur-md">
+  <nav class="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-8" aria-label={t.nav.mainNav}>
+    <a href={homePath} class="group playful-focus flex items-center gap-3 rounded-full" aria-label={brandAriaLabel}>
+      <img src={shelter.logo} alt={shelter.name} class="h-12 w-12 rounded-[1.35rem] border-2 border-white object-cover shadow-pillowy transition-transform group-hover:-rotate-3 group-hover:scale-105" width="48" height="48" />
+      <div class="leading-none">
+        <span class="block font-playful-display text-2xl font-extrabold tracking-tight text-playful-orange-dark">{shelter.name}</span>
+        <span class="block pt-1 text-xs font-bold uppercase tracking-[0.18em] text-playful-muted">{shelter.address.locality || shelter.tagline[locale]}</span>
+      </div>
+    </a>
+
+    <ul class="hidden items-center gap-2 min-[1000px]:flex" role="list">
+      {navLinks.map(({ href, label, rotate }) => {
+        const isActive = isActivePath(href);
+        return (
+          <li>
+            <a
+              href={href}
+              class={`squishy playful-focus rounded-full px-3 py-2 text-sm font-extrabold transition-colors lg:px-4 ${rotate} ${isActive ? 'bg-playful-peach text-playful-orange-dark shadow-sm' : 'text-playful-muted hover:bg-playful-peach hover:text-playful-orange-dark'}`}
+              aria-current={isActive ? 'page' : undefined}
+            >
+              {label}
+            </a>
+          </li>
+        );
+      })}
+    </ul>
+
+    <div class="hidden items-center gap-3 min-[1000px]:flex">
+      <div class="flex items-center gap-1 rounded-full border border-playful-line bg-white/70 p-1 shadow-sm" aria-label={languageSelectorLabel}>
+        {locales.map(({ code, label, flag }) => {
+          const isActive = code === locale;
+          const altPath = isActive ? currentPath : getAlternatePath(currentPath, code);
+          return (
+            <a
+              href={altPath}
+              title={label}
+              aria-label={label}
+              aria-current={isActive ? 'true' : undefined}
+              data-playful-language-link
+              data-locale={code}
+              class={`playful-focus flex h-9 w-9 items-center justify-center rounded-full text-base transition-all ${isActive ? 'bg-playful-peach shadow-sm' : 'opacity-60 hover:opacity-100'}`}
+            >
+              {flag}
+            </a>
+          );
+        })}
+      </div>
+      <PlayfulDonateMenu locale={locale} variant="desktop" instanceId={`site-${locale}-desktop`} />
+    </div>
+
+    <button
+      id="playful-site-mobile-menu-btn"
+      type="button"
+      class="playful-focus rounded-full border-2 border-playful-line bg-white/80 p-3 text-playful-orange-dark shadow-pillowy min-[1000px]:hidden"
+      aria-label={t.nav.openMenu}
+      aria-expanded="false"
+      aria-controls="playful-site-mobile-menu"
+    >
+      <svg id="playful-site-hamburger-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="h-6 w-6" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h16" />
+      </svg>
+      <svg id="playful-site-close-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="hidden h-6 w-6" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </nav>
+
+  <div id="playful-site-mobile-menu" data-mobile-menu-scroll class="hidden max-h-[calc(100svh-5rem)] overflow-y-auto overscroll-contain scroll-pb-5 border-t border-playful-line bg-playful-canvas px-5 pb-5 min-[1000px]:hidden">
+    <div class="flex items-center gap-2 py-4" aria-label={languageSelectorLabel}>
+      {locales.map(({ code, label, flag }) => {
+        const isActive = code === locale;
+        const altPath = isActive ? currentPath : getAlternatePath(currentPath, code);
+        return (
+          <a
+            href={altPath}
+            title={label}
+            aria-label={label}
+            aria-current={isActive ? 'true' : undefined}
+            data-playful-language-link
+            data-locale={code}
+            class={`playful-focus flex items-center gap-2 rounded-full px-4 py-2 text-sm font-extrabold ${isActive ? 'bg-playful-peach text-playful-orange-dark shadow-sm' : 'bg-white/70 text-playful-muted'}`}
+          >
+            <span>{flag}</span>
+            <span>{label}</span>
+          </a>
+        );
+      })}
+    </div>
+    <ul class="flex flex-col gap-2" role="list">
+      {navLinks.map(({ href, label }) => {
+        const isActive = isActivePath(href);
+        return (
+          <li>
+            <a href={href} class={`playful-focus block rounded-full px-5 py-3 text-sm font-extrabold shadow-sm ${isActive ? 'bg-playful-peach text-playful-orange-dark' : 'bg-white/75 text-playful-muted hover:bg-playful-peach'}`} aria-current={isActive ? 'page' : undefined}>
+              {label}
+            </a>
+          </li>
+        );
+      })}
+      <li class="pt-2">
+        <PlayfulDonateMenu locale={locale} variant="mobile" instanceId={`site-${locale}-mobile`} />
+      </li>
+      <li class="pt-3">
+        <div data-mobile-socials class="flex items-center justify-center rounded-[1.35rem] bg-white/75 px-4 py-3 shadow-sm">
+          <span class="flex items-center justify-center gap-3">
+            {safeDestination(shelter.social.facebook) && <a href={safeDestination(shelter.social.facebook)} class="playful-focus flex h-10 w-10 items-center justify-center rounded-full bg-playful-orange text-white shadow-sm" aria-label={facebookLabel} target="_blank" rel="noopener noreferrer"><BrandIcon name="facebook" class="h-5 w-5" /></a>}
+            {safeDestination(shelter.social.instagram) && <a href={safeDestination(shelter.social.instagram)} class="playful-focus flex h-10 w-10 items-center justify-center rounded-full bg-playful-orange text-white shadow-sm" aria-label={instagramLabel} target="_blank" rel="noopener noreferrer"><BrandIcon name="instagram" class="h-5 w-5" /></a>}
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<script>
+  import { routeMap as playfulLanguageRouteMap } from '../../i18n';
+  const playfulReverseLanguageRouteMap = Object.fromEntries(
+    Object.entries(playfulLanguageRouteMap).map(([ptPath, enPath]) => [enPath, ptPath]),
+  );
+  const playfulNormalizePath = (path: string) => (path === '/' ? '/' : path.replace(/\/+$/, ''));
+  const playfulAlternatePath = (pathname: string, search: string, hash: string, targetLocale: string) => {
+    const normalizedPath = playfulNormalizePath(pathname);
+    const alternatePath = targetLocale === 'en'
+      ? playfulLanguageRouteMap[normalizedPath] ?? '/en/'
+      : playfulReverseLanguageRouteMap[normalizedPath] ?? '/';
+    return `${alternatePath}${search}${hash}`;
+  };
+  const playfulCurrentLocale = () => {
+    const normalizedPath = playfulNormalizePath(window.location.pathname);
+    return normalizedPath === '/en' || normalizedPath.startsWith('/en/') ? 'en' : 'pt';
+  };
+
+  document.querySelectorAll('[data-playful-language-link]').forEach((link) => {
+    const targetLocale = link.getAttribute('data-locale');
+    if (targetLocale !== 'pt' && targetLocale !== 'en') return;
+    const href = targetLocale === playfulCurrentLocale()
+      ? `${window.location.pathname}${window.location.search}${window.location.hash}`
+      : playfulAlternatePath(window.location.pathname, window.location.search, window.location.hash, targetLocale);
+    link.setAttribute('href', href);
+  });
+
+  const playfulSiteBtn = document.getElementById('playful-site-mobile-menu-btn');
+  const playfulSiteMenu = document.getElementById('playful-site-mobile-menu');
+  const playfulSiteHamburger = document.getElementById('playful-site-hamburger-icon');
+  const playfulSiteClose = document.getElementById('playful-site-close-icon');
+
+  if (playfulSiteBtn && playfulSiteMenu && playfulSiteHamburger && playfulSiteClose) {
+    playfulSiteBtn.addEventListener('click', () => {
+      const isOpen = playfulSiteMenu.classList.toggle('hidden') === false;
+      playfulSiteBtn.setAttribute('aria-expanded', String(isOpen));
+      playfulSiteHamburger.classList.toggle('hidden', isOpen);
+      playfulSiteClose.classList.toggle('hidden', !isOpen);
+    });
+
+    playfulSiteMenu.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        playfulSiteMenu.classList.add('hidden');
+        playfulSiteBtn.setAttribute('aria-expanded', 'false');
+        playfulSiteHamburger.classList.remove('hidden');
+        playfulSiteClose.classList.add('hidden');
+      });
+    });
+  }
+</script>

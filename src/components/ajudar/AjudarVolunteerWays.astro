@@ -1,0 +1,86 @@
+---
+const photos = [
+  {
+    src: '/illustrations/pesto-play.svg',
+    alt: 'Voluntária a passear um cão do abrigo',
+    rotate: 'lg:-rotate-2',
+  },
+  {
+    src: '/illustrations/pesto-play.svg',
+    alt: 'Voluntário com um cão do abrigo',
+    rotate: 'lg:rotate-1 lg:translate-y-8',
+  },
+  {
+    src: '/illustrations/pesto-play.svg',
+    alt: 'Voluntários a cuidar dos cães no abrigo do abrigo',
+    rotate: 'lg:-rotate-1',
+  },
+];
+
+const volunteerWays = [
+  {
+    title: 'Passear os Cães',
+    icon: '↗',
+    description: 'Leve um dos nossos patudos para uma caminhada revigorante. É simples, faz bem a si e a eles.',
+  },
+  {
+    title: 'Fotografar Animais',
+    icon: '◎',
+    description: 'Boas fotos aumentam muito as hipóteses de adoção. Se tem jeito para a fotografia, precisamos de si!',
+  },
+  {
+    title: 'Voluntariado no Abrigo',
+    icon: '❤',
+    description: 'Ajude nos cuidados diários, limpeza e socialização dos animais diretamente no nosso espaço.',
+  },
+  {
+    title: 'Campanhas e Divulgação',
+    icon: '✺',
+    description: 'Ajude a organizar eventos, feiras de adoção e a divulgar os nossos animais nas redes sociais.',
+  },
+];
+---
+
+<section id="voluntariado" class="relative overflow-hidden px-5 py-16 sm:px-8 lg:py-24" aria-labelledby="voluntario-heading">
+  <div class="ambient-blob right-0 top-20 h-80 w-80 bg-playful-orange/20"></div>
+  <div class="mx-auto max-w-7xl">
+    <header data-reveal="rise" class="relative z-10 mb-12 text-center">
+      <span class="mb-3 inline-block text-xs font-extrabold uppercase tracking-[0.24em] text-playful-orange-dark">Voluntariado</span>
+      <h2 id="voluntario-heading" class="mx-auto max-w-3xl font-playful-display text-4xl font-extrabold tracking-[-0.04em] text-playful-orange-dark sm:text-5xl">
+        Ofereça o Seu Tempo
+      </h2>
+      <p class="mx-auto mt-4 max-w-2xl text-lg font-medium leading-8 text-playful-muted">
+        O voluntariado é a espinha dorsal do abrigo. Há muitas formas de ajudar, independentemente da sua disponibilidade.
+      </p>
+    </header>
+
+    <div data-reveal-stagger="90" class="relative z-10 mx-auto mb-14 grid max-w-5xl grid-cols-1 gap-5 sm:grid-cols-3">
+      {photos.map(({ src, alt, rotate }) => (
+        <div data-reveal="pop" class={`${rotate} overflow-hidden rounded-[2rem] border-4 border-white bg-white shadow-pillowy-lg`}>
+          <img src={src} alt={alt} class="aspect-[4/3] h-full w-full object-cover" loading="lazy" />
+        </div>
+      ))}
+    </div>
+
+    <div data-reveal-stagger="90" class="relative z-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      {volunteerWays.map(({ title, icon, description }, index) => (
+        <article data-reveal="tilt" class={`card-pillowy rounded-playful border border-playful-line/70 bg-white p-7 text-center shadow-pillowy ${index % 2 === 0 ? 'lg:-rotate-1' : 'lg:rotate-1 lg:translate-y-4'}`}>
+          <div class="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-playful-orange/14 text-2xl font-extrabold text-playful-orange-dark shadow-sm" aria-hidden="true">{icon}</div>
+          <h3 class="mb-3 font-playful-display text-xl font-extrabold tracking-[-0.03em] text-playful-orange-dark">{title}</h3>
+          <p class="text-sm font-medium leading-6 text-playful-muted">{description}</p>
+        </article>
+      ))}
+    </div>
+
+    <div data-reveal="pop" class="relative z-10 mx-auto mt-12 max-w-3xl rounded-[2rem] border border-playful-orange/15 bg-playful-peach p-6 text-center shadow-pillowy sm:p-8">
+      <h3 class="font-playful-display text-2xl font-extrabold tracking-[-0.03em] text-playful-orange-dark">Queres combinar uma hora para ajudar?</h3>
+      <p class="mx-auto mt-3 max-w-2xl text-base font-medium leading-7 text-playful-muted">
+        Preenche o formulário de voluntariado, escolhe o tipo de ajuda que podes dar e o abrigo responde por email.
+      </p>
+      <a href="/ajudar/formulario-voluntariado" class="squishy playful-focus mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-playful-orange px-7 py-4 font-playful-display text-base font-extrabold text-white shadow-squish">
+        Formulário de voluntariado
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+</section>

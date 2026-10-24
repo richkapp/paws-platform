@@ -1,0 +1,79 @@
+---
+import { getTranslations, type Locale } from '../../i18n';
+
+interface Props {
+  locale?: Locale;
+}
+
+const { locale = 'pt' } = Astro.props;
+const t = getTranslations(locale);
+
+const dogsPath = locale === 'pt' ? '/caes' : '/en/dogs';
+const adoptPath = locale === 'pt' ? '/adocao' : '/en/adopt';
+---
+
+<section id="inicio" class="relative isolate overflow-hidden px-5 py-16 sm:px-8 lg:py-24">
+  <div class="ambient-blob -right-20 top-10 h-72 w-72 bg-playful-orange/45"></div>
+  <div class="ambient-blob -left-24 bottom-8 h-80 w-80 bg-playful-peach/80"></div>
+  <div class="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1.02fr_0.98fr]">
+    <div class="relative z-10 text-center lg:text-left">
+      <div data-reveal="left" data-reveal-delay="40" class="mb-6 inline-flex -rotate-2 items-center gap-2 rounded-full border border-playful-line bg-playful-peach px-4 py-2 text-sm font-extrabold text-playful-orange-dark shadow-pillowy">
+        <span aria-hidden="true">🐾</span>
+        <span>{t.hero.badge}</span>
+      </div>
+
+      <h1 data-reveal="left" data-reveal-delay="120" class="font-playful-display text-[3rem] font-extrabold leading-[0.96] tracking-[-0.045em] text-playful-orange-dark sm:text-6xl lg:text-7xl">
+        {t.hero.headlinePart1}
+        <span class="relative mx-1 inline-block pb-3 text-playful-orange">
+          {t.hero.headlinePart2}
+          <svg class="absolute bottom-0 left-0 h-4 w-full text-playful-watermelon/70" viewBox="0 0 220 20" aria-hidden="true" preserveAspectRatio="none">
+            <path d="M4 13C52 4 107 3 216 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="8" />
+          </svg>
+        </span>
+        {t.hero.headlinePart3}
+      </h1>
+
+      <p data-reveal="left" data-reveal-delay="210" class="mx-auto mt-7 max-w-2xl text-lg font-medium leading-8 text-playful-muted lg:mx-0">
+        {t.hero.subtext}
+      </p>
+
+      <div data-reveal="left" data-reveal-delay="300" class="mt-8 flex flex-col justify-center gap-4 sm:flex-row lg:justify-start">
+        <a href={dogsPath} class="squishy playful-focus inline-flex items-center justify-center gap-2 rounded-full bg-playful-orange px-8 py-4 font-playful-display text-base font-extrabold text-white shadow-squish">
+          {t.hero.ctaPrimary}
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5" aria-hidden="true">
+            <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd" />
+          </svg>
+        </a>
+        <a href={adoptPath} class="squishy playful-focus inline-flex items-center justify-center gap-2 rounded-full border-2 border-playful-orange bg-white/80 px-8 py-4 font-playful-display text-base font-extrabold text-playful-orange-dark shadow-pillowy">
+          {t.hero.ctaSecondary}
+          <span aria-hidden="true">♡</span>
+        </a>
+      </div>
+
+      <div data-reveal="pop" data-reveal-delay="390" class="mt-9 flex flex-wrap justify-center gap-3 lg:justify-start">
+        {[t.hero.trustAdoption, t.hero.trustVaccinated, t.hero.trustSupport].map((trust, index) => (
+          <span class={`rounded-full border border-playful-line bg-white/78 px-4 py-2 text-sm font-bold text-playful-muted shadow-sm ${index === 0 ? '-rotate-2' : index === 1 ? 'rotate-1' : '-rotate-1'}`}>
+            ✓ {trust}
+          </span>
+        ))}
+      </div>
+    </div>
+
+    <div data-reveal="hero-image" data-reveal-delay="180" class="relative z-10 mx-auto w-full max-w-[560px] pt-4 lg:pt-0">
+      <div class="absolute -right-5 top-6 z-20 rotate-12 rounded-full bg-playful-watermelon px-4 py-4 text-white shadow-pillowy-lg" aria-hidden="true">❤</div>
+      <div class="absolute -bottom-5 left-1/2 z-20 w-max -translate-x-1/2 -rotate-3 rounded-full bg-playful-peach px-5 py-3 text-sm font-extrabold text-playful-muted shadow-pillowy">
+        {t.hero.trustVaccinated}
+      </div>
+      <div class="relative rotate-1">
+        <img
+          src="/illustrations/miso-portrait.svg"
+          alt={t.hero.heroImgAlt}
+          class="blob-mask aspect-square w-full object-cover border-8 border-white shadow-pillowy-lg"
+          style="object-position: 40% center;"
+          loading="eager"
+          fetchpriority="high"
+        />
+      </div>
+    </div>
+  </div>
+</section>

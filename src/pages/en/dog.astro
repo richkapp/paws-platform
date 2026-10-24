@@ -1,0 +1,28 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PlayfulSiteNav from '../../components/playful/PlayfulSiteNav.astro';
+import PlayfulSiteFooter from '../../components/playful/PlayfulSiteFooter.astro';
+import PlayfulScrollReveal from '../../components/playful/PlayfulScrollReveal.astro';
+import DogProfile from '../../components/DogProfile';
+
+const locale = 'en' as const;
+---
+
+<Layout
+  locale={locale}
+  title="Meet This Dog"
+  description="Meet this shelter dog from abrigo and consider giving them a loving home."
+  playfulFonts
+>
+  <div data-playful-scroll-reveal class="min-h-screen bg-playful-canvas text-playful-ink font-playful-body pattern-dots selection:bg-playful-orange selection:text-white">
+    <PlayfulSiteNav locale={locale} />
+    <div class="overflow-x-clip">
+      <main class="px-5 py-10 sm:px-8 lg:py-14">
+        <DogProfile locale={locale} client:load />
+      </main>
+      <PlayfulSiteFooter locale={locale} />
+    </div>
+  </div>
+
+  <PlayfulScrollReveal />
+</Layout>

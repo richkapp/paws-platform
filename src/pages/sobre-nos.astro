@@ -1,0 +1,27 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PlayfulSiteNav from '../components/playful/PlayfulSiteNav.astro';
+import PlayfulSiteFooter from '../components/playful/PlayfulSiteFooter.astro';
+import PlayfulScrollReveal from '../components/playful/PlayfulScrollReveal.astro';
+import SobreNosPlayfulPage from '../components/sobre-nos/SobreNosPlayfulPage.astro';
+
+const locale = 'pt' as const;
+---
+
+<Layout
+  locale={locale}
+  title="Sobre o abrigo"
+  description="Saiba mais sobre o abrigo, a nossa missão, princípios e o trabalho que fazemos pela proteção animal."
+  ogImage="/illustrations/miso-portrait.svg"
+  playfulFonts
+>
+  <div data-playful-scroll-reveal class="min-h-screen bg-playful-canvas text-playful-ink font-playful-body pattern-dots selection:bg-playful-orange selection:text-white">
+    <PlayfulSiteNav locale={locale} />
+    <div class="overflow-x-clip">
+      <SobreNosPlayfulPage locale={locale} />
+      <PlayfulSiteFooter locale={locale} />
+    </div>
+  </div>
+
+  <PlayfulScrollReveal />
+</Layout>

@@ -1,0 +1,15 @@
+---
+import Layout from '../layouts/Layout.astro';
+import AdminPanel from '../components/AdminPanel';
+
+const locale = 'pt' as const;
+---
+
+<Layout
+  locale={locale}
+  title="Gestão de cães"
+  noindex={true}
+  playfulFonts
+>
+  <AdminPanel locale={locale} client:load />
+</Layout>

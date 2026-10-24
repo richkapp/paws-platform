@@ -1,0 +1,44 @@
+---
+import '../styles/global.css';
+import { getTranslations, type Locale } from '../i18n';
+import { shelter, safeDestination, siteNotice } from '../config/shelter';
+export interface Props {
+  title?: string; description?: string; ogImage?: string; ogUrl?: string;
+  noindex?: boolean; playfulFonts?: boolean; locale?: Locale;
+}
+const { locale = 'pt', noindex = false, ogImage = '/illustrations/miso-portrait.svg' } = Astro.props;
+const t = getTranslations(locale);
+const rawTitle = Astro.props.title ?? t.layout.defaultTitle;
+const title = `${rawTitle.split(/ [—|] /)[0]} — ${shelter.name}`;
+const description = Astro.props.description ?? shelter.description[locale];
+const publicUrl = safeDestination(shelter.publicUrl);
+const ogUrl = publicUrl ? new URL(Astro.url.pathname, publicUrl).href : undefined;
+const ogImageAbsolute = publicUrl ? new URL(ogImage, publicUrl).href : undefined;
+---
+<!doctype html>
+<html lang={t.layout.htmlLang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href={shelter.logo} />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+    <title>{title}</title>
+    {!noindex && <>
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      {ogImageAbsolute && <meta property="og:image" content={ogImageAbsolute} />}
+      {ogUrl && <meta property="og:url" content={ogUrl} />}
+      <meta property="og:locale" content={t.layout.ogLocale} />
+      <meta property="og:site_name" content={shelter.name} />
+    </>}
+  </head>
+  <body class="bg-warm-50 text-warm-900 font-sans antialiased">
+    <aside class="border-b border-playful-line bg-playful-peach px-4 py-2 text-center text-xs font-bold text-playful-orange-dark" data-site-notice data-demo-banner={!shelter.forms.enabled || undefined}>
+      {siteNotice(locale)}
+    </aside>
+    <slot />
+  </body>
+</html>

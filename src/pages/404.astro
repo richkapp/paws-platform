@@ -1,0 +1,54 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PlayfulSiteNav from '../components/playful/PlayfulSiteNav.astro';
+import PlayfulSiteFooter from '../components/playful/PlayfulSiteFooter.astro';
+import PlayfulScrollReveal from '../components/playful/PlayfulScrollReveal.astro';
+
+const locale = 'pt' as const;
+---
+
+<Layout
+  locale={locale}
+  title="Página Não Encontrada"
+  description="A página que procura não existe. Volte à página inicial do abrigo de exemplo."
+  playfulFonts
+>
+  <div data-playful-scroll-reveal class="min-h-screen bg-playful-canvas text-playful-ink font-playful-body pattern-dots selection:bg-playful-orange selection:text-white">
+    <PlayfulSiteNav locale={locale} />
+    <div class="overflow-x-clip">
+      <main class="relative flex min-h-[72vh] items-center justify-center overflow-hidden px-5 py-20 sm:px-8">
+        <div class="ambient-blob -left-24 top-20 h-96 w-96 bg-playful-peach/80"></div>
+        <div class="ambient-blob -right-20 bottom-10 h-80 w-80 bg-playful-orange/25"></div>
+
+        <section data-reveal="pop" class="relative z-10 mx-auto max-w-3xl rounded-[2.8rem] border border-playful-line bg-white/88 px-6 py-14 text-center shadow-pillowy-lg sm:px-10" aria-labelledby="not-found-heading">
+          <div class="mx-auto mb-8 flex h-28 w-28 -rotate-6 items-center justify-center rounded-full bg-playful-peach text-6xl shadow-pillowy" aria-hidden="true">🐾</div>
+          <p class="mb-3 text-xs font-extrabold uppercase tracking-[0.24em] text-playful-orange-dark">Erro 404</p>
+          <h1 id="not-found-heading" class="font-playful-display text-5xl font-extrabold leading-[0.98] tracking-[-0.06em] text-playful-orange-dark sm:text-6xl">
+            Página não encontrada
+          </h1>
+          <p class="mx-auto mt-6 max-w-2xl text-xl font-extrabold leading-8 text-playful-muted">
+            Até os cães perdidos encontram o caminho de casa.
+          </p>
+          <p class="mx-auto mt-3 max-w-xl text-base font-medium leading-7 text-playful-muted/85">
+            A página que procura não existe ou foi movida. Não se preocupe — a nossa página inicial está mesmo aqui.
+          </p>
+
+          <div class="mt-10 flex flex-col justify-center gap-3 sm:flex-row">
+            <a href="/" class="squishy playful-focus inline-flex items-center justify-center gap-2 rounded-full bg-playful-orange px-7 py-4 font-playful-display font-extrabold text-white shadow-squish">
+              Voltar à página inicial
+              <span aria-hidden="true">→</span>
+            </a>
+            <a href="/caes" class="squishy playful-focus inline-flex items-center justify-center gap-2 rounded-full border-2 border-playful-orange bg-white px-7 py-4 font-playful-display font-extrabold text-playful-orange-dark shadow-pillowy">
+              Ver os nossos cães
+              <span aria-hidden="true">🐶</span>
+            </a>
+          </div>
+        </section>
+      </main>
+
+      <PlayfulSiteFooter locale={locale} />
+    </div>
+  </div>
+
+  <PlayfulScrollReveal />
+</Layout>

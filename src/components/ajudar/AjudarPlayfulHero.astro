@@ -1,0 +1,81 @@
+---
+import { shelter } from '../../config/shelter';
+import PlayfulDonateMenu from '../playful/PlayfulDonateMenu.astro';
+
+const heroTrust = ['Donativos em espécie', 'Voluntariado', 'Famílias FAT', 'Apoio financeiro'];
+---
+
+<section id="inicio" class="relative isolate overflow-hidden px-5 py-16 sm:px-8 lg:py-24" aria-labelledby="hero-heading">
+  <div class="ambient-blob -right-20 top-10 h-72 w-72 bg-playful-orange/45"></div>
+  <div class="ambient-blob -left-24 bottom-8 h-80 w-80 bg-playful-peach/80"></div>
+
+  <div class="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1.02fr_0.98fr]">
+    <div class="relative z-10 text-center lg:text-left">
+      <div data-reveal="left" data-reveal-delay="40" class="mb-6 inline-flex -rotate-2 items-center gap-2 rounded-full border border-playful-line bg-playful-peach px-4 py-2 text-sm font-extrabold text-playful-orange-dark shadow-pillowy">
+        <span aria-hidden="true">🐾</span>
+        <span>Faça a Diferença</span>
+      </div>
+
+      <h1 id="hero-heading" data-reveal="left" data-reveal-delay="120" class="font-playful-display text-[3.05rem] font-extrabold leading-[0.95] tracking-[-0.055em] text-playful-orange-dark sm:text-6xl lg:text-7xl">
+        Apoie o
+        <span class="relative mx-1 inline-block text-playful-orange">
+          {shelter.name}!
+          <svg class="absolute -bottom-3 left-0 h-4 w-full text-playful-watermelon/70" viewBox="0 0 220 20" aria-hidden="true" preserveAspectRatio="none">
+            <path d="M4 13C52 4 107 3 216 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="8" />
+          </svg>
+        </span>
+      </h1>
+
+      <p data-reveal="left" data-reveal-delay="210" class="mx-auto mt-7 max-w-2xl text-lg font-medium leading-8 text-playful-muted lg:mx-0">
+        Cada gesto conta. Seja com o seu tempo, com materiais ou com uma contribuição financeira,
+        este exemplo mostra como uma comunidade pode apoiar o bem-estar animal.
+      </p>
+      <p data-reveal="left" data-reveal-delay="270" class="mx-auto mt-4 max-w-xl text-base font-medium leading-7 text-playful-muted/85 lg:mx-0 sm:text-lg">
+        Descubra como pode contribuir para o nosso trabalho e juntar-se à nossa comunidade de defensores animais.
+      </p>
+
+      <div data-reveal="left" data-reveal-delay="340" class="relative z-30 mt-8 flex flex-col items-stretch justify-center gap-4 sm:flex-row sm:items-start lg:justify-start">
+        <a data-hero-volunteer-link href="/ajudar/formulario-voluntariado" class="squishy playful-focus inline-flex w-full items-center justify-center gap-2 rounded-full bg-playful-orange px-8 py-4 font-playful-display text-base font-extrabold text-white shadow-squish sm:w-auto">
+          Voluntariado
+          <span aria-hidden="true">→</span>
+        </a>
+        <PlayfulDonateMenu
+          locale="pt"
+          variant="desktop"
+          instanceId="hero-pt-donate"
+          buttonLabel="Doar"
+          rootClass="relative z-30 w-full sm:w-auto"
+          menuButtonClass="squishy playful-focus inline-flex w-full items-center justify-center gap-2 rounded-full border-2 border-playful-orange bg-white/80 px-8 py-4 font-playful-display text-base font-extrabold text-playful-orange-dark shadow-pillowy sm:w-auto"
+          menuPanelClass="mt-3 max-h-[min(20rem,calc(100svh-2rem))] w-full overflow-y-auto rounded-[1.5rem] border border-playful-line bg-white p-2 text-left shadow-pillowy-lg sm:absolute sm:left-0 sm:top-full sm:z-[80] sm:w-72 sm:max-h-none sm:overflow-visible"
+        />
+      </div>
+
+      <div data-reveal="pop" data-reveal-delay="430" class="mt-9 flex flex-wrap justify-center gap-3 lg:justify-start">
+        {heroTrust.map((trust, index) => (
+          <span class={`rounded-full border border-playful-line bg-white/78 px-4 py-2 text-sm font-bold text-playful-muted shadow-sm ${index === 0 ? '-rotate-2' : index === 1 ? 'rotate-1' : index === 2 ? '-rotate-1' : 'rotate-2'}`}>
+            ✓ {trust}
+          </span>
+        ))}
+      </div>
+    </div>
+
+    <div data-reveal="hero-image" data-reveal-delay="180" class="relative z-10 mx-auto w-full max-w-[590px] pt-4 lg:pt-0">
+      <div class="absolute -right-5 top-6 z-20 rotate-12 rounded-full bg-playful-watermelon px-4 py-4 text-white shadow-pillowy-lg" aria-hidden="true">❤</div>
+      <div class="absolute -bottom-5 left-1/2 z-20 w-max -translate-x-1/2 -rotate-3 rounded-full bg-playful-peach px-5 py-3 text-sm font-extrabold text-playful-muted shadow-pillowy">
+        Ajuda que chega ao abrigo
+      </div>
+      <picture class="relative block rotate-1">
+        <source srcset="/illustrations/miso-portrait.svg" type="image/svg+xml" />
+        <img
+          src="/illustrations/miso-portrait.svg"
+          alt="Cão feliz no abrigo, representando a ajuda ao abrigo"
+          class="blob-mask aspect-[5/4] w-full border-8 border-white object-cover shadow-pillowy-lg"
+          loading="eager"
+          fetchpriority="high"
+          width="1400"
+          height="1120"
+        />
+      </picture>
+    </div>
+  </div>
+</section>

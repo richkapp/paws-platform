@@ -1,0 +1,42 @@
+{
+  "name": "paws-platform",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "bun": ">=1.3.11"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "check": "astro check && tsc --project server/tsconfig.json",
+    "test": "bun test tests",
+    "test:integration": "bun run scripts/test-integration.ts",
+    "api": "bun run server/paws-api.ts",
+    "setup:local": "bun run scripts/setup-local.ts",
+    "db:setup": "bun run scripts/db.ts setup",
+    "db:seed": "bun run scripts/db.ts seed"
+  },
+  "dependencies": {
+    "@astrojs/react": "^4.4.2",
+    "@tailwindcss/vite": "^4.2.1",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "astro": "^5.17.1",
+    "nodemailer": "^9.0.1",
+    "pg": "^8.16.3",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "sharp": "^0.34.5",
+    "tailwindcss": "^4.2.1"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@types/bun": "^1.3.14",
+    "@types/nodemailer": "^8.0.1",
+    "@types/pg": "^8.20.0",
+    "typescript": "^5.9.3"
+  }
+}

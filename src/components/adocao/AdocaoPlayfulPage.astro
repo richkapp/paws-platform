@@ -1,0 +1,24 @@
+---
+import type { Locale } from '../../i18n';
+import { adocaoContent } from './adocaoContent';
+import AdocaoPlayfulHero from './AdocaoPlayfulHero.astro';
+import AdocaoBenefits from './AdocaoBenefits.astro';
+import AdocaoProcess from './AdocaoProcess.astro';
+import AdocaoFees from './AdocaoFees.astro';
+import AdocaoFinalCta from './AdocaoFinalCta.astro';
+
+interface Props {
+  locale?: Locale;
+}
+
+const { locale = 'pt' } = Astro.props;
+const content = adocaoContent[locale];
+---
+
+<main>
+  <AdocaoPlayfulHero content={content.hero} />
+  <AdocaoBenefits content={content.benefits} />
+  <AdocaoProcess content={content.process} />
+  <AdocaoFees content={content.fees} />
+  <AdocaoFinalCta content={content.cta} />
+</main>

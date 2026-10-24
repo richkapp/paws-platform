@@ -1,0 +1,86 @@
+---
+import type { AdocaoContent } from './adocaoContent';
+
+interface Props {
+  content: AdocaoContent['hero'];
+}
+
+const { content } = Astro.props;
+---
+
+<section id="inicio" class="relative isolate overflow-hidden px-5 pb-14 pt-14 sm:px-8 lg:pb-20 lg:pt-22" aria-labelledby="adocao-hero-heading">
+  <div class="ambient-blob -left-28 top-36 h-96 w-96 bg-playful-peach/80"></div>
+  <div class="ambient-blob -right-24 top-4 h-96 w-96 bg-playful-orange/35"></div>
+  <div class="ambient-blob bottom-0 left-1/2 h-72 w-72 -translate-x-1/2 bg-playful-watermelon/20"></div>
+
+  <div class="relative z-10 mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16">
+    <div class="text-center lg:text-left">
+      <div data-reveal="pop" class="mb-6 inline-flex -rotate-2 items-center gap-2 rounded-full border border-playful-line bg-playful-peach px-5 py-2 text-xs font-extrabold uppercase tracking-[0.22em] text-playful-orange-dark shadow-pillowy">
+        <span aria-hidden="true">🐾</span>
+        {content.badge}
+      </div>
+
+      <h1 id="adocao-hero-heading" data-reveal="left" data-reveal-delay="100" class="font-playful-display text-[3.2rem] font-extrabold leading-[0.94] tracking-[-0.065em] text-playful-ink sm:text-6xl lg:text-[5.9rem]">
+        {content.headingPrefix}
+        <span class="relative block text-playful-orange">
+          {content.headingHighlight}
+          <svg class="absolute -bottom-2 left-1/2 h-5 w-[88%] -translate-x-1/2 text-playful-watermelon/75" viewBox="0 0 260 24" aria-hidden="true" preserveAspectRatio="none">
+            <path d="M5 15C62 4 142 3 255 15" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="9" />
+          </svg>
+        </span>
+      </h1>
+
+      <div data-reveal="left" data-reveal-delay="190" class="mx-auto mt-7 max-w-2xl space-y-4 text-lg font-medium leading-8 text-playful-muted sm:text-xl lg:mx-0">
+        {content.paragraphs.map((paragraph, index) => (
+          <p class={index === 1 ? 'font-extrabold text-playful-orange-dark' : ''}>{paragraph}</p>
+        ))}
+      </div>
+
+      <div data-reveal="left" data-reveal-delay="310" class="mt-8 flex flex-col justify-center gap-4 sm:flex-row lg:justify-start">
+        <a href={content.primaryHref} class="squishy playful-focus inline-flex items-center justify-center gap-2 rounded-full bg-playful-orange px-8 py-4 font-playful-display text-base font-extrabold text-white shadow-squish">
+          {content.primaryCta}
+          <span aria-hidden="true">→</span>
+        </a>
+        <a href={content.secondaryHref} class="squishy playful-focus inline-flex items-center justify-center gap-2 rounded-full border-2 border-playful-orange bg-white/85 px-8 py-4 font-playful-display text-base font-extrabold text-playful-orange-dark shadow-pillowy">
+          {content.secondaryCta}
+          <span aria-hidden="true">↓</span>
+        </a>
+      </div>
+
+      <div data-reveal="rise" data-reveal-delay="410" class="mt-9 flex flex-wrap justify-center gap-3 lg:justify-start">
+        {content.chips.map((chip, index) => (
+          <span class={`rounded-full border border-playful-line bg-white/80 px-4 py-2 text-sm font-extrabold text-playful-muted shadow-sm ${index % 2 === 0 ? '-rotate-1' : 'rotate-1'}`}>
+            ✓ {chip}
+          </span>
+        ))}
+      </div>
+    </div>
+
+    <figure data-reveal="hero-image" data-reveal-delay="160" class="relative mx-auto w-full max-w-[620px] lg:max-w-none">
+      <div class="absolute -left-4 top-8 z-20 rotate-[-6deg] rounded-[1.5rem] bg-playful-peach px-5 py-4 text-left shadow-pillowy sm:-left-8">
+        <span class="block font-playful-display text-3xl font-extrabold text-playful-orange-dark">{content.processBadgeValue}</span>
+        <span class="block text-xs font-extrabold uppercase tracking-[0.18em] text-playful-muted">{content.processBadgeLabel}</span>
+      </div>
+      <div class="absolute -right-4 top-1/2 z-20 hidden -translate-y-1/2 rotate-3 rounded-full bg-white px-5 py-3 text-sm font-extrabold text-playful-orange-dark shadow-pillowy sm:block">
+        {content.priceBadge}
+      </div>
+      <div class="absolute -bottom-5 left-1/2 z-20 w-[88%] -translate-x-1/2 -rotate-2 rounded-[1.5rem] border border-playful-line/70 bg-white/88 px-5 py-4 text-center text-sm font-bold leading-6 text-playful-muted shadow-pillowy">
+        <span class="block font-playful-display text-lg font-extrabold tracking-[-0.03em] text-playful-orange-dark">{content.captionTitle}</span>
+        <span>{content.captionText}</span>
+      </div>
+
+      <picture class="relative block rotate-1">
+        <source srcset="/illustrations/tulipa-portrait.svg" type="image/svg+xml" />
+        <img
+          src="/illustrations/tulipa-portrait.svg"
+          alt={content.imageAlt}
+          width="1400"
+          height="1120"
+          loading="eager"
+          fetchpriority="high"
+          class="blob-mask aspect-[5/4] w-full border-[10px] border-white object-cover object-center shadow-pillowy-lg"
+        />
+      </picture>
+    </figure>
+  </div>
+</section>

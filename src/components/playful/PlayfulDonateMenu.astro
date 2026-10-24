@@ -1,0 +1,15 @@
+---
+import { shelter, safeDestination, demoNotice } from '../../config/shelter';
+import type { Locale } from '../../i18n';
+interface Props { locale?: Locale; instanceId?: string; class?: string; label?: string; [key: string]: unknown }
+const { locale = 'pt', class: className = '' } = Astro.props;
+const donateUrl = safeDestination(shelter.donations.paypalUrl || shelter.donations.otherUrl);
+---
+{donateUrl ? <a href={donateUrl} rel="noopener noreferrer" class={`playful-focus inline-flex rounded-full bg-playful-orange px-5 py-3 font-bold text-white shadow-squish ${className}`}>{locale === 'pt' ? 'Fazer donativo' : 'Donate'}</a> :
+<details class={`relative ${className}`}>
+  <summary class="playful-focus cursor-pointer list-none rounded-full bg-playful-orange px-5 py-3 text-center text-sm font-extrabold text-white shadow-squish">{locale === 'pt' ? 'Ajudar ♡' : 'Help ♡'}</summary>
+  <div class="absolute right-0 z-[80] mt-3 w-64 rounded-2xl border border-playful-line bg-white p-5 text-sm font-semibold leading-6 text-playful-muted shadow-pillowy">
+    <p data-donation-disabled>{demoNotice(locale)}</p>
+    <a href={locale === 'pt' ? '/ajudar' : '/en/help'} class="playful-focus mt-3 inline-block text-playful-orange-dark underline">{locale === 'pt' ? 'Explorar formas de ajudar' : 'Explore ways to help'}</a>
+  </div>
+</details>}

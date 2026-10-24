@@ -1,0 +1,89 @@
+---
+interface Props {
+  observeDynamic?: boolean;
+}
+
+const { observeDynamic = false } = Astro.props;
+---
+
+<script define:vars={{ observeDynamic }}>
+  const revealRoot = document.querySelector('[data-playful-scroll-reveal]');
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const shouldObserveDynamic = Boolean(observeDynamic);
+
+  const revealDelayValue = (value) => {
+    if (!value) return undefined;
+    return /^\d+$/.test(value) ? `${value}ms` : value;
+  };
+
+  if (revealRoot) {
+    const revealItems = new WeakSet();
+    let observer = null;
+
+    const applyStaggerDelays = () => {
+      revealRoot.querySelectorAll('[data-reveal-stagger]').forEach((group) => {
+        if (!(group instanceof HTMLElement)) return;
+
+        const step = Number(group.dataset.revealStagger || 90);
+        const groupItems = Array.from(group.querySelectorAll('[data-reveal]')).filter(
+          (child) => child.parentElement?.closest('[data-reveal-stagger]') === group
+        );
+
+        groupItems.forEach((item, index) => {
+          if (!(item instanceof HTMLElement)) return;
+          if (item.dataset.revealDelay) return;
+          item.style.setProperty('--reveal-delay', `${Math.min(index * step, 420)}ms`);
+        });
+      });
+    };
+
+    const applyReveal = (item) => {
+      if (!(item instanceof HTMLElement)) return;
+      if (revealItems.has(item)) return;
+      revealItems.add(item);
+
+      item.classList.add('playful-reveal');
+
+      const explicitDelay = revealDelayValue(item.dataset.revealDelay);
+      if (explicitDelay) {
+        item.style.setProperty('--reveal-delay', explicitDelay);
+      }
+
+      if (reduceMotion || !observer) {
+        item.classList.add('is-visible');
+        return;
+      }
+
+      observer.observe(item);
+    };
+
+    if (!reduceMotion && 'IntersectionObserver' in window) {
+      observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('is-visible');
+          observer?.unobserve(entry.target);
+        });
+      }, { rootMargin: '0px 0px -4% 0px', threshold: 0.08 });
+    }
+
+    applyStaggerDelays();
+    revealRoot.querySelectorAll('[data-reveal]').forEach(applyReveal);
+
+    if (shouldObserveDynamic && 'MutationObserver' in window) {
+      const mutationObserver = new MutationObserver((mutations) => {
+        applyStaggerDelays();
+
+        mutations.forEach((mutation) => {
+          mutation.addedNodes.forEach((node) => {
+            if (!(node instanceof Element)) return;
+            if (node.matches('[data-reveal]')) applyReveal(node);
+            node.querySelectorAll('[data-reveal]').forEach(applyReveal);
+          });
+        });
+      });
+
+      mutationObserver.observe(revealRoot, { childList: true, subtree: true });
+    }
+  }
+</script>

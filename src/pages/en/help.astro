@@ -1,0 +1,302 @@
+---
+import AjudarFinancialDonations from '../../components/ajudar/AjudarFinancialDonations.astro';
+import PlayfulDonateMenu from '../../components/playful/PlayfulDonateMenu.astro';
+import { shelterDogCount } from '../../lib/shelterCount';
+import { shelter } from '../../config/shelter';
+import Layout from '../../layouts/Layout.astro';
+import PlayfulSiteNav from '../../components/playful/PlayfulSiteNav.astro';
+import PlayfulSiteFooter from '../../components/playful/PlayfulSiteFooter.astro';
+import PlayfulScrollReveal from '../../components/playful/PlayfulScrollReveal.astro';
+import NeedIcon from '../../components/NeedIcon.astro';
+
+const locale = 'en' as const;
+
+const donationNeeds = [
+  {
+    title: 'Cleaning Supplies',
+    icon: 'cleaning' as const,
+    rotate: 'lg:-rotate-1',
+    bg: 'bg-white',
+    items: ['Multi-purpose detergent', 'Bleach', 'Bin bags (large)', 'Paper towels', 'Disposable gloves'],
+  },
+  {
+    title: 'Dog Food',
+    icon: 'dog-food' as const,
+    rotate: 'lg:rotate-1 lg:translate-y-5',
+    bg: 'bg-playful-peach',
+    items: ['Dry food (adult and junior)', 'Wet food (canned)', 'Snacks and treats', 'Puppy food', 'Vitamin supplements'],
+  },
+  {
+    title: 'Medication',
+    icon: 'medicine' as const,
+    rotate: 'lg:-rotate-1',
+    bg: 'bg-white',
+    items: ['External parasite treatments', 'Internal dewormers', 'Bandages and dressings', 'Saline solution', 'Check our current needs list'],
+  },
+  {
+    title: 'Other Items',
+    icon: 'other-items' as const,
+    rotate: 'lg:rotate-1 lg:translate-y-4',
+    bg: 'bg-playful-cream',
+    items: ['Collars and leads', 'Blankets and cushions', 'Toys and chew bones', 'Transport crates', 'Office supplies'],
+  },
+];
+
+const photos = [
+  { src: '/illustrations/pesto-play.svg', alt: 'Volunteer walking a shelter dog', rotate: 'lg:-rotate-2' },
+  { src: '/illustrations/pesto-play.svg', alt: 'Volunteer with a shelter dog', rotate: 'lg:rotate-1 lg:translate-y-8' },
+  { src: '/illustrations/pesto-play.svg', alt: 'Volunteers caring for dogs in this fictional shelter', rotate: 'lg:-rotate-1' },
+];
+
+const volunteerWays = [
+  {
+    title: 'Walk the Dogs',
+    icon: '↗',
+    description: "Take one of our dogs for a refreshing walk. It's simple, and it's good for both of you.",
+  },
+  {
+    title: 'Photograph the Animals',
+    icon: '◎',
+    description: 'Good photos greatly increase the chances of adoption. If you have a knack for photography, we need you!',
+  },
+  {
+    title: 'Shelter Volunteering',
+    icon: '❤',
+    description: 'Help with daily care, cleaning, and socialising the animals directly at our shelter.',
+  },
+  {
+    title: 'Campaigns & Outreach',
+    icon: '✺',
+    description: 'Help organise events, adoption fairs, and spread the word about our animals on social media.',
+  },
+];
+
+const fosterStats = [
+  { value: shelterDogCount, suffix: 'examples', label: 'Waiting for a temporary home', rotate: 'sm:-rotate-2' },
+  { value: 'Full Support', label: 'Food and vet care included', rotate: 'sm:rotate-1' },
+  { value: 'Flexible', label: 'Adapted to your availability', rotate: 'sm:-rotate-1' },
+];
+
+
+
+---
+
+<Layout
+  locale={locale}
+  title="How to Help"
+  description="Find out how you can help the shelter through donations, volunteering, or foster care."
+  ogImage="/illustrations/miso-portrait.svg"
+  playfulFonts
+>
+  <div data-playful-scroll-reveal class="min-h-screen bg-playful-canvas text-playful-ink font-playful-body pattern-dots selection:bg-playful-orange selection:text-white">
+    <PlayfulSiteNav locale={locale} />
+    <div class="overflow-x-clip">
+      <main>
+        <section id="inicio" class="relative isolate overflow-hidden px-5 pb-14 pt-14 sm:px-8 lg:pb-20 lg:pt-22" aria-labelledby="hero-heading">
+          <div class="ambient-blob -left-28 top-36 h-96 w-96 bg-playful-peach/80"></div>
+          <div class="ambient-blob -right-24 top-4 h-96 w-96 bg-playful-orange/35"></div>
+
+          <div class="relative z-10 mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1.02fr_0.98fr]">
+            <div class="text-center lg:text-left">
+              <div data-reveal="left" class="mb-6 inline-flex -rotate-2 items-center gap-2 rounded-full border border-playful-line bg-playful-peach px-4 py-2 text-sm font-extrabold text-playful-orange-dark shadow-pillowy">
+                <span aria-hidden="true">🐾</span>
+                <span>Make a Difference</span>
+              </div>
+
+              <h1 id="hero-heading" data-reveal="left" data-reveal-delay="100" class="font-playful-display text-[3.05rem] font-extrabold leading-[0.95] tracking-[-0.055em] text-playful-orange-dark sm:text-6xl lg:text-7xl">
+                Support
+                <span class="relative mx-1 inline-block text-playful-orange">
+                  {shelter.name}!
+                  <svg class="absolute -bottom-2 left-0 h-5 w-full text-playful-watermelon/70" viewBox="0 0 220 24" aria-hidden="true" preserveAspectRatio="none">
+                    <path d="M5 15C53 3 139 4 215 13" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="9" />
+                  </svg>
+                </span>
+              </h1>
+
+              <p data-reveal="left" data-reveal-delay="190" class="mx-auto mt-7 max-w-2xl text-lg font-medium leading-8 text-playful-muted lg:mx-0">
+                Every gesture counts. Whether with your time, supplies, or a financial contribution,
+                this example shows how a community can support animal welfare.
+              </p>
+              <p data-reveal="left" data-reveal-delay="250" class="mx-auto mt-4 max-w-xl text-base font-medium leading-7 text-playful-muted/85 sm:text-lg lg:mx-0">
+                Find out how you can contribute to our work and join our community of animal advocates.
+              </p>
+
+              <div data-reveal="left" data-reveal-delay="330" class="relative z-30 mt-8 flex flex-col items-stretch justify-center gap-4 sm:flex-row sm:items-start lg:justify-start">
+                <a data-hero-volunteer-link href="/en/help/volunteer-form" class="squishy playful-focus inline-flex w-full items-center justify-center gap-2 rounded-full bg-playful-orange px-8 py-4 font-playful-display text-base font-extrabold text-white shadow-squish sm:w-auto">
+                  Volunteer
+                  <span aria-hidden="true">→</span>
+                </a>
+                <PlayfulDonateMenu
+                  locale="en"
+                  variant="desktop"
+                  instanceId="hero-en-donate"
+                  buttonLabel="Donate"
+                  rootClass="relative z-30 w-full sm:w-auto"
+                  menuButtonClass="squishy playful-focus inline-flex w-full items-center justify-center gap-2 rounded-full border-2 border-playful-orange bg-white/85 px-8 py-4 font-playful-display text-base font-extrabold text-playful-orange-dark shadow-pillowy sm:w-auto"
+                  menuPanelClass="mt-3 max-h-[min(20rem,calc(100svh-2rem))] w-full overflow-y-auto rounded-[1.5rem] border border-playful-line bg-white p-2 text-left shadow-pillowy-lg sm:absolute sm:left-0 sm:top-full sm:z-[80] sm:w-72 sm:max-h-none sm:overflow-visible"
+                />
+              </div>
+            </div>
+
+            <figure data-reveal="hero-image" data-reveal-delay="160" class="relative mx-auto w-full max-w-[590px]">
+              <div class="absolute -left-5 top-8 z-20 -rotate-6 rounded-[1.5rem] bg-playful-peach px-5 py-4 text-left shadow-pillowy">
+                <span class="block font-playful-display text-2xl font-extrabold text-playful-orange-dark" data-shelter-count>{shelterDogCount}</span>
+                <span class="block text-xs font-extrabold uppercase tracking-[0.18em] text-playful-muted">animals</span>
+              </div>
+              <div class="absolute -bottom-5 left-1/2 z-20 w-[88%] -translate-x-1/2 rotate-[-2deg] rounded-[1.5rem] border border-playful-line/70 bg-white/88 px-5 py-4 text-center text-sm font-bold leading-6 text-playful-muted shadow-pillowy">
+                Food, time, foster care, money — every kind of help matters.
+              </div>
+              <picture class="block rotate-1">
+                <source srcset="/illustrations/miso-portrait.svg" type="image/svg+xml" />
+                <img src="/illustrations/miso-portrait.svg" alt="Happy shelter dog representing people helping shelter animals" width="1400" height="1120" loading="eager" fetchpriority="high" class="blob-mask aspect-[5/4] w-full border-[10px] border-white object-cover object-center shadow-pillowy-lg" />
+              </picture>
+            </figure>
+          </div>
+        </section>
+
+        <section id="donations" class="relative px-5 py-16 sm:px-8 lg:py-24" aria-labelledby="inkind-heading">
+          <div class="ambient-blob left-0 top-1/4 h-72 w-72 bg-playful-peach/70"></div>
+          <div class="mx-auto max-w-7xl">
+            <header data-reveal="rise" class="relative z-10 mb-12 text-center">
+              <span class="mb-3 inline-block text-xs font-extrabold uppercase tracking-[0.24em] text-playful-orange-dark">In-Kind Donations</span>
+              <h2 id="inkind-heading" class="mx-auto max-w-3xl font-playful-display text-4xl font-extrabold tracking-[-0.04em] text-playful-orange-dark sm:text-5xl">What We Need Most</h2>
+              <p class="mx-auto mt-4 max-w-2xl text-lg font-medium leading-8 text-playful-muted">We accept product donations directly at the shelter. Every item helps keep our dogs healthy and happy.</p>
+            </header>
+
+            <div data-reveal-stagger="90" class="relative z-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {donationNeeds.map(({ title, icon, rotate, bg, items }) => (
+                <article data-reveal="tilt" class={`${bg} ${rotate} card-pillowy rounded-playful border border-playful-line/70 p-7 shadow-pillowy`}>
+                  <div class="mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-playful-orange/14 text-playful-orange-dark shadow-sm" aria-hidden="true">
+                    <NeedIcon icon={icon} class="h-9 w-9" />
+                  </div>
+                  <h3 class="mb-4 font-playful-display text-xl font-extrabold tracking-[-0.03em] text-playful-orange-dark">{title}</h3>
+                  <ul class="space-y-2 text-sm font-medium leading-6 text-playful-muted" role="list">
+                    {items.map((item) => (
+                      <li class="flex items-start gap-2"><span class="mt-0.5 text-playful-orange" aria-hidden="true">•</span><span>{item}</span></li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
+            </div>
+
+            <div data-reveal="rise" class="relative z-10 mx-auto mt-12 max-w-3xl rounded-[2rem] border border-playful-line bg-white/85 px-6 py-5 text-center shadow-sm sm:flex sm:items-center sm:justify-between sm:gap-5 sm:text-left">
+              <p class="text-sm font-bold leading-6 text-playful-muted">
+                Have food, blankets, cleaning supplies, or other items to donate? Send the form and we will coordinate the best drop-off time.
+              </p>
+              <a data-supply-donation-link href="/en/help/supply-donation-form" class="squishy playful-focus mt-4 inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-playful-orange px-6 py-3 font-playful-display text-sm font-extrabold text-white shadow-squish sm:mt-0">
+                Arrange drop-off
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section id="volunteering" class="relative overflow-hidden px-5 py-16 sm:px-8 lg:py-24" aria-labelledby="volunteer-heading">
+          <div class="ambient-blob right-0 top-20 h-80 w-80 bg-playful-orange/20"></div>
+          <div class="mx-auto max-w-7xl">
+            <header data-reveal="rise" class="relative z-10 mb-12 text-center">
+              <span class="mb-3 inline-block text-xs font-extrabold uppercase tracking-[0.24em] text-playful-orange-dark">Volunteering</span>
+              <h2 id="volunteer-heading" class="mx-auto max-w-3xl font-playful-display text-4xl font-extrabold tracking-[-0.04em] text-playful-orange-dark sm:text-5xl">Give Your Time</h2>
+              <p class="mx-auto mt-4 max-w-2xl text-lg font-medium leading-8 text-playful-muted">Volunteering is the backbone of the shelter. There are many ways to help, regardless of your availability.</p>
+            </header>
+
+            <div data-reveal-stagger="90" class="relative z-10 mx-auto mb-14 grid max-w-5xl grid-cols-1 gap-5 sm:grid-cols-3">
+              {photos.map(({ src, alt, rotate }) => (
+                <div data-reveal="pop" class={`${rotate} overflow-hidden rounded-[2rem] border-4 border-white bg-white shadow-pillowy-lg`}>
+                  <img src={src} alt={alt} class="aspect-[4/3] h-full w-full object-cover" loading="lazy" />
+                </div>
+              ))}
+            </div>
+
+            <div data-reveal-stagger="90" class="relative z-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {volunteerWays.map(({ title, icon, description }, index) => (
+                <article data-reveal="tilt" class={`card-pillowy rounded-playful border border-playful-line/70 bg-white p-7 text-center shadow-pillowy ${index % 2 === 0 ? 'lg:-rotate-1' : 'lg:rotate-1 lg:translate-y-4'}`}>
+                  <div class="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-playful-orange/14 text-2xl font-extrabold text-playful-orange-dark shadow-sm" aria-hidden="true">{icon}</div>
+                  <h3 class="mb-3 font-playful-display text-xl font-extrabold tracking-[-0.03em] text-playful-orange-dark">{title}</h3>
+                  <p class="text-sm font-medium leading-6 text-playful-muted">{description}</p>
+                </article>
+              ))}
+            </div>
+
+            <div data-reveal="pop" class="relative z-10 mx-auto mt-12 max-w-3xl rounded-[2rem] border border-playful-orange/15 bg-playful-peach p-6 text-center shadow-pillowy sm:p-8">
+              <h3 class="font-playful-display text-2xl font-extrabold tracking-[-0.03em] text-playful-orange-dark">Want to schedule a time to help?</h3>
+              <p class="mx-auto mt-3 max-w-2xl text-base font-medium leading-7 text-playful-muted">
+                Fill in the volunteer form, choose the kinds of work you are willing to do, and the shelter will reply by email.
+              </p>
+              <a href="/en/help/volunteer-form" class="squishy playful-focus mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-playful-orange px-7 py-4 font-playful-display text-base font-extrabold text-white shadow-squish">
+                Volunteer form
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section id="foster" class="relative px-4 py-16 sm:px-8 lg:py-24" aria-labelledby="foster-heading">
+          <div class="ambient-blob left-8 bottom-12 h-80 w-80 bg-playful-peach/80"></div>
+          <div class="relative z-10 mx-auto max-w-6xl rounded-[2rem] border border-playful-orange/15 bg-playful-peach p-4 shadow-pillowy-lg sm:rounded-[2.5rem] sm:p-10 lg:p-12">
+            <div class="grid min-w-0 items-center gap-10 lg:grid-cols-[1.08fr_0.92fr]">
+              <div class="min-w-0">
+                <header data-reveal="left" class="mb-7">
+                  <span class="mb-3 inline-block max-w-full rounded-full bg-white/70 px-4 py-2 text-xs font-extrabold uppercase tracking-[0.16em] text-playful-orange-dark shadow-sm sm:tracking-[0.2em]">Foster Families</span>
+                  <h2 id="foster-heading" class="max-w-full break-words font-playful-display text-[clamp(1.8rem,8vw,2.25rem)] font-extrabold leading-[0.98] tracking-[-0.045em] text-playful-orange-dark sm:text-5xl">Open Your Home Temporarily</h2>
+                </header>
+                <div data-reveal="left" data-reveal-delay="120" class="rounded-[2rem] border border-playful-line/60 bg-white/80 p-6 shadow-sm sm:p-8">
+                  <h3 class="mb-4 font-playful-display text-2xl font-extrabold tracking-[-0.03em] text-playful-orange-dark">What is a Foster Family?</h3>
+                  <p class="mb-4 text-lg font-medium leading-8 text-playful-muted">A foster family temporarily takes in one of the <strong class="text-playful-orange-dark"><span data-shelter-count>{shelterDogCount}</span> fictional available animals</strong> in this example, providing a loving home environment while they await their forever family.</p>
+                  <p class="mb-4 font-medium leading-7 text-playful-muted">Fostering is especially important for anxious animals, puppies, or those recovering from surgery. A home environment makes an enormous difference to their wellbeing and significantly increases their chances of adoption.</p>
+                  <p class="font-medium leading-7 text-playful-muted">the shelter provides all food, medication, and veterinary support. You just offer your space, affection, and time.</p>
+                </div>
+              </div>
+              <div data-reveal="right" data-reveal-delay="160" class="min-w-0 space-y-6">
+                <div class="overflow-hidden rounded-[2rem] border-4 border-white bg-white shadow-pillowy-lg lg:rotate-2">
+                  <img src="/illustrations/tulipa-play.svg" alt="Dog in a foster home environment" class="aspect-[4/3] w-full object-cover" loading="lazy" />
+                </div>
+                <div data-reveal-stagger="70" class="grid grid-cols-1 gap-4 sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3">
+                  {fosterStats.map(({ value, suffix, label, rotate }) => (
+                    <div data-reveal="pop" class={`${rotate} rounded-[1.5rem] bg-white/85 px-5 py-4 text-center shadow-pillowy`}>
+                      <div class="font-playful-display text-lg font-extrabold text-playful-orange-dark">{suffix ? <><span data-shelter-count>{value}</span> {suffix}</> : value}</div>
+                      <div class="mt-1 text-xs font-bold uppercase tracking-[0.14em] text-playful-muted/75">{label}</div>
+                    </div>
+                  ))}
+                </div>
+                <a data-reveal="pop" data-foster-home-link href="/en/help/foster-home-form" class="squishy playful-focus inline-flex w-full items-center justify-center gap-2 rounded-full bg-playful-orange px-7 py-4 text-center font-playful-display font-extrabold text-white shadow-squish">
+                  I Want to Foster
+                  <span aria-hidden="true">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <AjudarFinancialDonations locale="en" />
+
+        <section class="relative overflow-hidden px-5 py-16 sm:px-8 lg:py-24" aria-labelledby="cta-heading">
+          <div class="ambient-blob left-1/2 top-10 h-80 w-80 -translate-x-1/2 bg-playful-orange/25"></div>
+          <div data-reveal="pop" class="relative z-10 mx-auto max-w-4xl rounded-[2.5rem] border border-playful-orange/15 bg-playful-orange-dark px-6 py-14 text-center text-white shadow-pillowy-lg sm:px-10">
+            <div class="mb-8 flex justify-center gap-3" aria-hidden="true">
+              {[1, 2, 3].map((_, index) => (
+                <span class={`flex h-11 w-11 items-center justify-center rounded-full bg-playful-peach text-playful-orange-dark shadow-sm ${index === 0 ? '-rotate-2' : index === 1 ? 'rotate-3' : '-rotate-1'}`}>🐾</span>
+              ))}
+            </div>
+            <h2 id="cta-heading" class="font-playful-display text-4xl font-extrabold tracking-[-0.04em] sm:text-5xl">Every Gesture Counts</h2>
+            <p class="mx-auto mt-6 max-w-2xl text-lg font-medium leading-8 text-white/86 sm:text-xl">Behind every animal we adopt, treat, and rescue, there are people like you who believe that a fairer world for animals is possible.</p>
+            <p class="mx-auto mt-4 max-w-xl text-base font-medium leading-7 text-white/80 sm:text-lg">You don't need to do a lot. You just need to do something.</p>
+            <a href="#contactos" class="squishy playful-focus mt-10 inline-flex items-center justify-center gap-2 rounded-full bg-playful-orange px-8 py-4 font-playful-display text-lg font-extrabold text-white shadow-squish">
+              Get in Touch
+              <span aria-hidden="true">✉</span>
+            </a>
+          </div>
+        </section>
+      </main>
+
+      <PlayfulSiteFooter locale={locale} />
+    </div>
+  </div>
+
+  <PlayfulScrollReveal />
+</Layout>
+
+<script>
+  import { refreshShelterCount } from '../../lib/shelterCount';
+  refreshShelterCount();
+</script>

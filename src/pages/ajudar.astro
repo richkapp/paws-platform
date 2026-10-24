@@ -1,0 +1,39 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PlayfulSiteNav from '../components/playful/PlayfulSiteNav.astro';
+import PlayfulSiteFooter from '../components/playful/PlayfulSiteFooter.astro';
+import PlayfulScrollReveal from '../components/playful/PlayfulScrollReveal.astro';
+import AjudarPlayfulHero from '../components/ajudar/AjudarPlayfulHero.astro';
+import AjudarDonationNeeds from '../components/ajudar/AjudarDonationNeeds.astro';
+import AjudarVolunteerWays from '../components/ajudar/AjudarVolunteerWays.astro';
+import AjudarFosterFamilies from '../components/ajudar/AjudarFosterFamilies.astro';
+import AjudarFinancialDonations from '../components/ajudar/AjudarFinancialDonations.astro';
+import AjudarFinalCta from '../components/ajudar/AjudarFinalCta.astro';
+
+const locale = 'pt' as const;
+---
+
+<Layout
+  locale={locale}
+  title="Como Ajudar"
+  description="Descubra como pode ajudar o abrigo através de donativos, voluntariado ou acolhimento temporário."
+  ogImage="/illustrations/miso-portrait.svg"
+  playfulFonts
+>
+  <div data-playful-scroll-reveal class="min-h-screen bg-playful-canvas text-playful-ink font-playful-body pattern-dots selection:bg-playful-orange selection:text-white">
+    <PlayfulSiteNav locale={locale} />
+    <div class="overflow-x-clip">
+      <main>
+        <AjudarPlayfulHero />
+        <AjudarDonationNeeds />
+        <AjudarVolunteerWays />
+        <AjudarFosterFamilies />
+        <AjudarFinancialDonations />
+        <AjudarFinalCta />
+      </main>
+      <PlayfulSiteFooter locale={locale} />
+    </div>
+  </div>
+
+  <PlayfulScrollReveal />
+</Layout>

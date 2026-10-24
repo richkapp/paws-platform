@@ -1,0 +1,26 @@
+---
+import type { Locale } from '../../i18n';
+import { aboutContent } from './sobreNosContent';
+import SobreNosPlayfulHero from './SobreNosPlayfulHero.astro';
+import SobreNosImpactStats from './SobreNosImpactStats.astro';
+import SobreNosPrinciples from './SobreNosPrinciples.astro';
+import SobreNosCommunity from './SobreNosCommunity.astro';
+import SobreNosRescue from './SobreNosRescue.astro';
+import SobreNosSuccessStory from './SobreNosSuccessStory.astro';
+
+interface Props {
+  locale?: Locale;
+}
+
+const { locale = 'pt' } = Astro.props;
+const content = aboutContent[locale];
+---
+
+<main>
+  <SobreNosPlayfulHero content={content.hero} />
+  <SobreNosImpactStats locale={locale} />
+  <SobreNosPrinciples content={content.principles} />
+  <SobreNosCommunity content={content.community} />
+  <SobreNosRescue content={content.rescue} />
+  <SobreNosSuccessStory content={content.story} />
+</main>

@@ -1,0 +1,76 @@
+---
+import { shelterDogCount } from '../../lib/shelterCount';
+const stats = [
+  { value: shelterDogCount, suffix: 'exemplos', label: 'À espera de um lar temporário', rotate: 'sm:-rotate-2' },
+  { value: 'Suporte Total', label: 'Ração e veterinário incluídos', rotate: 'sm:rotate-1' },
+  { value: 'Flexível', label: 'Adaptado à sua disponibilidade', rotate: 'sm:-rotate-1' },
+];
+---
+
+<section id="fat" class="relative px-4 py-16 sm:px-8 lg:py-24" aria-labelledby="fat-heading">
+  <div class="ambient-blob left-8 bottom-12 h-80 w-80 bg-playful-peach/80"></div>
+  <div class="relative z-10 mx-auto max-w-6xl rounded-[2rem] border border-playful-orange/15 bg-playful-peach p-4 shadow-pillowy-lg sm:rounded-[2.5rem] sm:p-10 lg:p-12">
+    <div class="grid min-w-0 items-center gap-10 lg:grid-cols-[1.08fr_0.92fr]">
+      <div class="min-w-0">
+        <header data-reveal="left" class="mb-7">
+          <span class="mb-3 inline-block max-w-full rounded-full bg-white/70 px-4 py-2 text-xs font-extrabold uppercase tracking-[0.16em] text-playful-orange-dark shadow-sm sm:tracking-[0.2em]">Famílias de Acolhimento Temporário</span>
+          <h2 id="fat-heading" class="max-w-full break-words font-playful-display text-[clamp(1.8rem,8vw,2.25rem)] font-extrabold leading-[0.98] tracking-[-0.045em] text-playful-orange-dark sm:text-5xl">
+            Abra a Sua Casa Temporariamente
+          </h2>
+        </header>
+
+        <div data-reveal="left" data-reveal-delay="120" class="rounded-[2rem] border border-playful-line/60 bg-white/80 p-6 shadow-sm sm:p-8">
+          <h3 class="mb-4 font-playful-display text-2xl font-extrabold tracking-[-0.03em] text-playful-orange-dark">O que é uma Família de Acolhimento Temporário (FAT)?</h3>
+          <p class="mb-4 text-lg font-medium leading-8 text-playful-muted">
+            Uma FAT é uma família que acolhe temporariamente um dos <strong class="text-playful-orange-dark"><span data-shelter-count>{shelterDogCount}</span> animais fictícios disponíveis</strong> deste exemplo,
+            proporcionando-lhe um ambiente familiar e amoroso enquanto aguarda a sua adoção definitiva.
+          </p>
+          <p class="mb-4 font-medium leading-7 text-playful-muted">
+            O acolhimento temporário é especialmente importante para animais mais ansiosos, cachorros, ou aqueles
+            que precisam de recuperação pós-cirúrgica. Um ambiente caseiro faz uma diferença enorme no seu bem-estar
+            e aumenta significativamente as hipóteses de adoção.
+          </p>
+          <p class="font-medium leading-7 text-playful-muted">
+            O abrigo fornece toda a alimentação, medicação e suporte veterinário necessário. A família apenas
+            oferece o seu espaço, carinho e tempo.
+          </p>
+        </div>
+      </div>
+
+      <div data-reveal="right" data-reveal-delay="160" class="min-w-0 space-y-6">
+        <div class="overflow-hidden rounded-[2rem] border-4 border-white bg-white shadow-pillowy-lg lg:rotate-2">
+          <img
+            src="/illustrations/tulipa-play.svg"
+            alt="Cão num ambiente familiar de acolhimento temporário"
+            class="aspect-[4/3] w-full object-cover"
+            loading="lazy"
+          />
+        </div>
+
+        <div data-reveal-stagger="70" class="grid grid-cols-1 gap-4 sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3">
+          {stats.map(({ value, suffix, label, rotate }) => (
+            <div data-reveal="pop" class={`${rotate} rounded-[1.5rem] bg-white/85 px-5 py-4 text-center shadow-pillowy`}>
+              <div class="font-playful-display text-lg font-extrabold text-playful-orange-dark">{suffix ? <><span data-shelter-count>{value}</span> {suffix}</> : value}</div>
+              <div class="mt-1 text-xs font-bold uppercase tracking-[0.14em] text-playful-muted/75">{label}</div>
+            </div>
+          ))}
+        </div>
+
+        <a
+          data-reveal="pop"
+          data-foster-home-link
+          href="/ajudar/formulario-familia-acolhimento"
+          class="squishy playful-focus inline-flex w-full items-center justify-center gap-2 rounded-full bg-playful-orange px-7 py-4 text-center font-playful-display font-extrabold text-white shadow-squish"
+        >
+          Quero ser Família de Acolhimento
+          <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  import { refreshShelterCount } from '../../lib/shelterCount';
+  refreshShelterCount();
+</script>

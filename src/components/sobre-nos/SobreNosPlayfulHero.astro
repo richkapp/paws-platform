@@ -1,0 +1,85 @@
+---
+import { shelter } from '../../config/shelter';
+import type { AboutContent } from './sobreNosContent';
+
+interface Props {
+  content: AboutContent['hero'];
+}
+
+const { content } = Astro.props;
+---
+
+<section id="inicio" class="relative isolate overflow-hidden px-5 py-16 sm:px-8 lg:py-24" aria-labelledby="hero-heading">
+  <div class="ambient-blob -right-20 top-8 h-80 w-80 bg-playful-orange/35"></div>
+  <div class="ambient-blob -left-24 bottom-6 h-96 w-96 bg-playful-peach/80"></div>
+
+  <div class="relative z-10 mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
+    <div class="text-center lg:text-left">
+      <div data-reveal="pop" class="mb-6 inline-flex rotate-[-1.5deg] items-center gap-2 rounded-full border border-playful-line/70 bg-white/80 px-5 py-2 text-xs font-extrabold uppercase tracking-[0.22em] text-playful-orange-dark shadow-pillowy">
+        <span aria-hidden="true">🐾</span>
+        {content.badge}
+      </div>
+
+      <h1 id="hero-heading" data-reveal="left" data-reveal-delay="100" class="font-playful-display text-5xl font-extrabold tracking-[-0.06em] text-playful-ink sm:text-6xl lg:text-7xl">
+        {content.headingPrefix}
+        <span class="relative mx-1 inline-block text-playful-orange">
+          {content.headingHighlight}
+          <span class="absolute -bottom-2 left-0 h-4 w-full -rotate-1 rounded-full bg-playful-peach/80 -z-10"></span>
+        </span>
+      </h1>
+
+      <p data-reveal="left" data-reveal-delay="190" class="mx-auto mt-6 max-w-2xl text-lg font-medium leading-8 text-playful-muted sm:text-xl lg:mx-0">
+        <strong class="font-extrabold text-playful-orange-dark">{content.leadStrong}</strong>
+        {' '}{content.leadRest}
+      </p>
+      <p data-reveal="left" data-reveal-delay="270" class="mx-auto mt-4 max-w-xl text-base font-semibold leading-7 text-playful-muted sm:text-lg lg:mx-0">
+        {content.subtext}
+      </p>
+
+      <div data-reveal="left" data-reveal-delay="350" class="mt-8 flex flex-col justify-center gap-4 sm:flex-row lg:justify-start">
+        <a href={content.primaryHref} class="squishy playful-focus inline-flex items-center justify-center gap-2 rounded-full bg-playful-orange px-8 py-4 font-playful-display text-base font-extrabold text-white shadow-squish">
+          {content.primaryCta}
+          <span aria-hidden="true">→</span>
+        </a>
+        <a href={content.secondaryHref} class="squishy playful-focus inline-flex items-center justify-center gap-2 rounded-full border-2 border-playful-line bg-white/85 px-8 py-4 font-playful-display text-base font-extrabold text-playful-orange-dark shadow-pillowy">
+          {content.secondaryCta}
+          <span aria-hidden="true">✉</span>
+        </a>
+      </div>
+
+      <div data-reveal="rise" data-reveal-delay="430" class="mt-8 flex flex-wrap justify-center gap-3 lg:justify-start" aria-label="abrigo trust markers">
+        {content.chips.map((chip, index) => (
+          <span class={`rounded-full border border-playful-line/70 bg-white/78 px-4 py-2 text-sm font-extrabold text-playful-muted shadow-sm ${index === 0 ? '-rotate-1' : index === 1 ? 'rotate-1' : '-rotate-1'}`}>
+            {chip}
+          </span>
+        ))}
+      </div>
+    </div>
+
+    <figure data-reveal="hero-image" data-reveal-delay="180" class="relative mx-auto w-full max-w-xl lg:max-w-none">
+      <div class="absolute -left-6 top-8 z-20 rotate-[-4deg] rounded-[1.5rem] bg-playful-peach px-5 py-4 text-left shadow-pillowy">
+        <span class="block font-playful-display text-2xl font-extrabold text-playful-orange-dark">♡</span>
+        <span class="block text-xs font-extrabold uppercase tracking-[0.18em] text-playful-muted">{shelter.name}</span>
+      </div>
+      <div class="absolute -right-3 bottom-12 z-20 hidden rotate-3 rounded-full bg-white px-5 py-3 text-sm font-extrabold text-playful-orange-dark shadow-pillowy sm:block">
+        {content.captionTitle}
+      </div>
+
+      <picture>
+        <source srcset="/illustrations/miso-portrait.svg" type="image/svg+xml" />
+        <img
+          src="/illustrations/miso-portrait.svg"
+          alt={content.imageAlt}
+          width="1400"
+          height="1120"
+          loading="eager"
+          fetchpriority="high"
+          class="blob-mask aspect-[5/4] w-full border-[10px] border-white object-cover object-center shadow-pillowy-lg"
+        />
+      </picture>
+      <figcaption class="mx-auto mt-5 max-w-md rounded-[1.5rem] border border-playful-line/70 bg-white/80 px-5 py-4 text-center text-sm font-bold leading-6 text-playful-muted shadow-sm">
+        {content.captionText}
+      </figcaption>
+    </figure>
+  </div>
+</section>

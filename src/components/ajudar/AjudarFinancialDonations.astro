@@ -1,0 +1,20 @@
+---
+import type { Locale } from '../../i18n';
+import { shelter, donationDestination, hasPaymentDestination, paymentNotice, formsNotice } from '../../config/shelter';
+interface Props { locale?: Locale }
+const { locale = 'pt' } = Astro.props;
+const url = donationDestination();
+const paymentsConfigured = hasPaymentDestination();
+---
+<section id={locale === 'pt' ? 'apoio-financeiro' : 'financial-support'} class="relative px-5 py-20 sm:px-8">
+  <div class="mx-auto max-w-5xl text-center"><h2 class="font-playful-display text-4xl font-extrabold text-playful-orange-dark">{locale === 'pt' ? 'Apoio financeiro' : 'Financial support'}</h2>
+    <p class="mx-auto mt-4 max-w-xl text-lg leading-8 text-playful-muted">{locale === 'pt' ? 'Os donativos podem apoiar alimentação, cuidados veterinários e um abrigo seguro.' : 'Donations can support food, veterinary care and a safe shelter.'}</p>
+    <div class="mt-10 rounded-[2.5rem] border border-playful-line bg-white p-8 shadow-pillowy-lg">
+      <span class="text-5xl text-playful-orange" aria-hidden="true">♡</span>
+      <p class="mt-5 font-bold leading-7 text-playful-muted" data-payment-notice data-payment-disabled={!paymentsConfigured || undefined}>{paymentNotice(locale)}</p>
+      <p class="mt-3 text-sm leading-6 text-playful-muted" data-forms-notice>{formsNotice(locale)}</p>
+      {url && <a href={url} rel="noopener noreferrer" class="playful-focus mt-5 inline-flex rounded-full bg-playful-orange px-6 py-3 font-bold text-white">{locale === 'pt' ? 'Página de donativos configurada' : 'Configured donation page'}</a>}
+      {shelter.donations.bankAccount.trim() && <p class="mt-5 select-all font-mono">{shelter.donations.bankAccount} · {shelter.donations.bankHolder}</p>}
+    </div>
+  </div>
+</section>

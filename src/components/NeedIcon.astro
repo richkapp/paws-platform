@@ -1,0 +1,62 @@
+---
+type NeedIconName = 'cleaning' | 'dog-food' | 'medicine' | 'other-items';
+
+interface Props {
+  icon: NeedIconName;
+  class?: string;
+}
+
+const { icon, class: className = 'h-8 w-8' } = Astro.props;
+---
+
+<svg
+  data-need-icon={icon}
+  class={className}
+  viewBox="0 0 48 48"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  aria-hidden="true"
+>
+  {icon === 'cleaning' && (
+    <>
+      <path d="M19 7h11l2 7H17l2-7Z" class="fill-playful-peach stroke-current" stroke-width="2.8" stroke-linejoin="round" />
+      <path d="M18 14h15l3 26a4 4 0 0 1-4 4H18a4 4 0 0 1-4-4l4-26Z" class="fill-white/75 stroke-current" stroke-width="2.8" stroke-linejoin="round" />
+      <path d="M20 21h10" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" />
+      <path d="M28 7V4h8" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M37 12h5M39 18l3 2M39 6l3-2" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" />
+      <path d="M20 31h9" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" />
+    </>
+  )}
+
+  {icon === 'dog-food' && (
+    <>
+      <path d="M11 25h26l-3.4 13.2A5 5 0 0 1 28.8 42h-9.6a5 5 0 0 1-4.8-3.8L11 25Z" class="fill-white/75 stroke-current" stroke-width="2.8" stroke-linejoin="round" />
+      <path d="M9 25h30" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" />
+      <path d="M18 35h12" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" opacity="0.65" />
+      <circle cx="18.5" cy="13.5" r="2.2" class="fill-playful-peach stroke-current" stroke-width="2" />
+      <circle cx="24" cy="11.5" r="2.2" class="fill-playful-peach stroke-current" stroke-width="2" />
+      <circle cx="29.5" cy="13.5" r="2.2" class="fill-playful-peach stroke-current" stroke-width="2" />
+      <path d="M18.8 21c.9-4 9.5-4 10.4 0 .4 1.8-.9 3-2.6 2.4a8.4 8.4 0 0 0-5.2 0c-1.7.6-3-.6-2.6-2.4Z" class="fill-playful-peach stroke-current" stroke-width="2.2" stroke-linejoin="round" />
+    </>
+  )}
+
+  {icon === 'medicine' && (
+    <>
+      <path d="M16 8h16a5 5 0 0 1 5 5v22a5 5 0 0 1-5 5H16a5 5 0 0 1-5-5V13a5 5 0 0 1 5-5Z" class="fill-white/75 stroke-current" stroke-width="2.8" stroke-linejoin="round" />
+      <path d="M17 8V5h14v3" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M24 17v14M17 24h14" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" />
+      <path d="M15 35h18" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" opacity="0.55" />
+      <path d="M37 10l4-4M40 16h4" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" opacity="0.75" />
+    </>
+  )}
+
+  {icon === 'other-items' && (
+    <>
+      <path d="M9 19 24 11l15 8-15 8-15-8Z" class="fill-playful-peach stroke-current" stroke-width="2.8" stroke-linejoin="round" />
+      <path d="M12 21v15l12 7 12-7V21" class="fill-white/75 stroke-current" stroke-width="2.8" stroke-linejoin="round" />
+      <path d="M24 27v16M12 21l12 6 12-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M18 12 10 17M30 12l8 5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" />
+      <path d="M20 34c1.7-2.1 6.3-2.1 8 0" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" opacity="0.7" />
+    </>
+  )}
+</svg>

@@ -1,0 +1,46 @@
+---
+import type { AboutContent } from './sobreNosContent';
+
+interface Props {
+  content: AboutContent['story'];
+}
+
+const { content } = Astro.props;
+---
+
+<section class="relative overflow-hidden px-5 py-16 sm:px-8 lg:py-24" aria-labelledby="stories-heading">
+  <div class="ambient-blob left-1/2 top-10 h-96 w-96 -translate-x-1/2 bg-playful-peach/70"></div>
+
+  <div data-reveal="pop" class="relative z-10 mx-auto max-w-5xl rounded-[2.75rem] border border-playful-orange/15 bg-playful-orange-dark p-6 text-center text-white shadow-pillowy-lg sm:p-10 lg:p-12">
+    <p class="mb-4 inline-flex rounded-full bg-playful-peach px-4 py-2 text-xs font-extrabold uppercase tracking-[0.22em] text-playful-orange-dark shadow-sm">
+      {content.eyebrow}
+    </p>
+    <h2 id="stories-heading" class="font-playful-display text-4xl font-extrabold tracking-[-0.05em] sm:text-5xl">
+      {content.heading}
+    </h2>
+
+    <figure class="mx-auto mt-9 max-w-3xl overflow-hidden rounded-[2.25rem] border-[8px] border-white/18 bg-playful-cream shadow-pillowy rotate-[-1deg]">
+      <img src="/illustrations/fig-portrait.svg" alt={content.imageAlt} width="390" height="440" loading="lazy" class="aspect-video w-full object-cover object-center" />
+      <figcaption class="bg-white px-5 py-4 text-sm font-extrabold text-playful-orange-dark">
+        {content.caption}
+      </figcaption>
+    </figure>
+
+    <blockquote class="mx-auto mt-9 max-w-3xl rounded-[2rem] border border-white/16 bg-white/10 px-6 py-7 text-left shadow-sm sm:px-8">
+      <p class="text-lg font-semibold italic leading-8 text-white/90">
+        {content.quote}
+      </p>
+    </blockquote>
+
+    <div class="mt-8 flex justify-center gap-3" aria-hidden="true">
+      {[1, 2, 3].map((_, index) => (
+        <span class={`flex h-11 w-11 items-center justify-center rounded-full bg-playful-peach text-playful-orange-dark shadow-sm ${index === 0 ? '-rotate-2' : index === 1 ? 'rotate-3' : '-rotate-1'}`}>🐾</span>
+      ))}
+    </div>
+
+    <a href={content.ctaHref} class="squishy playful-focus mt-9 inline-flex items-center justify-center gap-2 rounded-full bg-playful-orange px-8 py-4 font-playful-display text-lg font-extrabold text-white shadow-squish">
+      {content.cta}
+      <span aria-hidden="true">→</span>
+    </a>
+  </div>
+</section>

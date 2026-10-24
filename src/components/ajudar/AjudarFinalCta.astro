@@ -1,0 +1,28 @@
+<section class="relative overflow-hidden px-5 py-16 sm:px-8 lg:py-24" aria-labelledby="cta-heading">
+  <div class="ambient-blob left-1/2 top-10 h-80 w-80 -translate-x-1/2 bg-playful-orange/25"></div>
+  <div data-reveal="pop" class="relative z-10 mx-auto max-w-4xl rounded-[2.5rem] border border-playful-orange/15 bg-playful-orange-dark px-6 py-14 text-center text-white shadow-pillowy-lg sm:px-10">
+    <div class="mb-8 flex justify-center gap-3" aria-hidden="true">
+      {[1, 2, 3].map((_, index) => (
+        <span class={`flex h-11 w-11 items-center justify-center rounded-full bg-playful-peach text-playful-orange-dark shadow-sm ${index === 0 ? '-rotate-2' : index === 1 ? 'rotate-3' : '-rotate-1'}`}>🐾</span>
+      ))}
+    </div>
+
+    <h2 id="cta-heading" class="font-playful-display text-4xl font-extrabold tracking-[-0.04em] sm:text-5xl">
+      Cada Gesto Conta
+    </h2>
+    <p class="mx-auto mt-6 max-w-2xl text-lg font-medium leading-8 text-white/86 sm:text-xl">
+      Por detrás de cada animal que adotamos, tratamos e resgatamos, há pessoas como você que acreditam
+      que um mundo mais justo para os animais é possível.
+    </p>
+    <p class="mx-auto mt-4 max-w-xl text-base font-medium leading-7 text-white/80 sm:text-lg">
+      Não precisa de fazer muito. Basta fazer alguma coisa.
+    </p>
+    <a
+      href="#contactos"
+      class="squishy playful-focus mt-10 inline-flex items-center justify-center gap-2 rounded-full bg-playful-orange px-8 py-4 font-playful-display text-lg font-extrabold text-white shadow-squish"
+    >
+      Fale Connosco
+      <span aria-hidden="true">✉</span>
+    </a>
+  </div>
+</section>

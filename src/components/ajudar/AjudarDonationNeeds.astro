@@ -1,0 +1,78 @@
+---
+import NeedIcon from '../NeedIcon.astro';
+
+const donationNeeds = [
+  {
+    title: 'Materiais de Limpeza',
+    icon: 'cleaning' as const,
+    rotate: 'lg:-rotate-1',
+    bg: 'bg-white',
+    items: ['Detergente multiusos', 'Lixívia', 'Sacos do lixo (grandes)', 'Papel absorvente', 'Luvas descartáveis'],
+  },
+  {
+    title: 'Comida para Cão',
+    icon: 'dog-food' as const,
+    rotate: 'lg:rotate-1 lg:translate-y-5',
+    bg: 'bg-playful-peach',
+    items: ['Ração seca (adulto e júnior)', 'Comida húmida em lata', 'Snacks e petiscos', 'Ração para cachorros', 'Suplementos vitamínicos'],
+  },
+  {
+    title: 'Medicação',
+    icon: 'medicine' as const,
+    rotate: 'lg:-rotate-1',
+    bg: 'bg-white',
+    items: ['Antiparasitários externos', 'Desparasitantes internos', 'Pensos e ligaduras', 'Soro fisiológico', 'Consultar lista atual'],
+  },
+  {
+    title: 'Outros Artigos',
+    icon: 'other-items' as const,
+    rotate: 'lg:rotate-1 lg:translate-y-4',
+    bg: 'bg-playful-cream',
+    items: ['Coleiras e trelas', 'Cobertores e almofadas', 'Brinquedos e ossos', 'Caixas de transporte', 'Material de escritório'],
+  },
+];
+---
+
+<section id="donativos" class="relative px-5 py-16 sm:px-8 lg:py-24" aria-labelledby="especie-heading">
+  <div class="ambient-blob left-0 top-1/4 h-72 w-72 bg-playful-peach/70"></div>
+  <div class="mx-auto max-w-7xl">
+    <header data-reveal="rise" class="relative z-10 mb-12 text-center">
+      <span class="mb-3 inline-block text-xs font-extrabold uppercase tracking-[0.24em] text-playful-orange-dark">Donativos em Espécie</span>
+      <h2 id="especie-heading" class="mx-auto max-w-3xl font-playful-display text-4xl font-extrabold tracking-[-0.04em] text-playful-orange-dark sm:text-5xl">
+        O Que Mais Precisamos
+      </h2>
+      <p class="mx-auto mt-4 max-w-2xl text-lg font-medium leading-8 text-playful-muted">
+        Aceitamos donativos de produtos diretamente no abrigo. Cada item ajuda a manter os nossos patudos saudáveis e felizes.
+      </p>
+    </header>
+
+    <div data-reveal-stagger="90" class="relative z-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      {donationNeeds.map(({ title, icon, rotate, bg, items }) => (
+        <article data-reveal="tilt" class={`${bg} ${rotate} card-pillowy rounded-playful border border-playful-line/70 p-7 shadow-pillowy`}>
+          <div class="mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-playful-orange/14 text-playful-orange-dark shadow-sm" aria-hidden="true">
+            <NeedIcon icon={icon} class="h-9 w-9" />
+          </div>
+          <h3 class="mb-4 font-playful-display text-xl font-extrabold tracking-[-0.03em] text-playful-orange-dark">{title}</h3>
+          <ul class="space-y-2 text-sm font-medium leading-6 text-playful-muted" role="list">
+            {items.map((item) => (
+              <li class="flex items-start gap-2">
+                <span class="mt-0.5 text-playful-orange" aria-hidden="true">•</span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </article>
+      ))}
+    </div>
+
+    <div data-reveal="rise" class="relative z-10 mx-auto mt-12 max-w-3xl rounded-[2rem] border border-playful-line bg-white/85 px-6 py-5 text-center shadow-sm sm:flex sm:items-center sm:justify-between sm:gap-5 sm:text-left">
+      <p class="text-sm font-bold leading-6 text-playful-muted">
+        Tens ração, mantas, material de limpeza ou outros artigos para doar? Envia o formulário e combinamos a melhor altura para a entrega.
+      </p>
+      <a data-supply-donation-link href="/ajudar/formulario-donativos-em-especie" class="squishy playful-focus mt-4 inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-playful-orange px-6 py-3 font-playful-display text-sm font-extrabold text-white shadow-squish sm:mt-0">
+        Combinar entrega
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+</section>

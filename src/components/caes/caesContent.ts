@@ -1,0 +1,43 @@
+import type { Locale } from '../../i18n';
+import { demoDogs } from '../../data/demoDogs';
+
+export const dogProfileCount = demoDogs.length;
+export const availableCount = demoDogs.filter((dog) => !dog.is_adopted).length;
+export const adoptedCount = demoDogs.filter((dog) => dog.is_adopted).length;
+
+export type CaesHeroContent = {
+  eyebrow: string;
+  heading: string;
+  leadLineOne: string;
+  leadLineTwo: string;
+  primaryCta: string;
+  secondaryCta: string;
+  imageAlt: string;
+  imageCaption: string;
+  chips: string[];
+};
+
+export const caesHeroContent: Record<Locale, CaesHeroContent> = {
+  pt: {
+    eyebrow: 'Prontos para adoção',
+    heading: 'Os Nossos Cães',
+    leadLineOne: 'Cada um deles tem uma história, uma personalidade única e muito amor para dar.',
+    leadLineTwo: 'Poderá o próximo lar ser o teu?',
+    primaryCta: 'Ver cães',
+    secondaryCta: 'Fazer o questionário',
+    imageAlt: 'Colagem de cães do Abrigo de demonstração disponíveis para adoção',
+    imageCaption: 'Percorra os perfis, conheça a personalidade de cada patudo e fale connosco quando encontrar uma ligação.',
+    chips: [`${availableCount} para adoção`, `${adoptedCount} já adotados`, 'Tamanho e sexo', 'Pesquisa por nome'],
+  },
+  en: {
+    eyebrow: 'Ready for adoption',
+    heading: 'Our Dogs',
+    leadLineOne: 'Every one of them has a story, a unique personality, and so much love to give.',
+    leadLineTwo: 'Could the next home be yours?',
+    primaryCta: 'View dogs',
+    secondaryCta: 'Take the match quiz',
+    imageAlt: 'Collage of Abrigo de demonstração dogs available for adoption',
+    imageCaption: 'Browse the profiles, get to know each dog’s personality, and contact us when one of them feels right.',
+    chips: [`${availableCount} available`, `${adoptedCount} adopted`, 'Size and sex', 'Search by name'],
+  },
+};

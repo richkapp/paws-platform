@@ -1,0 +1,30 @@
+---
+import { getTranslations, type Locale } from '../../i18n';
+import { shelter, safeDestination, hasPaymentDestination, paymentNotice } from '../../config/shelter';
+import VisitSchedule from '../VisitSchedule';
+interface Props { locale?: Locale; homePath?: string }
+const { locale = 'pt', homePath = locale === 'pt' ? '/' : '/en/' } = Astro.props;
+const t = getTranslations(locale);
+const address = [...shelter.address.lines, shelter.address.locality].filter((line) => line.trim()).join(' · ');
+const links = locale === 'pt' ? [['/caes','Os nossos cães'],['/match','Questionário'],['/adocao','Adoção'],['/sobre-nos','Sobre nós'],['/ajudar','Como ajudar']] : [['/en/dogs','Our dogs'],['/en/match','Find a match'],['/en/adopt','Adoption'],['/en/about','About us'],['/en/help','How to help']];
+---
+<footer id="contactos" class="relative border-t border-playful-line bg-playful-cream px-5 pb-8 pt-16 sm:px-8">
+  <div class="mx-auto grid max-w-7xl gap-10 md:grid-cols-3">
+    <div>
+      <a href={homePath} class="playful-focus inline-flex items-center gap-4 rounded-xl"><img src={shelter.logo} alt="" width="64" height="64" /><span class="font-playful-display text-2xl font-extrabold text-playful-orange-dark">{shelter.name}</span></a>
+      <p class="mt-4 max-w-sm text-sm font-medium leading-7 text-playful-muted">{shelter.description[locale]}</p>
+      <div class="mt-4 flex gap-4">{Object.entries(shelter.social).map(([label,url]) => safeDestination(url) && <a href={safeDestination(url)} rel="noopener noreferrer" class="playful-focus font-bold text-playful-orange-dark underline">{label}</a>)}</div>
+    </div>
+    <div><h2 class="font-playful-display text-xl font-extrabold">{t.footer.navHeading}</h2><ul class="mt-4 space-y-3">{links.map(([url,label])=><li><a href={url} class="playful-focus font-semibold text-playful-muted hover:text-playful-orange-dark">{label}</a></li>)}</ul></div>
+    <div><h2 class="font-playful-display text-xl font-extrabold">{t.footer.contactHeading}</h2>
+      <p class="mt-4 text-sm leading-7 text-playful-muted">{address || (locale === 'pt' ? 'Morada não configurada.' : 'Address is not configured.')}</p>
+      {shelter.contact.email && <p class="mt-2 select-all font-semibold">{shelter.contact.email}</p>}
+      {shelter.contact.phone && <p class="mt-2 select-all font-semibold">{shelter.contact.phone}</p>}
+      {safeDestination(shelter.address.mapsUrl) && <a href={safeDestination(shelter.address.mapsUrl)} class="playful-focus mt-3 inline-block underline">{t.footer.visitMapLabel}</a>}
+      <VisitSchedule locale={locale} source="footer" client:load />
+      <p class="mt-4 text-xs font-bold text-playful-muted" data-payment-notice data-payment-disabled={!hasPaymentDestination() || undefined}>{paymentNotice(locale)}</p>
+      {shelter.donations.bankAccount.trim() && <p class="mt-2 select-all font-mono text-sm">{shelter.donations.bankAccount} · {shelter.donations.bankHolder}</p>}
+    </div>
+  </div>
+  <p class="mx-auto mt-12 max-w-7xl border-t border-playful-line pt-6 text-xs font-semibold text-playful-muted">{shelter.name} · {shelter.tagline[locale]} · <a href="/admin" class="playful-focus underline">Admin</a></p>
+</footer>

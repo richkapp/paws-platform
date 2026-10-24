@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" role="img" aria-labelledby="title desc"><title id="title">Miso — fictional dog illustration</title><desc id="desc">Original geometric demo artwork. A friendly #bd7b44 dog on a pastel background. Not a real animal.</desc>
+<rect width="640" height="640" rx="48" fill="#f4d58d"/><circle cx="525" cy="100" r="47" fill="#fff9f0" opacity=".65"/><path d="M0 540Q200 470 380 540T680 520V640H0Z" fill="#fff9f0" opacity=".5"/>
+<g transform="translate(0 0) rotate(0 320 360)"><ellipse cx="320" cy="566" rx="165" ry="24" fill="#4d392c" opacity=".13"/><path d="M210 508Q180 365 320 370Q460 365 430 510L450 565H190Z" fill="#bd7b44"/><path d="M425 470Q545 390 500 355" fill="none" stroke="#bd7b44" stroke-width="40" stroke-linecap="round"/>
+<path d="M220 200Q112 165 141 330Q153 370 211 319M420 200Q528 165 499 330Q487 370 429 319" fill="#664a3b"/>
+<rect x="189" y="172" width="262" height="253" rx="119" fill="#bd7b44"/><path d="M280 178Q320 165 350 181L342 301H300Z" fill="#fff3de"/>
+<ellipse cx="269" cy="283" rx="12" ry="17" fill="#2c2825"/><ellipse cx="371" cy="283" rx="12" ry="17" fill="#2c2825"/><circle cx="273" cy="277" r="4" fill="#fff9f0"/><circle cx="375" cy="277" r="4" fill="#fff9f0"/>
+<ellipse cx="320" cy="345" rx="69" ry="51" fill="#fff3de"/><path d="M301 326Q320 315 339 326Q338 348 320 350Q302 347 301 326" fill="#2c2825"/><path d="M320 349V366M291 363Q319 388 349 363" fill="none" stroke="#2c2825" stroke-width="7" stroke-linecap="round"/><path d="M311 376Q320 402 333 376" fill="#da827d"/>
+<path d="M218 416Q320 450 422 416" fill="none" stroke="#bc552d" stroke-width="19"/><circle cx="320" cy="442" r="17" fill="#f4ce72"/><ellipse cx="254" cy="548" rx="42" ry="24" fill="#fff3de"/><ellipse cx="386" cy="548" rx="42" ry="24" fill="#fff3de"/></g>
+<path d="M67 90q20-27 40 0q20-27 40 0q0 22-40 49Q67 112 67 90" fill="#ce706d" opacity=".8"/>
+</svg>

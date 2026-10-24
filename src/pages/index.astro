@@ -1,0 +1,14 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PlayfulLandingPage from '../components/home/PlayfulLandingPage.astro';
+
+const locale = 'pt' as const;
+---
+
+<Layout
+  locale={locale}
+  title="Adota um Cão"
+  playfulFonts
+>
+  <PlayfulLandingPage locale={locale} homePath="/" />
+</Layout>

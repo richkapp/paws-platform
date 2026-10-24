@@ -1,0 +1,36 @@
+---
+import { getTranslations, type Locale } from '../../i18n';
+
+interface Props {
+  locale?: Locale;
+}
+
+const { locale = 'pt' } = Astro.props;
+const t = getTranslations(locale);
+
+const cards = [
+  { title: t.whyAdopt.card1Title, description: t.whyAdopt.card1Desc, icon: '❤', bg: 'bg-playful-watermelon/70', rotate: 'md:-rotate-1' },
+  { title: t.whyAdopt.card2Title, description: t.whyAdopt.card2Desc, icon: '✦', bg: 'bg-playful-peach', rotate: 'md:rotate-1 md:translate-y-5' },
+  { title: t.whyAdopt.card3Title, description: t.whyAdopt.card3Desc, icon: '☻', bg: 'bg-playful-orange/90', rotate: 'md:-rotate-2' },
+];
+---
+
+<section class="relative px-5 py-16 sm:px-8 lg:py-24" aria-labelledby="playful-why-heading">
+  <div class="mx-auto max-w-7xl">
+    <div data-reveal="rise" class="mb-12 text-center">
+      <span class="mb-3 inline-block text-xs font-extrabold uppercase tracking-[0.24em] text-playful-orange-dark">{t.whyAdopt.eyebrow}</span>
+      <h2 id="playful-why-heading" class="mx-auto max-w-4xl font-playful-display text-4xl font-extrabold tracking-[-0.04em] text-playful-orange-dark sm:text-5xl">{t.whyAdopt.heading}</h2>
+      <p class="mx-auto mt-4 max-w-2xl text-lg font-medium leading-8 text-playful-muted">{t.whyAdopt.subheading}</p>
+    </div>
+
+    <div data-reveal-stagger="120" class="grid grid-cols-1 gap-6 md:grid-cols-3 lg:gap-8">
+      {cards.map(({ title, description, icon, bg, rotate }) => (
+        <article data-reveal="tilt" class={`${rotate} card-pillowy rounded-playful border border-playful-line/70 bg-white p-8 text-center shadow-pillowy`}>
+          <div class={`mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full ${bg} text-2xl text-white shadow-pillowy`} aria-hidden="true">{icon}</div>
+          <h3 class="font-playful-display text-2xl font-extrabold tracking-[-0.02em] text-playful-orange-dark">{title}</h3>
+          <p class="mt-4 text-sm font-medium leading-7 text-playful-muted">{description}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,36 @@
+---
+import type { Locale } from '../../i18n';
+import PlayfulNav from './PlayfulNav.astro';
+import PlayfulHero from './PlayfulHero.astro';
+import PlayfulStats from './PlayfulStats.astro';
+import PlayfulWhyAdopt from './PlayfulWhyAdopt.astro';
+import PlayfulFeaturedDogs from './PlayfulFeaturedDogs';
+import PlayfulAboutBlurb from './PlayfulAboutBlurb.astro';
+import PlayfulHelpCta from './PlayfulHelpCta.astro';
+import PlayfulFooter from './PlayfulFooter.astro';
+import PlayfulScrollReveal from '../playful/PlayfulScrollReveal.astro';
+
+interface Props {
+  locale?: Locale;
+  homePath?: string;
+}
+
+const { locale = 'pt', homePath = locale === 'pt' ? '/' : '/en/' } = Astro.props;
+---
+
+<div data-playful-scroll-reveal class="min-h-screen bg-playful-canvas text-playful-ink font-playful-body pattern-dots selection:bg-playful-orange selection:text-white">
+  <PlayfulNav locale={locale} homePath={homePath} />
+  <div class="overflow-x-clip">
+    <main>
+      <PlayfulHero locale={locale} />
+      <PlayfulStats locale={locale} />
+      <PlayfulWhyAdopt locale={locale} />
+      <PlayfulFeaturedDogs locale={locale} client:visible />
+      <PlayfulAboutBlurb locale={locale} />
+      <PlayfulHelpCta locale={locale} />
+    </main>
+    <PlayfulFooter locale={locale} homePath={homePath} />
+  </div>
+</div>
+
+<PlayfulScrollReveal observeDynamic />

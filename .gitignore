@@ -1,0 +1,23 @@
+# Dependencies and generated frontend output
+node_modules/
+dist/
+.astro/
+
+# Private local environments (only the blank example is publishable)
+.env
+.env.*
+!.env.example
+
+# Runtime media, archives and local database artifacts
+/storage/
+/archive/
+*.sql.gz
+*.dump
+*.backup
+
+# Logs, coverage and local/editor files
+*.log
+coverage/
+.DS_Store
+.idea/
+.vscode/

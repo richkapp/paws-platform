@@ -1,0 +1,13 @@
+---
+import type { Locale } from '../../i18n';
+import { demoNotice } from '../../config/shelter';
+interface Props { locale?: Locale }
+const { locale = 'pt' } = Astro.props;
+const help = locale === 'pt' ? '/ajudar' : '/en/help';
+const cards = locale === 'pt' ? [['♡','Apadrinhar','Ajudar a cuidar de um companheiro.'],['☀','Voluntariar','Partilhar tempo e atenção.'],['⌂','Acolher','Oferecer uma casa temporária.'],['✿','Doar materiais','Apoiar os cuidados do dia a dia.']] : [['♡','Sponsor','Help care for a companion.'],['☀','Volunteer','Share time and attention.'],['⌂','Foster','Offer a temporary home.'],['✿','Donate supplies','Support everyday care.']];
+---
+<section id="ajudar" class="relative px-5 py-20 sm:px-8"><div class="mx-auto max-w-7xl rounded-[3rem] border border-playful-line bg-playful-peach/70 p-7 text-center shadow-pillowy-lg sm:p-12">
+<h2 class="font-playful-display text-4xl font-extrabold text-playful-orange-dark">{locale === 'pt' ? 'Um pequeno gesto. Uma grande diferença.' : 'A small gesture. A big difference.'}</h2>
+<div class="my-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">{cards.map(([icon,title,desc]) => <a href={help} class="playful-focus card-pillowy rounded-[2rem] bg-white p-6 shadow-pillowy"><span class="text-4xl text-playful-orange" aria-hidden="true">{icon}</span><h3 class="mt-4 text-lg font-extrabold">{title}</h3><p class="mt-2 text-sm leading-6 text-playful-muted">{desc}</p></a>)}</div>
+<p class="text-sm font-semibold leading-6 text-playful-muted">{demoNotice(locale)}</p>
+</div></section>

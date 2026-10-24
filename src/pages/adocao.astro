@@ -1,0 +1,27 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PlayfulSiteNav from '../components/playful/PlayfulSiteNav.astro';
+import PlayfulSiteFooter from '../components/playful/PlayfulSiteFooter.astro';
+import PlayfulScrollReveal from '../components/playful/PlayfulScrollReveal.astro';
+import AdocaoPlayfulPage from '../components/adocao/AdocaoPlayfulPage.astro';
+
+const locale = 'pt' as const;
+---
+
+<Layout
+  locale={locale}
+  title="Adoção"
+  description="Saiba como adotar um cão do abrigo. Conheça o processo, os custos e os benefícios da adoção."
+  ogImage="/illustrations/tulipa-portrait.svg"
+  playfulFonts
+>
+  <div data-playful-scroll-reveal class="min-h-screen bg-playful-canvas text-playful-ink font-playful-body pattern-dots selection:bg-playful-orange selection:text-white">
+    <PlayfulSiteNav locale={locale} />
+    <div class="overflow-x-clip">
+      <AdocaoPlayfulPage locale={locale} />
+      <PlayfulSiteFooter locale={locale} />
+    </div>
+  </div>
+
+  <PlayfulScrollReveal />
+</Layout>

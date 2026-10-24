@@ -1,0 +1,107 @@
+---
+import type { Locale } from '../../i18n';
+import { caesHeroContent, availableCount } from './caesContent';
+
+interface Props {
+  locale?: Locale;
+}
+
+const { locale = 'pt' } = Astro.props;
+const content = caesHeroContent[locale];
+---
+
+<section id="inicio" class="relative isolate overflow-hidden px-5 pb-12 pt-14 sm:px-8 lg:pb-18 lg:pt-20" aria-labelledby="dogs-hero-heading">
+  <div class="ambient-blob -left-28 top-44 h-96 w-96 bg-playful-peach/80"></div>
+  <div class="ambient-blob -right-24 top-0 h-96 w-96 bg-playful-orange/35"></div>
+  <div class="ambient-blob bottom-0 left-1/2 h-72 w-72 -translate-x-1/2 bg-playful-watermelon/20"></div>
+
+  <div class="relative z-10 mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[0.92fr_1.08fr] lg:gap-16">
+    <div class="text-center lg:text-left">
+      <div class="mb-6 inline-flex -rotate-2 items-center gap-2 rounded-full border border-playful-line bg-playful-peach px-5 py-2 text-xs font-extrabold uppercase tracking-[0.22em] text-playful-orange-dark shadow-pillowy">
+        <span aria-hidden="true">🐾</span>
+        {content.eyebrow}
+      </div>
+
+      <h1 id="dogs-hero-heading" class="font-playful-display text-[3.7rem] font-extrabold leading-[0.92] tracking-[-0.07em] text-playful-ink sm:text-7xl lg:text-[6.4rem]">
+        {locale === 'pt' ? (
+          <>
+            Os Nossos
+            <span class="relative block text-playful-orange">
+              Cães
+              <svg class="absolute -bottom-2 left-1/2 h-5 w-[84%] -translate-x-1/2 text-playful-watermelon/75" viewBox="0 0 260 24" aria-hidden="true" preserveAspectRatio="none">
+                <path d="M5 15C62 4 142 3 255 15" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="9" />
+              </svg>
+            </span>
+          </>
+        ) : (
+          <>
+            Our
+            <span class="relative ml-2 inline-block text-playful-orange">
+              Dogs
+              <svg class="absolute -bottom-2 left-1/2 h-5 w-[110%] -translate-x-1/2 text-playful-watermelon/75" viewBox="0 0 260 24" aria-hidden="true" preserveAspectRatio="none">
+                <path d="M5 15C62 4 142 3 255 15" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="9" />
+              </svg>
+            </span>
+          </>
+        )}
+      </h1>
+
+      <p class="mx-auto mt-7 max-w-2xl text-lg font-medium leading-8 text-playful-muted sm:text-xl lg:mx-0">
+        {content.leadLineOne}
+        <span class="block font-extrabold text-playful-orange-dark">{content.leadLineTwo}</span>
+      </p>
+
+      <div class="mt-8 flex flex-col justify-center gap-4 sm:flex-row lg:justify-start">
+        <a href="#lista-caes" class="squishy playful-focus inline-flex items-center justify-center gap-2 rounded-full bg-playful-orange px-8 py-4 font-playful-display text-base font-extrabold text-white shadow-squish">
+          {content.primaryCta}
+          <span aria-hidden="true">↓</span>
+        </a>
+        <a href={locale === 'pt' ? '/match' : '/en/match'} data-caes-match-button class="squishy playful-focus inline-flex items-center justify-center gap-2 rounded-full border-2 border-playful-orange bg-white/85 px-8 py-4 font-playful-display text-base font-extrabold text-playful-orange-dark shadow-pillowy">
+          {content.secondaryCta}
+          <span aria-hidden="true">🐾</span>
+        </a>
+      </div>
+
+      <div class="mt-9 flex flex-wrap justify-center gap-3 lg:justify-start" aria-label={locale === 'pt' ? 'Resumo da listagem de cães' : 'Dog listing summary'}>
+        {content.chips.map((chip, index) => (
+          <span class={`rounded-full border border-playful-line bg-white/80 px-4 py-2 text-sm font-extrabold text-playful-muted shadow-sm ${index % 2 === 0 ? '-rotate-1' : 'rotate-1'}`}>
+            {index < 2 ? (
+              <><span data-shelter-count={index === 0 ? '' : undefined} data-adopted-count={index === 1 ? '' : undefined}>{chip.split(' ')[0]}</span> {chip.split(' ').slice(1).join(' ')}</>
+            ) : chip}
+          </span>
+        ))}
+      </div>
+    </div>
+
+    <figure class="relative mx-auto w-full max-w-[640px] lg:max-w-none">
+      <div class="absolute -left-4 top-8 z-20 rotate-[-6deg] rounded-[1.5rem] bg-playful-peach px-5 py-4 text-left shadow-pillowy sm:-left-8">
+        <span class="block font-playful-display text-3xl font-extrabold text-playful-orange-dark" data-shelter-count>{availableCount}</span>
+        <span class="block text-xs font-extrabold uppercase tracking-[0.18em] text-playful-muted">{locale === 'pt' ? 'para adoção' : 'available'}</span>
+      </div>
+      <div class="absolute -right-3 bottom-24 z-20 hidden rotate-3 rounded-full bg-white px-5 py-3 text-sm font-extrabold text-playful-orange-dark shadow-pillowy sm:block">
+        {locale === 'pt' ? 'Cada patudo tem uma história' : 'Every dog has a story'}
+      </div>
+
+      <picture class="relative block rotate-1">
+        <source srcset="/illustrations/orion-play.svg" type="image/svg+xml" />
+        <img
+          src="/illustrations/orion-play.svg"
+          alt={content.imageAlt}
+          width="1400"
+          height="1120"
+          loading="eager"
+          fetchpriority="high"
+          class="blob-mask aspect-[5/4] w-full border-[10px] border-white object-cover object-center shadow-pillowy-lg"
+        />
+      </picture>
+      <figcaption class="mx-auto mt-5 max-w-lg rounded-[1.5rem] border border-playful-line/70 bg-white/82 px-5 py-4 text-center text-sm font-bold leading-6 text-playful-muted shadow-sm">
+        {content.imageCaption}
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<script>
+  import { refreshShelterCount } from '../../lib/shelterCount';
+  refreshShelterCount();
+</script>
